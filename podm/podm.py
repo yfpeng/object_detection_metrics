@@ -20,11 +20,14 @@ class Box:
                         (Right,Bottom)
 
         Args:
-            xtl: Float value representing the X top-left coordinate of the bounding box.
-            ytl: Float value representing the Y top-left coordinate of the bounding box.
-            xbr: Float value representing the X bottom-right coordinate of the bounding box.
-            ybr: Float value representing the Y bottom-right coordinate of the bounding box.
+            xtl: the X top-left coordinate of the bounding box.
+            ytl: the Y top-left coordinate of the bounding box.
+            xbr: the X bottom-right coordinate of the bounding box.
+            ybr: the Y bottom-right coordinate of the bounding box.
         """
+        assert xtl < xbr, f'xtl < xbr: xtl:{xtl}, xbr:{xbr}'
+        assert ytl < ybr, f'ytl < ybr: xtl:{ytl}, xbr:{ybr}'
+
         self.xtl = xtl
         self.ytl = ytl
         self.xbr = xbr
@@ -40,7 +43,10 @@ class Box:
 
     @property
     def area(self) -> float:
-        return (self.xbr - self.xtl + 1) * (self.ybr - self.ytl + 1)
+        return (self.xbr - self.xtl) * (self.ybr - self.ytl)
+
+    def __str__(self):
+        return 'Box[xtl={},ytl={},xbr={},ybr={}]'.format(self.xtl, self.ytl, self.xbr, self.ybr)
 
     @classmethod
     def intersection_over_union(cls, box1: 'Box', box2: 'Box') -> float:
@@ -51,11 +57,11 @@ class Box:
         # if boxes dont intersect
         if not Box.is_intersecting(box1, box2):
             return 0
-        intersection = Box.get_intersection_area(box1, box2)
-        union = Box.get_union_areas(box1, box2, intersection_area=intersection)
+        intersection = Box.intersection_area(box1, box2)
+        union = Box.union_areas(box1, box2, intersection_area=intersection)
         # intersection over union
         iou = intersection / union
-        assert iou >= 0, '{} = {} / {}, {}, {}'.format(iou, intersection, union, box1, box2)
+        assert iou >= 0, '{} = {} / {}, box1={}, box2={}'.format(iou, intersection, union, box1, box2)
         return iou
 
     @classmethod
@@ -71,19 +77,19 @@ class Box:
         return True
 
     @classmethod
-    def get_intersection_area(cls, box1: 'Box', box2: 'Box') -> float:
+    def intersection_area(cls, box1: 'Box', box2: 'Box') -> float:
         xtl = max(box1.xtl, box2.xtl)
         ytl = max(box1.ytl, box2.ytl)
         xbr = min(box1.xbr, box2.xbr)
         ybr = min(box1.ybr, box2.ybr)
         # intersection area
-        return (xbr - xtl + 1) * (ybr - ytl + 1)
+        return (xbr - xtl) * (ybr - ytl)
 
     @staticmethod
-    def get_union_areas(box1: 'Box', box2: 'Box', intersection_area: float = None) -> float:
+    def union_areas(box1: 'Box', box2: 'Box', intersection_area: float = None) -> float:
         if intersection_area is None:
-            intersection_area = Box.get_intersection_area(box1, box2)
-        return float(box1.area + box2.area - intersection_area)
+            intersection_area = Box.intersection_area(box1, box2)
+        return box1.area + box2.area - intersection_area
 
 
 class MethodAveragePrecision(Enum):
@@ -103,14 +109,13 @@ class BoundingBox(Box):
                  score=None):
         """Constructor.
         Args:
-            image_name: String representing the image name.
-            label: String value representing class id.
-            xtl: Float value representing the X top-left coordinate of the bounding box.
-            ytl: Float value representing the Y top-left coordinate of the bounding box.
-            xbr: Float value representing the X bottom-right coordinate of the bounding box.
-            ybr: Float value representing the Y bottom-right coordinate of the bounding box.
-            score: (optional) Float value representing the confidence of the detected
-                class. If detectionType is Detection, classConfidence needs to be informed.
+            image_name: the image name.
+            label: class id.
+            xtl: the X top-left coordinate of the bounding box.
+            ytl: the Y top-left coordinate of the bounding box.
+            xbr: the X bottom-right coordinate of the bounding box.
+            ybr: the Y bottom-right coordinate of the bounding box.
+            score: (optional) the confidence of the detected class.
         """
         super().__init__(xtl, ytl, xbr, ybr)
         self.image_name = image_name
@@ -132,7 +137,7 @@ class MetricPerClass:
         self.fp = None
 
     @staticmethod
-    def get_mAP(results: Dict[str, 'MetricPerClass']):
+    def mAP(results: Dict[str, 'MetricPerClass']):
         return np.average([m.ap for m in results.values() if m.num_groundtruth > 0])
 
 
@@ -144,25 +149,14 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
     """Get the metrics used by the VOC Pascal 2012 challenge.
 
     Args:
-        gold_standard: Object of the class BoundingBoxes representing ground truth bounding boxes;
-        predictions: Object of the class BoundingBoxes representing detected bounding boxes;
+        gold_standard: ground truth bounding boxes;
+        predictions: detected bounding boxes;
         iou_threshold: IOU threshold indicating which detections will be considered TP or FP (default value = 0.5);
-        method: It can be calculated as the implementation
-            in the official PASCAL VOC toolkit (EveryPointInterpolation), or applying the 11-point
-            interpolation as described in the paper "The PASCAL Visual Object Classes(VOC) Challenge"
-            or EveryPointInterpolation"  (ElevenPointInterpolation);
+        method: It can be calculated as the implementation in the official PASCAL VOC toolkit (EveryPointInterpolation),
+            or applying the 11-point interpolation as described in the paper "The PASCAL Visual Object Classes(VOC)
+            Challenge" or AllPointsInterpolation" (ElevenPointInterpolation);
     Returns:
-        A list of dictionaries. Each dictionary contains information and metrics of each class.
-            The keys of each dictionary are:
-                dict['class']: class representing the current dictionary;
-                dict['precision']: array with the precision values;
-                dict['recall']: array with the recall values;
-                dict['AP']: average precision;
-                dict['interpolated precision']: interpolated precision values;
-                dict['interpolated recall']: interpolated recall values;
-                dict['total positives']: total number of ground truth positives;
-                dict['total TP']: total number of True Positive detections;
-                dict['total FP']: total number of False Negative detections;
+        A dictionary containing metrics of each class.
     """
     ret = {}  # list containing metrics (precision, recall, average precision) of each class
 
@@ -235,7 +229,7 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
 
 def calculate_all_points_average_precision(recall, precision):
     """
-    All points interpolated average precision
+    All-point interpolated average precision
 
     Returns:
         average precision

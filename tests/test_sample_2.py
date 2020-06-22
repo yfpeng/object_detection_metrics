@@ -22,5 +22,5 @@ def test_sample2():
     assert_results(results, RESULT0_5, 'num_groundtruth')
     assert_results(results, RESULT0_5, 'num_detection')
 
-    mAP = MetricPerClass.get_mAP(results)
+    mAP = MetricPerClass.mAP(results)
     assert np.isclose(RESULT0_5['mAP'], mAP, 1e-3), mAP
