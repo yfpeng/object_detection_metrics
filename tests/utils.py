@@ -39,7 +39,7 @@ def load_data(pathname) -> List[BoundingBox]:
     return boxes
 
 
-def test_results(actuals: Dict[str, MetricPerClass], expecteds, key, classes=None):
+def assert_results(actuals: Dict[str, MetricPerClass], expecteds, key, classes=None):
     if classes is None:
         classes = set(m.label for m in actuals.values())
 

@@ -12,7 +12,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='pdom',
+    name='object-detection-metrics',
     python_requires='>=3.6',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
@@ -54,7 +54,7 @@ setup(
         'Topic :: Software Development :: Libraries :: Application Frameworks',
     ],
 
-    keywords='pdom',
+    keywords='object detection metrics',
 
     packages=find_packages(exclude=["tests.*", "tests"]),
 )
