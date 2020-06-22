@@ -1,0 +1,4378 @@
+[
+  {
+    "name": "2007_000027",
+    "boxes": [
+      {
+        "xtl": 0,
+        "ytl": 13,
+        "xbr": 174,
+        "ybr": 244,
+        "label": "tvmonitor",
+        "score": 0.471781
+      },
+      {
+        "xtl": 274,
+        "ytl": 226,
+        "xbr": 301,
+        "ybr": 265,
+        "label": "cup",
+        "score": 0.414941
+      },
+      {
+        "xtl": 429,
+        "ytl": 219,
+        "xbr": 528,
+        "ybr": 247,
+        "label": "book",
+        "score": 0.460851
+      },
+      {
+        "xtl": 336,
+        "ytl": 231,
+        "xbr": 376,
+        "ybr": 305,
+        "label": "bottle",
+        "score": 0.28715
+      },
+      {
+        "xtl": 0,
+        "ytl": 199,
+        "xbr": 88,
+        "ybr": 436,
+        "label": "chair",
+        "score": 0.292345
+      },
+      {
+        "xtl": 433,
+        "ytl": 260,
+        "xbr": 506,
+        "ybr": 336,
+        "label": "book",
+        "score": 0.269833
+      },
+      {
+        "xtl": 518,
+        "ytl": 314,
+        "xbr": 603,
+        "ybr": 369,
+        "label": "book",
+        "score": 0.462608
+      },
+      {
+        "xtl": 592,
+        "ytl": 310,
+        "xbr": 634,
+        "ybr": 388,
+        "label": "book",
+        "score": 0.298196
+      },
+      {
+        "xtl": 403,
+        "ytl": 384,
+        "xbr": 517,
+        "ybr": 461,
+        "label": "book",
+        "score": 0.382881
+      },
+      {
+        "xtl": 405,
+        "ytl": 429,
+        "xbr": 519,
+        "ybr": 470,
+        "label": "book",
+        "score": 0.369369
+      },
+      {
+        "xtl": 259,
+        "ytl": 183,
+        "xbr": 304,
+        "ybr": 239,
+        "label": "pottedplant",
+        "score": 0.297364
+      },
+      {
+        "xtl": 279,
+        "ytl": 178,
+        "xbr": 340,
+        "ybr": 248,
+        "label": "pottedplant",
+        "score": 0.510713
+      },
+      {
+        "xtl": 187,
+        "ytl": 206,
+        "xbr": 237,
+        "ybr": 258,
+        "label": "pictureframe",
+        "score": 0.261096
+      },
+      {
+        "xtl": 433,
+        "ytl": 272,
+        "xbr": 499,
+        "ybr": 341,
+        "label": "book",
+        "score": 0.272826
+      },
+      {
+        "xtl": 413,
+        "ytl": 390,
+        "xbr": 515,
+        "ybr": 459,
+        "label": "book",
+        "score": 0.619459
+      }
+    ]
+  },
+  {
+    "name": "2007_000032",
+    "boxes": [
+      {
+        "xtl": 503,
+        "ytl": 4,
+        "xbr": 639,
+        "ybr": 127,
+        "label": "tvmonitor",
+        "score": 0.452213
+      },
+      {
+        "xtl": 14,
+        "ytl": 18,
+        "xbr": 257,
+        "ybr": 240,
+        "label": "refrigerator",
+        "score": 0.2835
+      },
+      {
+        "xtl": 508,
+        "ytl": 167,
+        "xbr": 625,
+        "ybr": 246,
+        "label": "book",
+        "score": 0.325701
+      },
+      {
+        "xtl": 501,
+        "ytl": 225,
+        "xbr": 610,
+        "ybr": 259,
+        "label": "book",
+        "score": 0.473745
+      },
+      {
+        "xtl": 417,
+        "ytl": 235,
+        "xbr": 452,
+        "ybr": 311,
+        "label": "bottle",
+        "score": 0.569329
+      },
+      {
+        "xtl": 503,
+        "ytl": 257,
+        "xbr": 552,
+        "ybr": 350,
+        "label": "book",
+        "score": 0.352939
+      },
+      {
+        "xtl": 531,
+        "ytl": 262,
+        "xbr": 584,
+        "ybr": 356,
+        "label": "book",
+        "score": 0.35684
+      },
+      {
+        "xtl": 585,
+        "ytl": 326,
+        "xbr": 639,
+        "ybr": 384,
+        "label": "book",
+        "score": 0.271981
+      },
+      {
+        "xtl": 466,
+        "ytl": 427,
+        "xbr": 585,
+        "ybr": 470,
+        "label": "book",
+        "score": 0.354973
+      },
+      {
+        "xtl": 81,
+        "ytl": 27,
+        "xbr": 227,
+        "ybr": 247,
+        "label": "tvmonitor",
+        "score": 0.342337
+      },
+      {
+        "xtl": 341,
+        "ytl": 178,
+        "xbr": 391,
+        "ybr": 251,
+        "label": "pottedplant",
+        "score": 0.521316
+      },
+      {
+        "xtl": 247,
+        "ytl": 205,
+        "xbr": 305,
+        "ybr": 260,
+        "label": "pictureframe",
+        "score": 0.260571
+      },
+      {
+        "xtl": 481,
+        "ytl": 400,
+        "xbr": 570,
+        "ybr": 460,
+        "label": "book",
+        "score": 0.354335
+      }
+    ]
+  },
+  {
+    "name": "2007_000033",
+    "boxes": [
+      {
+        "xtl": 3,
+        "ytl": 12,
+        "xbr": 78,
+        "ybr": 153,
+        "label": "pottedplant",
+        "score": 0.529134
+      },
+      {
+        "xtl": 92,
+        "ytl": 37,
+        "xbr": 193,
+        "ybr": 121,
+        "label": "tvmonitor",
+        "score": 0.523199
+      },
+      {
+        "xtl": 63,
+        "ytl": 77,
+        "xbr": 560,
+        "ybr": 477,
+        "label": "refrigerator",
+        "score": 0.386569
+      },
+      {
+        "xtl": 292,
+        "ytl": 6,
+        "xbr": 438,
+        "ybr": 99,
+        "label": "tvmonitor",
+        "score": 0.374142
+      },
+      {
+        "xtl": 436,
+        "ytl": 0,
+        "xbr": 564,
+        "ybr": 105,
+        "label": "windowblind",
+        "score": 0.273336
+      },
+      {
+        "xtl": 13,
+        "ytl": 20,
+        "xbr": 124,
+        "ybr": 173,
+        "label": "pottedplant",
+        "score": 0.346044
+      }
+    ]
+  },
+  {
+    "name": "2007_000039",
+    "boxes": [
+      {
+        "xtl": 482,
+        "ytl": 0,
+        "xbr": 638,
+        "ybr": 275,
+        "label": "refrigerator",
+        "score": 0.537946
+      },
+      {
+        "xtl": 529,
+        "ytl": 201,
+        "xbr": 593,
+        "ybr": 309,
+        "label": "wastecontainer",
+        "score": 0.313999
+      }
+    ]
+  },
+  {
+    "name": "2007_000042",
+    "boxes": [
+      {
+        "xtl": 509,
+        "ytl": 1,
+        "xbr": 632,
+        "ybr": 179,
+        "label": "pottedplant",
+        "score": 0.586544
+      },
+      {
+        "xtl": 555,
+        "ytl": 144,
+        "xbr": 635,
+        "ybr": 204,
+        "label": "tvmonitor",
+        "score": 0.338835
+      },
+      {
+        "xtl": 10,
+        "ytl": 150,
+        "xbr": 209,
+        "ybr": 475,
+        "label": "sofa",
+        "score": 0.833625
+      },
+      {
+        "xtl": 494,
+        "ytl": 283,
+        "xbr": 638,
+        "ybr": 475,
+        "label": "diningtable",
+        "score": 0.570301
+      }
+    ]
+  },
+  {
+    "name": "2007_000061",
+    "boxes": [
+      {
+        "xtl": 493,
+        "ytl": 111,
+        "xbr": 561,
+        "ybr": 239,
+        "label": "chair",
+        "score": 0.627778
+      },
+      {
+        "xtl": 504,
+        "ytl": 102,
+        "xbr": 634,
+        "ybr": 243,
+        "label": "diningtable",
+        "score": 0.340181
+      },
+      {
+        "xtl": 564,
+        "ytl": 142,
+        "xbr": 639,
+        "ybr": 265,
+        "label": "chair",
+        "score": 0.675353
+      },
+      {
+        "xtl": 54,
+        "ytl": 82,
+        "xbr": 588,
+        "ybr": 471,
+        "label": "sofa",
+        "score": 0.292752
+      },
+      {
+        "xtl": 194,
+        "ytl": 313,
+        "xbr": 312,
+        "ybr": 433,
+        "label": "remote",
+        "score": 0.785086
+      }
+    ]
+  },
+  {
+    "name": "2007_000063",
+    "boxes": [
+      {
+        "xtl": 14,
+        "ytl": 52,
+        "xbr": 309,
+        "ybr": 425,
+        "label": "pottedplant",
+        "score": 0.81948
+      },
+      {
+        "xtl": 438,
+        "ytl": 209,
+        "xbr": 539,
+        "ybr": 281,
+        "label": "pottedplant",
+        "score": 0.61384
+      },
+      {
+        "xtl": 214,
+        "ytl": 257,
+        "xbr": 251,
+        "ybr": 295,
+        "label": "vase",
+        "score": 0.551992
+      },
+      {
+        "xtl": 458,
+        "ytl": 256,
+        "xbr": 491,
+        "ybr": 283,
+        "label": "vase",
+        "score": 0.264438
+      },
+      {
+        "xtl": 247,
+        "ytl": 0,
+        "xbr": 507,
+        "ybr": 112,
+        "label": "windowblind",
+        "score": 0.339878
+      },
+      {
+        "xtl": 237,
+        "ytl": 204,
+        "xbr": 418,
+        "ybr": 290,
+        "label": "pictureframe",
+        "score": 0.540837
+      },
+      {
+        "xtl": 426,
+        "ytl": 210,
+        "xbr": 528,
+        "ybr": 286,
+        "label": "pottedplant",
+        "score": 0.728262
+      }
+    ]
+  },
+  {
+    "name": "2007_000068",
+    "boxes": [
+      {
+        "xtl": 0,
+        "ytl": 14,
+        "xbr": 125,
+        "ybr": 147,
+        "label": "tvmonitor",
+        "score": 0.35553
+      },
+      {
+        "xtl": 475,
+        "ytl": 0,
+        "xbr": 633,
+        "ybr": 447,
+        "label": "pottedplant",
+        "score": 0.726746
+      },
+      {
+        "xtl": 504,
+        "ytl": 240,
+        "xbr": 623,
+        "ybr": 443,
+        "label": "vase",
+        "score": 0.261603
+      }
+    ]
+  },
+  {
+    "name": "2007_000121",
+    "boxes": [
+      {
+        "xtl": 157,
+        "ytl": 154,
+        "xbr": 290,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.429933
+      },
+      {
+        "xtl": 158,
+        "ytl": 154,
+        "xbr": 502,
+        "ybr": 479,
+        "label": "diningtable",
+        "score": 0.712185
+      },
+      {
+        "xtl": 100,
+        "ytl": 72,
+        "xbr": 119,
+        "ybr": 93,
+        "label": "cup",
+        "score": 0.28548
+      },
+      {
+        "xtl": 0,
+        "ytl": 87,
+        "xbr": 178,
+        "ybr": 296,
+        "label": "countertop",
+        "score": 0.499608
+      }
+    ]
+  },
+  {
+    "name": "2007_000123",
+    "boxes": [
+      {
+        "xtl": 157,
+        "ytl": 42,
+        "xbr": 193,
+        "ybr": 65,
+        "label": "person",
+        "score": 0.408621
+      },
+      {
+        "xtl": 1,
+        "ytl": 63,
+        "xbr": 133,
+        "ybr": 215,
+        "label": "bed",
+        "score": 0.363359
+      },
+      {
+        "xtl": 237,
+        "ytl": 121,
+        "xbr": 310,
+        "ybr": 204,
+        "label": "chair",
+        "score": 0.343155
+      },
+      {
+        "xtl": 19,
+        "ytl": 90,
+        "xbr": 143,
+        "ybr": 182,
+        "label": "bed",
+        "score": 0.710099
+      },
+      {
+        "xtl": 392,
+        "ytl": 228,
+        "xbr": 468,
+        "ybr": 324,
+        "label": "wastecontainer",
+        "score": 0.39361
+      }
+    ]
+  },
+  {
+    "name": "2007_000129",
+    "boxes": [
+      {
+        "xtl": 267,
+        "ytl": 75,
+        "xbr": 340,
+        "ybr": 135,
+        "label": "chair",
+        "score": 0.459296
+      },
+      {
+        "xtl": 0,
+        "ytl": 12,
+        "xbr": 155,
+        "ybr": 246,
+        "label": "refrigerator",
+        "score": 0.486051
+      },
+      {
+        "xtl": 252,
+        "ytl": 78,
+        "xbr": 352,
+        "ybr": 342,
+        "label": "chair",
+        "score": 0.678557
+      },
+      {
+        "xtl": 396,
+        "ytl": 93,
+        "xbr": 639,
+        "ybr": 335,
+        "label": "chair",
+        "score": 0.616418
+      },
+      {
+        "xtl": 260,
+        "ytl": 111,
+        "xbr": 490,
+        "ybr": 369,
+        "label": "diningtable",
+        "score": 0.48514
+      },
+      {
+        "xtl": 244,
+        "ytl": 119,
+        "xbr": 405,
+        "ybr": 355,
+        "label": "diningtable",
+        "score": 0.537489
+      }
+    ]
+  },
+  {
+    "name": "2007_000170",
+    "boxes": [
+      {
+        "xtl": 0,
+        "ytl": 27,
+        "xbr": 45,
+        "ybr": 154,
+        "label": "refrigerator",
+        "score": 0.303672
+      },
+      {
+        "xtl": 12,
+        "ytl": 161,
+        "xbr": 105,
+        "ybr": 198,
+        "label": "bowl",
+        "score": 0.503095
+      },
+      {
+        "xtl": 313,
+        "ytl": 60,
+        "xbr": 409,
+        "ybr": 285,
+        "label": "chair",
+        "score": 0.6316
+      },
+      {
+        "xtl": 0,
+        "ytl": 125,
+        "xbr": 189,
+        "ybr": 294,
+        "label": "diningtable",
+        "score": 0.306721
+      },
+      {
+        "xtl": 300,
+        "ytl": 90,
+        "xbr": 509,
+        "ybr": 302,
+        "label": "diningtable",
+        "score": 0.401212
+      },
+      {
+        "xtl": 0,
+        "ytl": 154,
+        "xbr": 188,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.706046
+      },
+      {
+        "xtl": 33,
+        "ytl": 14,
+        "xbr": 181,
+        "ybr": 172,
+        "label": "door",
+        "score": 0.704533
+      },
+      {
+        "xtl": 289,
+        "ytl": 47,
+        "xbr": 452,
+        "ybr": 225,
+        "label": "cabinetry",
+        "score": 0.253778
+      }
+    ]
+  },
+  {
+    "name": "2007_000175",
+    "boxes": [
+      {
+        "xtl": 345,
+        "ytl": 69,
+        "xbr": 624,
+        "ybr": 479,
+        "label": "sofa",
+        "score": 0.841393
+      },
+      {
+        "xtl": 297,
+        "ytl": 86,
+        "xbr": 380,
+        "ybr": 222,
+        "label": "chair",
+        "score": 0.342367
+      },
+      {
+        "xtl": 423,
+        "ytl": 140,
+        "xbr": 526,
+        "ybr": 260,
+        "label": "pillow",
+        "score": 0.282579
+      }
+    ]
+  },
+  {
+    "name": "2007_000187",
+    "boxes": [
+      {
+        "xtl": 222,
+        "ytl": 4,
+        "xbr": 325,
+        "ybr": 178,
+        "label": "pottedplant",
+        "score": 0.765009
+      },
+      {
+        "xtl": 344,
+        "ytl": 130,
+        "xbr": 369,
+        "ybr": 160,
+        "label": "pottedplant",
+        "score": 0.491541
+      },
+      {
+        "xtl": 428,
+        "ytl": 42,
+        "xbr": 639,
+        "ybr": 210,
+        "label": "tvmonitor",
+        "score": 0.786197
+      },
+      {
+        "xtl": 3,
+        "ytl": 183,
+        "xbr": 636,
+        "ybr": 460,
+        "label": "sofa",
+        "score": 0.791896
+      },
+      {
+        "xtl": 356,
+        "ytl": 311,
+        "xbr": 421,
+        "ybr": 336,
+        "label": "remote",
+        "score": 0.679025
+      },
+      {
+        "xtl": 299,
+        "ytl": 115,
+        "xbr": 349,
+        "ybr": 160,
+        "label": "pictureframe",
+        "score": 0.295145
+      },
+      {
+        "xtl": 352,
+        "ytl": 130,
+        "xbr": 381,
+        "ybr": 181,
+        "label": "pottedplant",
+        "score": 0.312138
+      },
+      {
+        "xtl": 403,
+        "ytl": 166,
+        "xbr": 549,
+        "ybr": 305,
+        "label": "coffeetable",
+        "score": 0.362789
+      }
+    ]
+  },
+  {
+    "name": "2007_000241",
+    "boxes": [
+      {
+        "xtl": 190,
+        "ytl": 96,
+        "xbr": 272,
+        "ybr": 138,
+        "label": "bowl",
+        "score": 0.25275
+      },
+      {
+        "xtl": 215,
+        "ytl": 115,
+        "xbr": 322,
+        "ybr": 153,
+        "label": "bowl",
+        "score": 0.774696
+      },
+      {
+        "xtl": 315,
+        "ytl": 94,
+        "xbr": 381,
+        "ybr": 137,
+        "label": "cup",
+        "score": 0.459554
+      },
+      {
+        "xtl": 0,
+        "ytl": 133,
+        "xbr": 235,
+        "ybr": 186,
+        "label": "sink",
+        "score": 0.674897
+      },
+      {
+        "xtl": 111,
+        "ytl": 37,
+        "xbr": 227,
+        "ybr": 143,
+        "label": "tap",
+        "score": 0.36174
+      },
+      {
+        "xtl": 497,
+        "ytl": 55,
+        "xbr": 639,
+        "ybr": 337,
+        "label": "cabinetry",
+        "score": 0.321016
+      }
+    ]
+  },
+  {
+    "name": "2007_000243",
+    "boxes": [
+      {
+        "xtl": 316,
+        "ytl": 75,
+        "xbr": 441,
+        "ybr": 334,
+        "label": "refrigerator",
+        "score": 0.463334
+      },
+      {
+        "xtl": 236,
+        "ytl": 0,
+        "xbr": 380,
+        "ybr": 85,
+        "label": "windowblind",
+        "score": 0.44915
+      },
+      {
+        "xtl": 95,
+        "ytl": 0,
+        "xbr": 219,
+        "ybr": 211,
+        "label": "bookcase",
+        "score": 0.648869
+      },
+      {
+        "xtl": 6,
+        "ytl": 136,
+        "xbr": 134,
+        "ybr": 274,
+        "label": "coffeetable",
+        "score": 0.472681
+      }
+    ]
+  },
+  {
+    "name": "2007_000250",
+    "boxes": [
+      {
+        "xtl": 322,
+        "ytl": 57,
+        "xbr": 341,
+        "ybr": 120,
+        "label": "bottle",
+        "score": 0.506194
+      },
+      {
+        "xtl": 462,
+        "ytl": 72,
+        "xbr": 489,
+        "ybr": 120,
+        "label": "chair",
+        "score": 0.250874
+      },
+      {
+        "xtl": 247,
+        "ytl": 130,
+        "xbr": 291,
+        "ybr": 173,
+        "label": "cup",
+        "score": 0.666443
+      },
+      {
+        "xtl": 165,
+        "ytl": 129,
+        "xbr": 489,
+        "ybr": 227,
+        "label": "diningtable",
+        "score": 0.600672
+      },
+      {
+        "xtl": 478,
+        "ytl": 115,
+        "xbr": 556,
+        "ybr": 229,
+        "label": "chair",
+        "score": 0.384535
+      },
+      {
+        "xtl": 489,
+        "ytl": 91,
+        "xbr": 624,
+        "ybr": 254,
+        "label": "chair",
+        "score": 0.420201
+      },
+      {
+        "xtl": 582,
+        "ytl": 113,
+        "xbr": 631,
+        "ybr": 235,
+        "label": "chair",
+        "score": 0.268141
+      },
+      {
+        "xtl": 168,
+        "ytl": 153,
+        "xbr": 357,
+        "ybr": 420,
+        "label": "chair",
+        "score": 0.861616
+      },
+      {
+        "xtl": 394,
+        "ytl": 152,
+        "xbr": 503,
+        "ybr": 401,
+        "label": "chair",
+        "score": 0.765259
+      },
+      {
+        "xtl": 435,
+        "ytl": 63,
+        "xbr": 575,
+        "ybr": 204,
+        "label": "cabinetry",
+        "score": 0.424704
+      },
+      {
+        "xtl": 461,
+        "ytl": 86,
+        "xbr": 555,
+        "ybr": 232,
+        "label": "chair",
+        "score": 0.402742
+      },
+      {
+        "xtl": 155,
+        "ytl": 127,
+        "xbr": 304,
+        "ybr": 445,
+        "label": "chair",
+        "score": 0.676397
+      },
+      {
+        "xtl": 353,
+        "ytl": 161,
+        "xbr": 495,
+        "ybr": 403,
+        "label": "chair",
+        "score": 0.770853
+      }
+    ]
+  },
+  {
+    "name": "2007_000256",
+    "boxes": [
+      {
+        "xtl": 397,
+        "ytl": 138,
+        "xbr": 639,
+        "ybr": 222,
+        "label": "sink",
+        "score": 0.553823
+      },
+      {
+        "xtl": 557,
+        "ytl": 34,
+        "xbr": 639,
+        "ybr": 169,
+        "label": "tap",
+        "score": 0.293102
+      },
+      {
+        "xtl": 205,
+        "ytl": 380,
+        "xbr": 346,
+        "ybr": 479,
+        "label": "wastecontainer",
+        "score": 0.314123
+      }
+    ]
+  },
+  {
+    "name": "2007_000272",
+    "boxes": [
+      {
+        "xtl": 467,
+        "ytl": 249,
+        "xbr": 593,
+        "ybr": 470,
+        "label": "chair",
+        "score": 0.533144
+      }
+    ]
+  },
+  {
+    "name": "2007_000323",
+    "boxes": [
+      {
+        "xtl": 458,
+        "ytl": 48,
+        "xbr": 494,
+        "ybr": 134,
+        "label": "bottle",
+        "score": 0.280955
+      },
+      {
+        "xtl": 434,
+        "ytl": 16,
+        "xbr": 622,
+        "ybr": 243,
+        "label": "refrigerator",
+        "score": 0.356081
+      },
+      {
+        "xtl": 376,
+        "ytl": 94,
+        "xbr": 439,
+        "ybr": 246,
+        "label": "refrigerator",
+        "score": 0.535987
+      }
+    ]
+  },
+  {
+    "name": "2007_000332",
+    "boxes": []
+  },
+  {
+    "name": "2007_000333",
+    "boxes": [
+      {
+        "xtl": 511,
+        "ytl": 17,
+        "xbr": 608,
+        "ybr": 108,
+        "label": "pottedplant",
+        "score": 0.426336
+      },
+      {
+        "xtl": 337,
+        "ytl": 95,
+        "xbr": 356,
+        "ybr": 158,
+        "label": "chair",
+        "score": 0.256416
+      },
+      {
+        "xtl": 476,
+        "ytl": 99,
+        "xbr": 585,
+        "ybr": 227,
+        "label": "chair",
+        "score": 0.33604
+      },
+      {
+        "xtl": 564,
+        "ytl": 120,
+        "xbr": 639,
+        "ybr": 280,
+        "label": "sofa",
+        "score": 0.573717
+      },
+      {
+        "xtl": 3,
+        "ytl": 95,
+        "xbr": 340,
+        "ybr": 454,
+        "label": "diningtable",
+        "score": 0.633977
+      },
+      {
+        "xtl": 15,
+        "ytl": 149,
+        "xbr": 205,
+        "ybr": 471,
+        "label": "chair",
+        "score": 0.654364
+      },
+      {
+        "xtl": 474,
+        "ytl": 61,
+        "xbr": 579,
+        "ybr": 261,
+        "label": "chair",
+        "score": 0.720733
+      }
+    ]
+  },
+  {
+    "name": "2007_000346",
+    "boxes": [
+      {
+        "xtl": 359,
+        "ytl": 15,
+        "xbr": 445,
+        "ybr": 263,
+        "label": "bottle",
+        "score": 0.739925
+      },
+      {
+        "xtl": 0,
+        "ytl": 4,
+        "xbr": 279,
+        "ybr": 469,
+        "label": "refrigerator",
+        "score": 0.499644
+      }
+    ]
+  },
+  {
+    "name": "2007_000363",
+    "boxes": [
+      {
+        "xtl": 3,
+        "ytl": 17,
+        "xbr": 56,
+        "ybr": 91,
+        "label": "pottedplant",
+        "score": 0.542316
+      },
+      {
+        "xtl": 471,
+        "ytl": 3,
+        "xbr": 566,
+        "ybr": 76,
+        "label": "tvmonitor",
+        "score": 0.277761
+      },
+      {
+        "xtl": 172,
+        "ytl": 48,
+        "xbr": 296,
+        "ybr": 129,
+        "label": "tvmonitor",
+        "score": 0.275542
+      },
+      {
+        "xtl": 0,
+        "ytl": 63,
+        "xbr": 80,
+        "ybr": 274,
+        "label": "sofa",
+        "score": 0.316454
+      },
+      {
+        "xtl": 50,
+        "ytl": 115,
+        "xbr": 467,
+        "ybr": 301,
+        "label": "sofa",
+        "score": 0.620831
+      },
+      {
+        "xtl": 446,
+        "ytl": 100,
+        "xbr": 591,
+        "ybr": 278,
+        "label": "chair",
+        "score": 0.306937
+      },
+      {
+        "xtl": 0,
+        "ytl": 13,
+        "xbr": 29,
+        "ybr": 99,
+        "label": "pottedplant",
+        "score": 0.319877
+      },
+      {
+        "xtl": 179,
+        "ytl": 39,
+        "xbr": 291,
+        "ybr": 144,
+        "label": "tvmonitor",
+        "score": 0.385547
+      },
+      {
+        "xtl": 474,
+        "ytl": 89,
+        "xbr": 593,
+        "ybr": 266,
+        "label": "chair",
+        "score": 0.841719
+      },
+      {
+        "xtl": 12,
+        "ytl": 98,
+        "xbr": 131,
+        "ybr": 290,
+        "label": "chair",
+        "score": 0.275912
+      }
+    ]
+  },
+  {
+    "name": "2007_000364",
+    "boxes": [
+      {
+        "xtl": 519,
+        "ytl": 9,
+        "xbr": 622,
+        "ybr": 89,
+        "label": "pottedplant",
+        "score": 0.334868
+      },
+      {
+        "xtl": 304,
+        "ytl": 100,
+        "xbr": 346,
+        "ybr": 179,
+        "label": "chair",
+        "score": 0.256941
+      },
+      {
+        "xtl": 360,
+        "ytl": 76,
+        "xbr": 545,
+        "ybr": 230,
+        "label": "refrigerator",
+        "score": 0.332695
+      },
+      {
+        "xtl": 66,
+        "ytl": 86,
+        "xbr": 316,
+        "ybr": 332,
+        "label": "refrigerator",
+        "score": 0.707666
+      },
+      {
+        "xtl": 504,
+        "ytl": 107,
+        "xbr": 639,
+        "ybr": 307,
+        "label": "chair",
+        "score": 0.450818
+      },
+      {
+        "xtl": 0,
+        "ytl": 226,
+        "xbr": 262,
+        "ybr": 479,
+        "label": "oven",
+        "score": 0.536102
+      }
+    ]
+  },
+  {
+    "name": "2007_000392",
+    "boxes": [
+      {
+        "xtl": 350,
+        "ytl": 41,
+        "xbr": 398,
+        "ybr": 135,
+        "label": "bottle",
+        "score": 0.279499
+      },
+      {
+        "xtl": 0,
+        "ytl": 72,
+        "xbr": 23,
+        "ybr": 173,
+        "label": "bottle",
+        "score": 0.419682
+      },
+      {
+        "xtl": 14,
+        "ytl": 128,
+        "xbr": 225,
+        "ybr": 177,
+        "label": "sink",
+        "score": 0.685773
+      },
+      {
+        "xtl": 251,
+        "ytl": 56,
+        "xbr": 306,
+        "ybr": 133,
+        "label": "cup",
+        "score": 0.285873
+      },
+      {
+        "xtl": 291,
+        "ytl": 66,
+        "xbr": 339,
+        "ybr": 132,
+        "label": "cup",
+        "score": 0.417154
+      },
+      {
+        "xtl": 519,
+        "ytl": 29,
+        "xbr": 633,
+        "ybr": 319,
+        "label": "cabinetry",
+        "score": 0.326669
+      }
+    ]
+  },
+  {
+    "name": "2007_000423",
+    "boxes": [
+      {
+        "xtl": 315,
+        "ytl": 53,
+        "xbr": 367,
+        "ybr": 153,
+        "label": "bottle",
+        "score": 0.486727
+      },
+      {
+        "xtl": 364,
+        "ytl": 30,
+        "xbr": 578,
+        "ybr": 228,
+        "label": "cabinetry",
+        "score": 0.272065
+      }
+    ]
+  },
+  {
+    "name": "2007_000452",
+    "boxes": [
+      {
+        "xtl": 1,
+        "ytl": 88,
+        "xbr": 599,
+        "ybr": 473,
+        "label": "bed",
+        "score": 0.936491
+      },
+      {
+        "xtl": 199,
+        "ytl": 120,
+        "xbr": 252,
+        "ybr": 153,
+        "label": "pictureframe",
+        "score": 0.3743
+      },
+      {
+        "xtl": 336,
+        "ytl": 113,
+        "xbr": 400,
+        "ybr": 151,
+        "label": "pictureframe",
+        "score": 0.654368
+      },
+      {
+        "xtl": 189,
+        "ytl": 141,
+        "xbr": 271,
+        "ybr": 181,
+        "label": "nightstand",
+        "score": 0.369957
+      }
+    ]
+  },
+  {
+    "name": "2007_000464",
+    "boxes": [
+      {
+        "xtl": 44,
+        "ytl": 75,
+        "xbr": 117,
+        "ybr": 194,
+        "label": "chair",
+        "score": 0.606796
+      },
+      {
+        "xtl": 77,
+        "ytl": 80,
+        "xbr": 170,
+        "ybr": 196,
+        "label": "chair",
+        "score": 0.464106
+      },
+      {
+        "xtl": 125,
+        "ytl": 88,
+        "xbr": 211,
+        "ybr": 183,
+        "label": "chair",
+        "score": 0.262397
+      },
+      {
+        "xtl": 184,
+        "ytl": 80,
+        "xbr": 247,
+        "ybr": 174,
+        "label": "chair",
+        "score": 0.375377
+      },
+      {
+        "xtl": 492,
+        "ytl": 75,
+        "xbr": 639,
+        "ybr": 245,
+        "label": "refrigerator",
+        "score": 0.252112
+      },
+      {
+        "xtl": 159,
+        "ytl": 220,
+        "xbr": 217,
+        "ybr": 252,
+        "label": "remote",
+        "score": 0.292862
+      },
+      {
+        "xtl": 178,
+        "ytl": 225,
+        "xbr": 226,
+        "ybr": 246,
+        "label": "remote",
+        "score": 0.440775
+      },
+      {
+        "xtl": 46,
+        "ytl": 85,
+        "xbr": 521,
+        "ybr": 479,
+        "label": "sofa",
+        "score": 0.862613
+      },
+      {
+        "xtl": 25,
+        "ytl": 46,
+        "xbr": 155,
+        "ybr": 228,
+        "label": "chair",
+        "score": 0.284735
+      }
+    ]
+  },
+  {
+    "name": "2007_000480",
+    "boxes": [
+      {
+        "xtl": 405,
+        "ytl": 131,
+        "xbr": 638,
+        "ybr": 478,
+        "label": "refrigerator",
+        "score": 0.361779
+      }
+    ]
+  },
+  {
+    "name": "2007_000491",
+    "boxes": [
+      {
+        "xtl": 109,
+        "ytl": 1,
+        "xbr": 151,
+        "ybr": 109,
+        "label": "bottle",
+        "score": 0.431028
+      },
+      {
+        "xtl": 58,
+        "ytl": 76,
+        "xbr": 116,
+        "ybr": 123,
+        "label": "cup",
+        "score": 0.44466
+      },
+      {
+        "xtl": 1,
+        "ytl": 94,
+        "xbr": 63,
+        "ybr": 131,
+        "label": "bowl",
+        "score": 0.403386
+      },
+      {
+        "xtl": 0,
+        "ytl": 103,
+        "xbr": 222,
+        "ybr": 469,
+        "label": "refrigerator",
+        "score": 0.466671
+      },
+      {
+        "xtl": 480,
+        "ytl": 169,
+        "xbr": 634,
+        "ybr": 478,
+        "label": "chair",
+        "score": 0.523154
+      }
+    ]
+  },
+  {
+    "name": "2007_000504",
+    "boxes": [
+      {
+        "xtl": 4,
+        "ytl": 9,
+        "xbr": 218,
+        "ybr": 308,
+        "label": "tvmonitor",
+        "score": 0.526273
+      },
+      {
+        "xtl": 207,
+        "ytl": 251,
+        "xbr": 272,
+        "ybr": 332,
+        "label": "book",
+        "score": 0.468295
+      },
+      {
+        "xtl": 0,
+        "ytl": 235,
+        "xbr": 134,
+        "ybr": 474,
+        "label": "oven",
+        "score": 0.290283
+      },
+      {
+        "xtl": 329,
+        "ytl": 330,
+        "xbr": 419,
+        "ybr": 385,
+        "label": "book",
+        "score": 0.258227
+      },
+      {
+        "xtl": 347,
+        "ytl": 243,
+        "xbr": 398,
+        "ybr": 297,
+        "label": "pottedplant",
+        "score": 0.269495
+      }
+    ]
+  },
+  {
+    "name": "2007_000515",
+    "boxes": [
+      {
+        "xtl": 0,
+        "ytl": 92,
+        "xbr": 442,
+        "ybr": 448,
+        "label": "bed",
+        "score": 0.870608
+      },
+      {
+        "xtl": 497,
+        "ytl": 135,
+        "xbr": 536,
+        "ybr": 172,
+        "label": "pictureframe",
+        "score": 0.286726
+      },
+      {
+        "xtl": 470,
+        "ytl": 149,
+        "xbr": 561,
+        "ybr": 268,
+        "label": "nightstand",
+        "score": 0.43211
+      }
+    ]
+  },
+  {
+    "name": "2007_000528",
+    "boxes": [
+      {
+        "xtl": 83,
+        "ytl": 245,
+        "xbr": 159,
+        "ybr": 315,
+        "label": "pottedplant",
+        "score": 0.374484
+      },
+      {
+        "xtl": 102,
+        "ytl": 299,
+        "xbr": 136,
+        "ybr": 341,
+        "label": "vase",
+        "score": 0.486235
+      },
+      {
+        "xtl": 210,
+        "ytl": 299,
+        "xbr": 267,
+        "ybr": 399,
+        "label": "bottle",
+        "score": 0.359365
+      },
+      {
+        "xtl": 87,
+        "ytl": 363,
+        "xbr": 198,
+        "ybr": 400,
+        "label": "book",
+        "score": 0.405094
+      },
+      {
+        "xtl": 454,
+        "ytl": 361,
+        "xbr": 549,
+        "ybr": 432,
+        "label": "book",
+        "score": 0.265792
+      },
+      {
+        "xtl": 74,
+        "ytl": 209,
+        "xbr": 183,
+        "ybr": 333,
+        "label": "pottedplant",
+        "score": 0.533443
+      },
+      {
+        "xtl": 101,
+        "ytl": 279,
+        "xbr": 152,
+        "ybr": 346,
+        "label": "vase",
+        "score": 0.351264
+      }
+    ]
+  },
+  {
+    "name": "2007_000529",
+    "boxes": [
+      {
+        "xtl": 385,
+        "ytl": 7,
+        "xbr": 488,
+        "ybr": 182,
+        "label": "pottedplant",
+        "score": 0.869161
+      },
+      {
+        "xtl": 493,
+        "ytl": 68,
+        "xbr": 639,
+        "ybr": 255,
+        "label": "tvmonitor",
+        "score": 0.710095
+      },
+      {
+        "xtl": 438,
+        "ytl": 197,
+        "xbr": 476,
+        "ybr": 230,
+        "label": "cup",
+        "score": 0.257235
+      },
+      {
+        "xtl": 492,
+        "ytl": 194,
+        "xbr": 639,
+        "ybr": 255,
+        "label": "keyboard",
+        "score": 0.431013
+      },
+      {
+        "xtl": 0,
+        "ytl": 123,
+        "xbr": 153,
+        "ybr": 479,
+        "label": "sofa",
+        "score": 0.864148
+      },
+      {
+        "xtl": 10,
+        "ytl": 145,
+        "xbr": 117,
+        "ybr": 260,
+        "label": "pillow",
+        "score": 0.340144
+      },
+      {
+        "xtl": 393,
+        "ytl": 217,
+        "xbr": 568,
+        "ybr": 411,
+        "label": "coffeetable",
+        "score": 0.420287
+      }
+    ]
+  },
+  {
+    "name": "2007_000549",
+    "boxes": [
+      {
+        "xtl": 520,
+        "ytl": 81,
+        "xbr": 582,
+        "ybr": 123,
+        "label": "chair",
+        "score": 0.285392
+      },
+      {
+        "xtl": 387,
+        "ytl": 116,
+        "xbr": 446,
+        "ybr": 216,
+        "label": "chair",
+        "score": 0.311403
+      },
+      {
+        "xtl": 405,
+        "ytl": 102,
+        "xbr": 540,
+        "ybr": 243,
+        "label": "diningtable",
+        "score": 0.30413
+      },
+      {
+        "xtl": 486,
+        "ytl": 102,
+        "xbr": 559,
+        "ybr": 234,
+        "label": "chair",
+        "score": 0.389888
+      },
+      {
+        "xtl": 505,
+        "ytl": 87,
+        "xbr": 605,
+        "ybr": 251,
+        "label": "chair",
+        "score": 0.595409
+      },
+      {
+        "xtl": 50,
+        "ytl": 135,
+        "xbr": 192,
+        "ybr": 362,
+        "label": "chair",
+        "score": 0.809926
+      },
+      {
+        "xtl": 152,
+        "ytl": 141,
+        "xbr": 284,
+        "ybr": 348,
+        "label": "diningtable",
+        "score": 0.456562
+      },
+      {
+        "xtl": 57,
+        "ytl": 131,
+        "xbr": 385,
+        "ybr": 349,
+        "label": "diningtable",
+        "score": 0.378174
+      },
+      {
+        "xtl": 245,
+        "ytl": 147,
+        "xbr": 373,
+        "ybr": 379,
+        "label": "chair",
+        "score": 0.784999
+      },
+      {
+        "xtl": 456,
+        "ytl": 95,
+        "xbr": 581,
+        "ybr": 220,
+        "label": "diningtable",
+        "score": 0.478472
+      }
+    ]
+  },
+  {
+    "name": "2007_000559",
+    "boxes": [
+      {
+        "xtl": 1,
+        "ytl": 123,
+        "xbr": 80,
+        "ybr": 336,
+        "label": "chair",
+        "score": 0.28747
+      }
+    ]
+  },
+  {
+    "name": "2007_000572",
+    "boxes": [
+      {
+        "xtl": 165,
+        "ytl": 72,
+        "xbr": 249,
+        "ybr": 138,
+        "label": "chair",
+        "score": 0.262165
+      },
+      {
+        "xtl": 583,
+        "ytl": 4,
+        "xbr": 639,
+        "ybr": 192,
+        "label": "pottedplant",
+        "score": 0.480055
+      },
+      {
+        "xtl": 0,
+        "ytl": 99,
+        "xbr": 335,
+        "ybr": 474,
+        "label": "sofa",
+        "score": 0.770797
+      },
+      {
+        "xtl": 3,
+        "ytl": 298,
+        "xbr": 176,
+        "ybr": 477,
+        "label": "chair",
+        "score": 0.297908
+      }
+    ]
+  },
+  {
+    "name": "2007_000584",
+    "boxes": [
+      {
+        "xtl": 25,
+        "ytl": 243,
+        "xbr": 123,
+        "ybr": 317,
+        "label": "pottedplant",
+        "score": 0.38698
+      },
+      {
+        "xtl": 515,
+        "ytl": 238,
+        "xbr": 628,
+        "ybr": 306,
+        "label": "book",
+        "score": 0.37279
+      },
+      {
+        "xtl": 57,
+        "ytl": 373,
+        "xbr": 150,
+        "ybr": 410,
+        "label": "book",
+        "score": 0.412792
+      },
+      {
+        "xtl": 425,
+        "ytl": 377,
+        "xbr": 522,
+        "ybr": 445,
+        "label": "book",
+        "score": 0.3328
+      },
+      {
+        "xtl": 25,
+        "ytl": 214,
+        "xbr": 135,
+        "ybr": 344,
+        "label": "pottedplant",
+        "score": 0.450679
+      },
+      {
+        "xtl": 47,
+        "ytl": 266,
+        "xbr": 97,
+        "ybr": 352,
+        "label": "vase",
+        "score": 0.377953
+      }
+    ]
+  },
+  {
+    "name": "2007_000629",
+    "boxes": [
+      {
+        "xtl": 105,
+        "ytl": 109,
+        "xbr": 172,
+        "ybr": 206,
+        "label": "chair",
+        "score": 0.315143
+      },
+      {
+        "xtl": 523,
+        "ytl": 160,
+        "xbr": 625,
+        "ybr": 234,
+        "label": "diningtable",
+        "score": 0.264715
+      },
+      {
+        "xtl": 507,
+        "ytl": 195,
+        "xbr": 631,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.524567
+      },
+      {
+        "xtl": 252,
+        "ytl": 81,
+        "xbr": 507,
+        "ybr": 275,
+        "label": "countertop",
+        "score": 0.489387
+      }
+    ]
+  },
+  {
+    "name": "2007_000636",
+    "boxes": [
+      {
+        "xtl": 40,
+        "ytl": 0,
+        "xbr": 100,
+        "ybr": 54,
+        "label": "book",
+        "score": 0.280358
+      },
+      {
+        "xtl": 209,
+        "ytl": 118,
+        "xbr": 266,
+        "ybr": 199,
+        "label": "chair",
+        "score": 0.255882
+      },
+      {
+        "xtl": 33,
+        "ytl": 57,
+        "xbr": 117,
+        "ybr": 194,
+        "label": "bed",
+        "score": 0.263161
+      },
+      {
+        "xtl": 353,
+        "ytl": 88,
+        "xbr": 601,
+        "ybr": 316,
+        "label": "countertop",
+        "score": 0.485044
+      },
+      {
+        "xtl": 310,
+        "ytl": 202,
+        "xbr": 361,
+        "ybr": 271,
+        "label": "wastecontainer",
+        "score": 0.32865
+      }
+    ]
+  },
+  {
+    "name": "2007_000645",
+    "boxes": [
+      {
+        "xtl": 200,
+        "ytl": 44,
+        "xbr": 234,
+        "ybr": 67,
+        "label": "person",
+        "score": 0.497034
+      },
+      {
+        "xtl": 99,
+        "ytl": 59,
+        "xbr": 212,
+        "ybr": 252,
+        "label": "refrigerator",
+        "score": 0.490569
+      },
+      {
+        "xtl": 256,
+        "ytl": 115,
+        "xbr": 307,
+        "ybr": 201,
+        "label": "chair",
+        "score": 0.301474
+      },
+      {
+        "xtl": 0,
+        "ytl": 78,
+        "xbr": 140,
+        "ybr": 184,
+        "label": "bed",
+        "score": 0.43821
+      }
+    ]
+  },
+  {
+    "name": "2007_000648",
+    "boxes": [
+      {
+        "xtl": 0,
+        "ytl": 72,
+        "xbr": 456,
+        "ybr": 479,
+        "label": "toilet",
+        "score": 0.259917
+      },
+      {
+        "xtl": 210,
+        "ytl": 127,
+        "xbr": 639,
+        "ybr": 479,
+        "label": "sofa",
+        "score": 0.618909
+      },
+      {
+        "xtl": 32,
+        "ytl": 197,
+        "xbr": 500,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.279172
+      },
+      {
+        "xtl": 209,
+        "ytl": 75,
+        "xbr": 343,
+        "ybr": 202,
+        "label": "chair",
+        "score": 0.360461
+      },
+      {
+        "xtl": 349,
+        "ytl": 156,
+        "xbr": 502,
+        "ybr": 232,
+        "label": "pillow",
+        "score": 0.278384
+      },
+      {
+        "xtl": 126,
+        "ytl": 249,
+        "xbr": 332,
+        "ybr": 455,
+        "label": "backpack",
+        "score": 0.552256
+      }
+    ]
+  },
+  {
+    "name": "2007_000661",
+    "boxes": [
+      {
+        "xtl": 289,
+        "ytl": 68,
+        "xbr": 335,
+        "ybr": 99,
+        "label": "chair",
+        "score": 0.442548
+      },
+      {
+        "xtl": 371,
+        "ytl": 85,
+        "xbr": 443,
+        "ybr": 193,
+        "label": "chair",
+        "score": 0.280312
+      },
+      {
+        "xtl": 13,
+        "ytl": 95,
+        "xbr": 54,
+        "ybr": 247,
+        "label": "chair",
+        "score": 0.287597
+      },
+      {
+        "xtl": 15,
+        "ytl": 104,
+        "xbr": 114,
+        "ybr": 244,
+        "label": "chair",
+        "score": 0.608093
+      },
+      {
+        "xtl": 89,
+        "ytl": 103,
+        "xbr": 153,
+        "ybr": 228,
+        "label": "chair",
+        "score": 0.392649
+      },
+      {
+        "xtl": 376,
+        "ytl": 133,
+        "xbr": 639,
+        "ybr": 479,
+        "label": "sofa",
+        "score": 0.583354
+      },
+      {
+        "xtl": 122,
+        "ytl": 201,
+        "xbr": 622,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.453748
+      },
+      {
+        "xtl": 316,
+        "ytl": 75,
+        "xbr": 446,
+        "ybr": 185,
+        "label": "diningtable",
+        "score": 0.257117
+      },
+      {
+        "xtl": 353,
+        "ytl": 79,
+        "xbr": 470,
+        "ybr": 191,
+        "label": "chair",
+        "score": 0.366008
+      },
+      {
+        "xtl": 10,
+        "ytl": 83,
+        "xbr": 136,
+        "ybr": 250,
+        "label": "diningtable",
+        "score": 0.351905
+      },
+      {
+        "xtl": 480,
+        "ytl": 154,
+        "xbr": 555,
+        "ybr": 225,
+        "label": "pillow",
+        "score": 0.32019
+      },
+      {
+        "xtl": 493,
+        "ytl": 165,
+        "xbr": 622,
+        "ybr": 229,
+        "label": "pillow",
+        "score": 0.28837
+      },
+      {
+        "xtl": 432,
+        "ytl": 183,
+        "xbr": 602,
+        "ybr": 392,
+        "label": "sofa",
+        "score": 0.305575
+      },
+      {
+        "xtl": 287,
+        "ytl": 230,
+        "xbr": 466,
+        "ybr": 470,
+        "label": "backpack",
+        "score": 0.374395
+      }
+    ]
+  },
+  {
+    "name": "2007_000663",
+    "boxes": [
+      {
+        "xtl": 158,
+        "ytl": 0,
+        "xbr": 246,
+        "ybr": 134,
+        "label": "pottedplant",
+        "score": 0.588823
+      },
+      {
+        "xtl": 306,
+        "ytl": 47,
+        "xbr": 413,
+        "ybr": 138,
+        "label": "tvmonitor",
+        "score": 0.667867
+      },
+      {
+        "xtl": 10,
+        "ytl": 87,
+        "xbr": 231,
+        "ybr": 244,
+        "label": "chair",
+        "score": 0.331138
+      },
+      {
+        "xtl": 11,
+        "ytl": 122,
+        "xbr": 327,
+        "ybr": 424,
+        "label": "chair",
+        "score": 0.657345
+      }
+    ]
+  },
+  {
+    "name": "2007_000664",
+    "boxes": [
+      {
+        "xtl": 219,
+        "ytl": 78,
+        "xbr": 298,
+        "ybr": 192,
+        "label": "chair",
+        "score": 0.581617
+      },
+      {
+        "xtl": 343,
+        "ytl": 77,
+        "xbr": 402,
+        "ybr": 167,
+        "label": "chair",
+        "score": 0.346867
+      },
+      {
+        "xtl": 337,
+        "ytl": 221,
+        "xbr": 410,
+        "ybr": 257,
+        "label": "remote",
+        "score": 0.537004
+      },
+      {
+        "xtl": 0,
+        "ytl": 84,
+        "xbr": 361,
+        "ybr": 477,
+        "label": "chair",
+        "score": 0.556317
+      },
+      {
+        "xtl": 200,
+        "ytl": 121,
+        "xbr": 639,
+        "ybr": 455,
+        "label": "sofa",
+        "score": 0.737236
+      },
+      {
+        "xtl": 345,
+        "ytl": 196,
+        "xbr": 502,
+        "ybr": 280,
+        "label": "pillow",
+        "score": 0.421205
+      }
+    ]
+  },
+  {
+    "name": "2007_000676",
+    "boxes": [
+      {
+        "xtl": 10,
+        "ytl": 62,
+        "xbr": 241,
+        "ybr": 428,
+        "label": "refrigerator",
+        "score": 0.395208
+      }
+    ]
+  },
+  {
+    "name": "2007_000713",
+    "boxes": [
+      {
+        "xtl": 29,
+        "ytl": 81,
+        "xbr": 115,
+        "ybr": 198,
+        "label": "chair",
+        "score": 0.684118
+      },
+      {
+        "xtl": 71,
+        "ytl": 92,
+        "xbr": 175,
+        "ybr": 174,
+        "label": "diningtable",
+        "score": 0.344975
+      },
+      {
+        "xtl": 144,
+        "ytl": 90,
+        "xbr": 202,
+        "ybr": 174,
+        "label": "chair",
+        "score": 0.402527
+      },
+      {
+        "xtl": 491,
+        "ytl": 69,
+        "xbr": 639,
+        "ybr": 247,
+        "label": "refrigerator",
+        "score": 0.396334
+      },
+      {
+        "xtl": 162,
+        "ytl": 234,
+        "xbr": 240,
+        "ybr": 266,
+        "label": "remote",
+        "score": 0.644244
+      },
+      {
+        "xtl": 27,
+        "ytl": 104,
+        "xbr": 507,
+        "ybr": 466,
+        "label": "sofa",
+        "score": 0.843951
+      },
+      {
+        "xtl": 15,
+        "ytl": 118,
+        "xbr": 201,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.298137
+      },
+      {
+        "xtl": 4,
+        "ytl": 82,
+        "xbr": 147,
+        "ybr": 246,
+        "label": "diningtable",
+        "score": 0.340024
+      },
+      {
+        "xtl": 330,
+        "ytl": 134,
+        "xbr": 428,
+        "ybr": 269,
+        "label": "pillow",
+        "score": 0.399261
+      },
+      {
+        "xtl": 203,
+        "ytl": 189,
+        "xbr": 360,
+        "ybr": 284,
+        "label": "pillow",
+        "score": 0.469166
+      }
+    ]
+  },
+  {
+    "name": "2007_000720",
+    "boxes": [
+      {
+        "xtl": 0,
+        "ytl": 98,
+        "xbr": 220,
+        "ybr": 474,
+        "label": "refrigerator",
+        "score": 0.598137
+      },
+      {
+        "xtl": 506,
+        "ytl": 18,
+        "xbr": 624,
+        "ybr": 245,
+        "label": "chair",
+        "score": 0.288888
+      }
+    ]
+  },
+  {
+    "name": "2007_000727",
+    "boxes": [
+      {
+        "xtl": 358,
+        "ytl": 76,
+        "xbr": 378,
+        "ybr": 114,
+        "label": "bottle",
+        "score": 0.414083
+      },
+      {
+        "xtl": 4,
+        "ytl": 65,
+        "xbr": 148,
+        "ybr": 284,
+        "label": "refrigerator",
+        "score": 0.283587
+      },
+      {
+        "xtl": 285,
+        "ytl": 97,
+        "xbr": 360,
+        "ybr": 232,
+        "label": "chair",
+        "score": 0.683264
+      },
+      {
+        "xtl": 359,
+        "ytl": 100,
+        "xbr": 632,
+        "ybr": 468,
+        "label": "toilet",
+        "score": 0.616908
+      },
+      {
+        "xtl": 120,
+        "ytl": 10,
+        "xbr": 305,
+        "ybr": 181,
+        "label": "cabinetry",
+        "score": 0.308908
+      },
+      {
+        "xtl": 16,
+        "ytl": 51,
+        "xbr": 159,
+        "ybr": 297,
+        "label": "countertop",
+        "score": 0.560036
+      }
+    ]
+  },
+  {
+    "name": "2007_000733",
+    "boxes": [
+      {
+        "xtl": 542,
+        "ytl": 44,
+        "xbr": 600,
+        "ybr": 130,
+        "label": "bottle",
+        "score": 0.481664
+      },
+      {
+        "xtl": 86,
+        "ytl": 10,
+        "xbr": 547,
+        "ybr": 471,
+        "label": "refrigerator",
+        "score": 0.327573
+      },
+      {
+        "xtl": 335,
+        "ytl": 329,
+        "xbr": 475,
+        "ybr": 473,
+        "label": "wastecontainer",
+        "score": 0.290803
+      }
+    ]
+  },
+  {
+    "name": "2007_000738",
+    "boxes": [
+      {
+        "xtl": 31,
+        "ytl": 72,
+        "xbr": 114,
+        "ybr": 197,
+        "label": "chair",
+        "score": 0.697611
+      },
+      {
+        "xtl": 129,
+        "ytl": 88,
+        "xbr": 196,
+        "ybr": 164,
+        "label": "chair",
+        "score": 0.385118
+      },
+      {
+        "xtl": 170,
+        "ytl": 226,
+        "xbr": 238,
+        "ybr": 260,
+        "label": "remote",
+        "score": 0.634198
+      },
+      {
+        "xtl": 36,
+        "ytl": 103,
+        "xbr": 495,
+        "ybr": 471,
+        "label": "sofa",
+        "score": 0.839692
+      },
+      {
+        "xtl": 385,
+        "ytl": 144,
+        "xbr": 439,
+        "ybr": 206,
+        "label": "pillow",
+        "score": 0.278028
+      },
+      {
+        "xtl": 321,
+        "ytl": 140,
+        "xbr": 430,
+        "ybr": 255,
+        "label": "pillow",
+        "score": 0.317325
+      },
+      {
+        "xtl": 185,
+        "ytl": 196,
+        "xbr": 355,
+        "ybr": 272,
+        "label": "pillow",
+        "score": 0.431206
+      }
+    ]
+  },
+  {
+    "name": "2007_000762",
+    "boxes": [
+      {
+        "xtl": 422,
+        "ytl": 76,
+        "xbr": 521,
+        "ybr": 186,
+        "label": "chair",
+        "score": 0.300086
+      },
+      {
+        "xtl": 95,
+        "ytl": 106,
+        "xbr": 169,
+        "ybr": 245,
+        "label": "chair",
+        "score": 0.730814
+      },
+      {
+        "xtl": 104,
+        "ytl": 109,
+        "xbr": 253,
+        "ybr": 245,
+        "label": "diningtable",
+        "score": 0.659045
+      },
+      {
+        "xtl": 190,
+        "ytl": 107,
+        "xbr": 279,
+        "ybr": 240,
+        "label": "chair",
+        "score": 0.788522
+      },
+      {
+        "xtl": 301,
+        "ytl": 88,
+        "xbr": 616,
+        "ybr": 466,
+        "label": "chair",
+        "score": 0.253207
+      },
+      {
+        "xtl": 491,
+        "ytl": 156,
+        "xbr": 639,
+        "ybr": 383,
+        "label": "sofa",
+        "score": 0.421262
+      },
+      {
+        "xtl": 593,
+        "ytl": 169,
+        "xbr": 634,
+        "ybr": 227,
+        "label": "pillow",
+        "score": 0.270063
+      },
+      {
+        "xtl": 374,
+        "ytl": 231,
+        "xbr": 568,
+        "ybr": 466,
+        "label": "backpack",
+        "score": 0.411606
+      }
+    ]
+  },
+  {
+    "name": "2007_000768",
+    "boxes": [
+      {
+        "xtl": 283,
+        "ytl": 94,
+        "xbr": 639,
+        "ybr": 468,
+        "label": "refrigerator",
+        "score": 0.712861
+      },
+      {
+        "xtl": 102,
+        "ytl": 0,
+        "xbr": 345,
+        "ybr": 110,
+        "label": "windowblind",
+        "score": 0.319139
+      }
+    ]
+  },
+  {
+    "name": "2007_000783",
+    "boxes": [
+      {
+        "xtl": 359,
+        "ytl": 74,
+        "xbr": 405,
+        "ybr": 204,
+        "label": "toothbrush",
+        "score": 0.452562
+      },
+      {
+        "xtl": 7,
+        "ytl": 200,
+        "xbr": 126,
+        "ybr": 294,
+        "label": "chair",
+        "score": 0.665166
+      },
+      {
+        "xtl": 28,
+        "ytl": 197,
+        "xbr": 302,
+        "ybr": 298,
+        "label": "diningtable",
+        "score": 0.471159
+      },
+      {
+        "xtl": 413,
+        "ytl": 232,
+        "xbr": 486,
+        "ybr": 301,
+        "label": "cup",
+        "score": 0.312791
+      },
+      {
+        "xtl": 19,
+        "ytl": 208,
+        "xbr": 622,
+        "ybr": 479,
+        "label": "diningtable",
+        "score": 0.285083
+      },
+      {
+        "xtl": 10,
+        "ytl": 237,
+        "xbr": 120,
+        "ybr": 397,
+        "label": "chair",
+        "score": 0.26875
+      }
+    ]
+  },
+  {
+    "name": "2007_000793",
+    "boxes": [
+      {
+        "xtl": 6,
+        "ytl": 49,
+        "xbr": 163,
+        "ybr": 278,
+        "label": "refrigerator",
+        "score": 0.326107
+      },
+      {
+        "xtl": 236,
+        "ytl": 86,
+        "xbr": 411,
+        "ybr": 295,
+        "label": "refrigerator",
+        "score": 0.579474
+      },
+      {
+        "xtl": 544,
+        "ytl": 110,
+        "xbr": 624,
+        "ybr": 267,
+        "label": "chair",
+        "score": 0.517205
+      }
+    ]
+  },
+  {
+    "name": "2007_000799",
+    "boxes": [
+      {
+        "xtl": 516,
+        "ytl": 31,
+        "xbr": 587,
+        "ybr": 86,
+        "label": "person",
+        "score": 0.38306
+      },
+      {
+        "xtl": 5,
+        "ytl": 96,
+        "xbr": 478,
+        "ybr": 456,
+        "label": "bed",
+        "score": 0.848061
+      },
+      {
+        "xtl": 151,
+        "ytl": 123,
+        "xbr": 202,
+        "ybr": 150,
+        "label": "pictureframe",
+        "score": 0.253355
+      },
+      {
+        "xtl": 139,
+        "ytl": 137,
+        "xbr": 218,
+        "ybr": 178,
+        "label": "nightstand",
+        "score": 0.344821
+      },
+      {
+        "xtl": 552,
+        "ytl": 134,
+        "xbr": 596,
+        "ybr": 171,
+        "label": "pictureframe",
+        "score": 0.330341
+      },
+      {
+        "xtl": 515,
+        "ytl": 149,
+        "xbr": 630,
+        "ybr": 277,
+        "label": "nightstand",
+        "score": 0.595493
+      }
+    ]
+  },
+  {
+    "name": "2007_000804",
+    "boxes": [
+      {
+        "xtl": 528,
+        "ytl": 189,
+        "xbr": 630,
+        "ybr": 273,
+        "label": "chair",
+        "score": 0.407449
+      },
+      {
+        "xtl": 490,
+        "ytl": 212,
+        "xbr": 637,
+        "ybr": 477,
+        "label": "diningtable",
+        "score": 0.704756
+      },
+      {
+        "xtl": 152,
+        "ytl": 66,
+        "xbr": 205,
+        "ybr": 126,
+        "label": "tap",
+        "score": 0.450086
+      }
+    ]
+  },
+  {
+    "name": "2007_000807",
+    "boxes": [
+      {
+        "xtl": 229,
+        "ytl": 96,
+        "xbr": 307,
+        "ybr": 175,
+        "label": "diningtable",
+        "score": 0.31992
+      },
+      {
+        "xtl": 277,
+        "ytl": 87,
+        "xbr": 357,
+        "ybr": 182,
+        "label": "chair",
+        "score": 0.609371
+      },
+      {
+        "xtl": 329,
+        "ytl": 77,
+        "xbr": 377,
+        "ybr": 173,
+        "label": "chair",
+        "score": 0.3978
+      },
+      {
+        "xtl": 0,
+        "ytl": 88,
+        "xbr": 365,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.743866
+      },
+      {
+        "xtl": 205,
+        "ytl": 101,
+        "xbr": 627,
+        "ybr": 472,
+        "label": "sofa",
+        "score": 0.780272
+      },
+      {
+        "xtl": 202,
+        "ytl": 45,
+        "xbr": 361,
+        "ybr": 218,
+        "label": "chair",
+        "score": 0.285667
+      },
+      {
+        "xtl": 410,
+        "ytl": 202,
+        "xbr": 534,
+        "ybr": 291,
+        "label": "pillow",
+        "score": 0.338145
+      },
+      {
+        "xtl": 441,
+        "ytl": 195,
+        "xbr": 579,
+        "ybr": 336,
+        "label": "pillow",
+        "score": 0.291803
+      }
+    ]
+  },
+  {
+    "name": "2007_000822",
+    "boxes": [
+      {
+        "xtl": 7,
+        "ytl": 93,
+        "xbr": 227,
+        "ybr": 466,
+        "label": "chair",
+        "score": 0.364822
+      },
+      {
+        "xtl": 3,
+        "ytl": 218,
+        "xbr": 134,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.467128
+      },
+      {
+        "xtl": 20,
+        "ytl": 133,
+        "xbr": 121,
+        "ybr": 333,
+        "label": "backpack",
+        "score": 0.35058
+      }
+    ]
+  },
+  {
+    "name": "2007_000830",
+    "boxes": [
+      {
+        "xtl": 223,
+        "ytl": 3,
+        "xbr": 410,
+        "ybr": 209,
+        "label": "refrigerator",
+        "score": 0.455136
+      },
+      {
+        "xtl": 196,
+        "ytl": 167,
+        "xbr": 339,
+        "ybr": 199,
+        "label": "chair",
+        "score": 0.776692
+      },
+      {
+        "xtl": 413,
+        "ytl": 72,
+        "xbr": 582,
+        "ybr": 245,
+        "label": "refrigerator",
+        "score": 0.522709
+      },
+      {
+        "xtl": 25,
+        "ytl": 191,
+        "xbr": 93,
+        "ybr": 257,
+        "label": "cup",
+        "score": 0.723936
+      },
+      {
+        "xtl": 122,
+        "ytl": 215,
+        "xbr": 184,
+        "ybr": 257,
+        "label": "cup",
+        "score": 0.323463
+      },
+      {
+        "xtl": 12,
+        "ytl": 211,
+        "xbr": 511,
+        "ybr": 471,
+        "label": "diningtable",
+        "score": 0.619161
+      }
+    ]
+  },
+  {
+    "name": "2007_000836",
+    "boxes": [
+      {
+        "xtl": 103,
+        "ytl": 95,
+        "xbr": 168,
+        "ybr": 177,
+        "label": "chair",
+        "score": 0.447598
+      },
+      {
+        "xtl": 139,
+        "ytl": 93,
+        "xbr": 226,
+        "ybr": 178,
+        "label": "diningtable",
+        "score": 0.258219
+      },
+      {
+        "xtl": 183,
+        "ytl": 84,
+        "xbr": 246,
+        "ybr": 175,
+        "label": "chair",
+        "score": 0.588726
+      },
+      {
+        "xtl": 84,
+        "ytl": 111,
+        "xbr": 526,
+        "ybr": 460,
+        "label": "sofa",
+        "score": 0.888695
+      },
+      {
+        "xtl": 1,
+        "ytl": 124,
+        "xbr": 243,
+        "ybr": 476,
+        "label": "chair",
+        "score": 0.581266
+      },
+      {
+        "xtl": 146,
+        "ytl": 57,
+        "xbr": 273,
+        "ybr": 201,
+        "label": "pottedplant",
+        "score": 0.430453
+      },
+      {
+        "xtl": 231,
+        "ytl": 168,
+        "xbr": 297,
+        "ybr": 222,
+        "label": "pillow",
+        "score": 0.266013
+      },
+      {
+        "xtl": 319,
+        "ytl": 201,
+        "xbr": 421,
+        "ybr": 282,
+        "label": "pillow",
+        "score": 0.403415
+      }
+    ]
+  },
+  {
+    "name": "2007_000837",
+    "boxes": [
+      {
+        "xtl": 12,
+        "ytl": 91,
+        "xbr": 586,
+        "ybr": 467,
+        "label": "bed",
+        "score": 0.930039
+      },
+      {
+        "xtl": 151,
+        "ytl": 112,
+        "xbr": 204,
+        "ybr": 162,
+        "label": "heater",
+        "score": 0.340766
+      },
+      {
+        "xtl": 208,
+        "ytl": 123,
+        "xbr": 253,
+        "ybr": 155,
+        "label": "pictureframe",
+        "score": 0.287067
+      },
+      {
+        "xtl": 334,
+        "ytl": 118,
+        "xbr": 385,
+        "ybr": 151,
+        "label": "pictureframe",
+        "score": 0.265741
+      },
+      {
+        "xtl": 139,
+        "ytl": 136,
+        "xbr": 213,
+        "ybr": 174,
+        "label": "heater",
+        "score": 0.399949
+      },
+      {
+        "xtl": 187,
+        "ytl": 141,
+        "xbr": 268,
+        "ybr": 183,
+        "label": "nightstand",
+        "score": 0.440801
+      },
+      {
+        "xtl": 45,
+        "ytl": 216,
+        "xbr": 220,
+        "ybr": 313,
+        "label": "backpack",
+        "score": 0.552314
+      }
+    ]
+  },
+  {
+    "name": "2007_000847",
+    "boxes": [
+      {
+        "xtl": 334,
+        "ytl": 3,
+        "xbr": 432,
+        "ybr": 175,
+        "label": "pottedplant",
+        "score": 0.794246
+      },
+      {
+        "xtl": 465,
+        "ytl": 10,
+        "xbr": 639,
+        "ybr": 312,
+        "label": "tvmonitor",
+        "score": 0.739287
+      },
+      {
+        "xtl": 418,
+        "ytl": 223,
+        "xbr": 451,
+        "ybr": 258,
+        "label": "cup",
+        "score": 0.257921
+      },
+      {
+        "xtl": 412,
+        "ytl": 253,
+        "xbr": 496,
+        "ybr": 305,
+        "label": "bowl",
+        "score": 0.575326
+      },
+      {
+        "xtl": 275,
+        "ytl": 212,
+        "xbr": 627,
+        "ybr": 475,
+        "label": "diningtable",
+        "score": 0.630522
+      },
+      {
+        "xtl": 408,
+        "ytl": 132,
+        "xbr": 448,
+        "ybr": 200,
+        "label": "pictureframe",
+        "score": 0.378338
+      }
+    ]
+  },
+  {
+    "name": "2007_000862",
+    "boxes": [
+      {
+        "xtl": 362,
+        "ytl": 3,
+        "xbr": 480,
+        "ybr": 177,
+        "label": "pottedplant",
+        "score": 0.728396
+      },
+      {
+        "xtl": 478,
+        "ytl": 51,
+        "xbr": 639,
+        "ybr": 274,
+        "label": "tvmonitor",
+        "score": 0.515889
+      },
+      {
+        "xtl": 562,
+        "ytl": 203,
+        "xbr": 639,
+        "ybr": 285,
+        "label": "laptop",
+        "score": 0.369974
+      },
+      {
+        "xtl": 0,
+        "ytl": 122,
+        "xbr": 75,
+        "ybr": 444,
+        "label": "sofa",
+        "score": 0.682094
+      },
+      {
+        "xtl": 438,
+        "ytl": 250,
+        "xbr": 532,
+        "ybr": 303,
+        "label": "bowl",
+        "score": 0.392438
+      },
+      {
+        "xtl": 460,
+        "ytl": 290,
+        "xbr": 561,
+        "ybr": 329,
+        "label": "book",
+        "score": 0.464414
+      },
+      {
+        "xtl": 300,
+        "ytl": 208,
+        "xbr": 630,
+        "ybr": 478,
+        "label": "diningtable",
+        "score": 0.545966
+      },
+      {
+        "xtl": 422,
+        "ytl": 7,
+        "xbr": 491,
+        "ybr": 187,
+        "label": "lamp",
+        "score": 0.299307
+      }
+    ]
+  },
+  {
+    "name": "2007_000876",
+    "boxes": [
+      {
+        "xtl": 277,
+        "ytl": 96,
+        "xbr": 325,
+        "ybr": 253,
+        "label": "vase",
+        "score": 0.601586
+      },
+      {
+        "xtl": 0,
+        "ytl": 174,
+        "xbr": 111,
+        "ybr": 282,
+        "label": "chair",
+        "score": 0.567982
+      },
+      {
+        "xtl": 6,
+        "ytl": 191,
+        "xbr": 294,
+        "ybr": 291,
+        "label": "book",
+        "score": 0.252957
+      },
+      {
+        "xtl": 62,
+        "ytl": 205,
+        "xbr": 552,
+        "ybr": 342,
+        "label": "diningtable",
+        "score": 0.397695
+      },
+      {
+        "xtl": 498,
+        "ytl": 69,
+        "xbr": 638,
+        "ybr": 474,
+        "label": "refrigerator",
+        "score": 0.551441
+      },
+      {
+        "xtl": 0,
+        "ytl": 193,
+        "xbr": 132,
+        "ybr": 436,
+        "label": "chair",
+        "score": 0.684243
+      },
+      {
+        "xtl": 137,
+        "ytl": 328,
+        "xbr": 526,
+        "ybr": 473,
+        "label": "chair",
+        "score": 0.30283
+      }
+    ]
+  },
+  {
+    "name": "2007_000904",
+    "boxes": [
+      {
+        "xtl": 451,
+        "ytl": 68,
+        "xbr": 514,
+        "ybr": 201,
+        "label": "chair",
+        "score": 0.556269
+      },
+      {
+        "xtl": 479,
+        "ytl": 79,
+        "xbr": 543,
+        "ybr": 221,
+        "label": "chair",
+        "score": 0.256938
+      },
+      {
+        "xtl": 189,
+        "ytl": 108,
+        "xbr": 294,
+        "ybr": 281,
+        "label": "chair",
+        "score": 0.508078
+      },
+      {
+        "xtl": 235,
+        "ytl": 104,
+        "xbr": 418,
+        "ybr": 280,
+        "label": "diningtable",
+        "score": 0.651619
+      },
+      {
+        "xtl": 294,
+        "ytl": 113,
+        "xbr": 415,
+        "ybr": 275,
+        "label": "chair",
+        "score": 0.661377
+      },
+      {
+        "xtl": 414,
+        "ytl": 21,
+        "xbr": 542,
+        "ybr": 170,
+        "label": "cabinetry",
+        "score": 0.253241
+      },
+      {
+        "xtl": 307,
+        "ytl": 114,
+        "xbr": 421,
+        "ybr": 269,
+        "label": "chair",
+        "score": 0.530137
+      }
+    ]
+  },
+  {
+    "name": "2007_000999",
+    "boxes": [
+      {
+        "xtl": 272,
+        "ytl": 97,
+        "xbr": 332,
+        "ybr": 149,
+        "label": "bowl",
+        "score": 0.273927
+      },
+      {
+        "xtl": 330,
+        "ytl": 95,
+        "xbr": 385,
+        "ybr": 139,
+        "label": "cup",
+        "score": 0.383205
+      },
+      {
+        "xtl": 0,
+        "ytl": 124,
+        "xbr": 279,
+        "ybr": 191,
+        "label": "sink",
+        "score": 0.60043
+      },
+      {
+        "xtl": 157,
+        "ytl": 33,
+        "xbr": 274,
+        "ybr": 155,
+        "label": "tap",
+        "score": 0.385225
+      }
+    ]
+  },
+  {
+    "name": "2007_001073",
+    "boxes": [
+      {
+        "xtl": 234,
+        "ytl": 110,
+        "xbr": 388,
+        "ybr": 164,
+        "label": "diningtable",
+        "score": 0.427094
+      },
+      {
+        "xtl": 476,
+        "ytl": 95,
+        "xbr": 569,
+        "ybr": 238,
+        "label": "chair",
+        "score": 0.752864
+      },
+      {
+        "xtl": 492,
+        "ytl": 86,
+        "xbr": 624,
+        "ybr": 228,
+        "label": "diningtable",
+        "score": 0.340147
+      },
+      {
+        "xtl": 180,
+        "ytl": 124,
+        "xbr": 304,
+        "ybr": 338,
+        "label": "chair",
+        "score": 0.706263
+      },
+      {
+        "xtl": 187,
+        "ytl": 116,
+        "xbr": 444,
+        "ybr": 339,
+        "label": "diningtable",
+        "score": 0.737078
+      },
+      {
+        "xtl": 315,
+        "ytl": 125,
+        "xbr": 441,
+        "ybr": 337,
+        "label": "chair",
+        "score": 0.811449
+      },
+      {
+        "xtl": 255,
+        "ytl": 12,
+        "xbr": 360,
+        "ybr": 116,
+        "label": "door",
+        "score": 0.265961
+      },
+      {
+        "xtl": 455,
+        "ytl": 55,
+        "xbr": 580,
+        "ybr": 199,
+        "label": "cabinetry",
+        "score": 0.632075
+      },
+      {
+        "xtl": 161,
+        "ytl": 130,
+        "xbr": 288,
+        "ybr": 352,
+        "label": "chair",
+        "score": 0.851917
+      }
+    ]
+  },
+  {
+    "name": "2007_001154",
+    "boxes": [
+      {
+        "xtl": 572,
+        "ytl": 41,
+        "xbr": 616,
+        "ybr": 136,
+        "label": "refrigerator",
+        "score": 0.258286
+      },
+      {
+        "xtl": 373,
+        "ytl": 142,
+        "xbr": 496,
+        "ybr": 343,
+        "label": "chair",
+        "score": 0.702139
+      },
+      {
+        "xtl": 399,
+        "ytl": 123,
+        "xbr": 625,
+        "ybr": 359,
+        "label": "diningtable",
+        "score": 0.65577
+      },
+      {
+        "xtl": 0,
+        "ytl": 82,
+        "xbr": 147,
+        "ybr": 479,
+        "label": "oven",
+        "score": 0.332659
+      },
+      {
+        "xtl": 515,
+        "ytl": 171,
+        "xbr": 638,
+        "ybr": 371,
+        "label": "chair",
+        "score": 0.625771
+      },
+      {
+        "xtl": 2,
+        "ytl": 140,
+        "xbr": 145,
+        "ybr": 469,
+        "label": "refrigerator",
+        "score": 0.463671
+      },
+      {
+        "xtl": 446,
+        "ytl": 14,
+        "xbr": 575,
+        "ybr": 119,
+        "label": "door",
+        "score": 0.299166
+      },
+      {
+        "xtl": 163,
+        "ytl": 16,
+        "xbr": 382,
+        "ybr": 229,
+        "label": "cabinetry",
+        "score": 0.283256
+      },
+      {
+        "xtl": 362,
+        "ytl": 126,
+        "xbr": 486,
+        "ybr": 378,
+        "label": "chair",
+        "score": 0.741752
+      },
+      {
+        "xtl": 567,
+        "ytl": 157,
+        "xbr": 634,
+        "ybr": 397,
+        "label": "chair",
+        "score": 0.297665
+      }
+    ]
+  },
+  {
+    "name": "2007_001175",
+    "boxes": [
+      {
+        "xtl": 0,
+        "ytl": 97,
+        "xbr": 272,
+        "ybr": 231,
+        "label": "chair",
+        "score": 0.333591
+      },
+      {
+        "xtl": 385,
+        "ytl": 62,
+        "xbr": 553,
+        "ybr": 286,
+        "label": "refrigerator",
+        "score": 0.27444
+      },
+      {
+        "xtl": 1,
+        "ytl": 70,
+        "xbr": 278,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.695876
+      },
+      {
+        "xtl": 223,
+        "ytl": 12,
+        "xbr": 319,
+        "ybr": 232,
+        "label": "chair",
+        "score": 0.251675
+      }
+    ]
+  },
+  {
+    "name": "2007_001185",
+    "boxes": [
+      {
+        "xtl": 11,
+        "ytl": 29,
+        "xbr": 214,
+        "ybr": 215,
+        "label": "chair",
+        "score": 0.263912
+      },
+      {
+        "xtl": 140,
+        "ytl": 106,
+        "xbr": 432,
+        "ybr": 216,
+        "label": "laptop",
+        "score": 0.572785
+      },
+      {
+        "xtl": 138,
+        "ytl": 76,
+        "xbr": 423,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.268733
+      },
+      {
+        "xtl": 0,
+        "ytl": 165,
+        "xbr": 210,
+        "ybr": 469,
+        "label": "sofa",
+        "score": 0.436822
+      },
+      {
+        "xtl": 36,
+        "ytl": 26,
+        "xbr": 184,
+        "ybr": 174,
+        "label": "tvmonitor",
+        "score": 0.708856
+      }
+    ]
+  },
+  {
+    "name": "2007_001225",
+    "boxes": [
+      {
+        "xtl": 187,
+        "ytl": 182,
+        "xbr": 325,
+        "ybr": 279,
+        "label": "oven",
+        "score": 0.461092
+      },
+      {
+        "xtl": 456,
+        "ytl": 238,
+        "xbr": 515,
+        "ybr": 314,
+        "label": "pottedplant",
+        "score": 0.483013
+      },
+      {
+        "xtl": 463,
+        "ytl": 289,
+        "xbr": 492,
+        "ybr": 334,
+        "label": "vase",
+        "score": 0.380704
+      },
+      {
+        "xtl": 304,
+        "ytl": 290,
+        "xbr": 639,
+        "ybr": 479,
+        "label": "diningtable",
+        "score": 0.39247
+      },
+      {
+        "xtl": 328,
+        "ytl": 247,
+        "xbr": 411,
+        "ybr": 335,
+        "label": "pictureframe",
+        "score": 0.415511
+      },
+      {
+        "xtl": 45,
+        "ytl": 257,
+        "xbr": 210,
+        "ybr": 445,
+        "label": "coffeetable",
+        "score": 0.423677
+      }
+    ]
+  },
+  {
+    "name": "2007_001239",
+    "boxes": [
+      {
+        "xtl": 120,
+        "ytl": 59,
+        "xbr": 221,
+        "ybr": 145,
+        "label": "pottedplant",
+        "score": 0.431331
+      },
+      {
+        "xtl": 434,
+        "ytl": 112,
+        "xbr": 638,
+        "ybr": 443,
+        "label": "chair",
+        "score": 0.279715
+      },
+      {
+        "xtl": 16,
+        "ytl": 140,
+        "xbr": 456,
+        "ybr": 460,
+        "label": "sofa",
+        "score": 0.809609
+      },
+      {
+        "xtl": 320,
+        "ytl": 25,
+        "xbr": 449,
+        "ybr": 171,
+        "label": "tvmonitor",
+        "score": 0.842078
+      }
+    ]
+  },
+  {
+    "name": "2007_001284",
+    "boxes": [
+      {
+        "xtl": 452,
+        "ytl": 90,
+        "xbr": 565,
+        "ybr": 250,
+        "label": "chair",
+        "score": 0.50829
+      },
+      {
+        "xtl": 525,
+        "ytl": 105,
+        "xbr": 613,
+        "ybr": 234,
+        "label": "chair",
+        "score": 0.272149
+      },
+      {
+        "xtl": 131,
+        "ytl": 140,
+        "xbr": 301,
+        "ybr": 354,
+        "label": "chair",
+        "score": 0.672911
+      },
+      {
+        "xtl": 137,
+        "ytl": 123,
+        "xbr": 399,
+        "ybr": 360,
+        "label": "diningtable",
+        "score": 0.75857
+      },
+      {
+        "xtl": 294,
+        "ytl": 134,
+        "xbr": 407,
+        "ybr": 356,
+        "label": "chair",
+        "score": 0.752356
+      },
+      {
+        "xtl": 212,
+        "ytl": 8,
+        "xbr": 316,
+        "ybr": 122,
+        "label": "door",
+        "score": 0.370938
+      },
+      {
+        "xtl": 425,
+        "ytl": 57,
+        "xbr": 545,
+        "ybr": 198,
+        "label": "cabinetry",
+        "score": 0.553859
+      },
+      {
+        "xtl": 456,
+        "ytl": 87,
+        "xbr": 558,
+        "ybr": 232,
+        "label": "diningtable",
+        "score": 0.503265
+      },
+      {
+        "xtl": 114,
+        "ytl": 132,
+        "xbr": 244,
+        "ybr": 373,
+        "label": "chair",
+        "score": 0.734819
+      }
+    ]
+  },
+  {
+    "name": "2007_001288",
+    "boxes": [
+      {
+        "xtl": 218,
+        "ytl": 55,
+        "xbr": 237,
+        "ybr": 121,
+        "label": "bottle",
+        "score": 0.345662
+      },
+      {
+        "xtl": 478,
+        "ytl": 109,
+        "xbr": 494,
+        "ybr": 142,
+        "label": "bottle",
+        "score": 0.408759
+      },
+      {
+        "xtl": 354,
+        "ytl": 81,
+        "xbr": 468,
+        "ybr": 267,
+        "label": "chair",
+        "score": 0.550121
+      },
+      {
+        "xtl": 395,
+        "ytl": 86,
+        "xbr": 546,
+        "ybr": 260,
+        "label": "chair",
+        "score": 0.252585
+      },
+      {
+        "xtl": 0,
+        "ytl": 138,
+        "xbr": 322,
+        "ybr": 260,
+        "label": "diningtable",
+        "score": 0.558273
+      },
+      {
+        "xtl": 0,
+        "ytl": 193,
+        "xbr": 141,
+        "ybr": 439,
+        "label": "chair",
+        "score": 0.353948
+      },
+      {
+        "xtl": 12,
+        "ytl": 133,
+        "xbr": 338,
+        "ybr": 479,
+        "label": "diningtable",
+        "score": 0.635992
+      },
+      {
+        "xtl": 184,
+        "ytl": 177,
+        "xbr": 329,
+        "ybr": 455,
+        "label": "chair",
+        "score": 0.733928
+      },
+      {
+        "xtl": 56,
+        "ytl": 34,
+        "xbr": 196,
+        "ybr": 142,
+        "label": "door",
+        "score": 0.778941
+      }
+    ]
+  },
+  {
+    "name": "2007_001289",
+    "boxes": [
+      {
+        "xtl": 190,
+        "ytl": 52,
+        "xbr": 226,
+        "ybr": 132,
+        "label": "bottle",
+        "score": 0.324319
+      },
+      {
+        "xtl": 238,
+        "ytl": 29,
+        "xbr": 270,
+        "ybr": 130,
+        "label": "bottle",
+        "score": 0.6986
+      },
+      {
+        "xtl": 105,
+        "ytl": 95,
+        "xbr": 153,
+        "ybr": 143,
+        "label": "cup",
+        "score": 0.406768
+      },
+      {
+        "xtl": 0,
+        "ytl": 135,
+        "xbr": 93,
+        "ybr": 172,
+        "label": "sink",
+        "score": 0.591608
+      },
+      {
+        "xtl": 152,
+        "ytl": 44,
+        "xbr": 203,
+        "ybr": 135,
+        "label": "cup",
+        "score": 0.378816
+      },
+      {
+        "xtl": 193,
+        "ytl": 52,
+        "xbr": 233,
+        "ybr": 126,
+        "label": "cup",
+        "score": 0.452174
+      }
+    ]
+  },
+  {
+    "name": "2007_001299",
+    "boxes": [
+      {
+        "xtl": 310,
+        "ytl": 42,
+        "xbr": 336,
+        "ybr": 86,
+        "label": "bottle",
+        "score": 0.452056
+      },
+      {
+        "xtl": 218,
+        "ytl": 64,
+        "xbr": 256,
+        "ybr": 136,
+        "label": "bottle",
+        "score": 0.302484
+      },
+      {
+        "xtl": 268,
+        "ytl": 55,
+        "xbr": 300,
+        "ybr": 133,
+        "label": "bottle",
+        "score": 0.533752
+      },
+      {
+        "xtl": 299,
+        "ytl": 36,
+        "xbr": 333,
+        "ybr": 129,
+        "label": "bottle",
+        "score": 0.587681
+      },
+      {
+        "xtl": 173,
+        "ytl": 100,
+        "xbr": 214,
+        "ybr": 147,
+        "label": "cup",
+        "score": 0.552031
+      },
+      {
+        "xtl": 1,
+        "ytl": 130,
+        "xbr": 161,
+        "ybr": 180,
+        "label": "sink",
+        "score": 0.679296
+      },
+      {
+        "xtl": 207,
+        "ytl": 49,
+        "xbr": 254,
+        "ybr": 133,
+        "label": "cup",
+        "score": 0.35345
+      },
+      {
+        "xtl": 245,
+        "ytl": 51,
+        "xbr": 288,
+        "ybr": 133,
+        "label": "cup",
+        "score": 0.534974
+      },
+      {
+        "xtl": 458,
+        "ytl": 59,
+        "xbr": 603,
+        "ybr": 325,
+        "label": "cabinetry",
+        "score": 0.329424
+      }
+    ]
+  },
+  {
+    "name": "2007_001311",
+    "boxes": [
+      {
+        "xtl": 142,
+        "ytl": 61,
+        "xbr": 180,
+        "ybr": 128,
+        "label": "cup",
+        "score": 0.290321
+      },
+      {
+        "xtl": 21,
+        "ytl": 124,
+        "xbr": 227,
+        "ybr": 165,
+        "label": "sink",
+        "score": 0.523856
+      },
+      {
+        "xtl": 147,
+        "ytl": 53,
+        "xbr": 183,
+        "ybr": 129,
+        "label": "cup",
+        "score": 0.427046
+      },
+      {
+        "xtl": 344,
+        "ytl": 19,
+        "xbr": 518,
+        "ybr": 245,
+        "label": "cabinetry",
+        "score": 0.290274
+      }
+    ]
+  },
+  {
+    "name": "2007_001321",
+    "boxes": [
+      {
+        "xtl": 183,
+        "ytl": 61,
+        "xbr": 220,
+        "ybr": 124,
+        "label": "cup",
+        "score": 0.375738
+      },
+      {
+        "xtl": 12,
+        "ytl": 88,
+        "xbr": 80,
+        "ybr": 159,
+        "label": "cup",
+        "score": 0.400132
+      },
+      {
+        "xtl": 60,
+        "ytl": 123,
+        "xbr": 269,
+        "ybr": 159,
+        "label": "sink",
+        "score": 0.340414
+      },
+      {
+        "xtl": 196,
+        "ytl": 52,
+        "xbr": 231,
+        "ybr": 125,
+        "label": "cup",
+        "score": 0.350947
+      },
+      {
+        "xtl": 387,
+        "ytl": 12,
+        "xbr": 572,
+        "ybr": 259,
+        "label": "cabinetry",
+        "score": 0.334059
+      }
+    ]
+  },
+  {
+    "name": "2007_001340",
+    "boxes": [
+      {
+        "xtl": 3,
+        "ytl": 111,
+        "xbr": 126,
+        "ybr": 448,
+        "label": "refrigerator",
+        "score": 0.46459
+      },
+      {
+        "xtl": 421,
+        "ytl": 159,
+        "xbr": 630,
+        "ybr": 475,
+        "label": "chair",
+        "score": 0.700177
+      },
+      {
+        "xtl": 100,
+        "ytl": 44,
+        "xbr": 268,
+        "ybr": 279,
+        "label": "cabinetry",
+        "score": 0.28221
+      },
+      {
+        "xtl": 432,
+        "ytl": 193,
+        "xbr": 596,
+        "ybr": 438,
+        "label": "chair",
+        "score": 0.553875
+      }
+    ]
+  },
+  {
+    "name": "2007_001377",
+    "boxes": [
+      {
+        "xtl": 540,
+        "ytl": 159,
+        "xbr": 581,
+        "ybr": 196,
+        "label": "cup",
+        "score": 0.40653
+      },
+      {
+        "xtl": 543,
+        "ytl": 164,
+        "xbr": 607,
+        "ybr": 223,
+        "label": "cup",
+        "score": 0.301408
+      },
+      {
+        "xtl": 364,
+        "ytl": 189,
+        "xbr": 561,
+        "ybr": 451,
+        "label": "chair",
+        "score": 0.407069
+      },
+      {
+        "xtl": 358,
+        "ytl": 172,
+        "xbr": 639,
+        "ybr": 467,
+        "label": "diningtable",
+        "score": 0.588653
+      },
+      {
+        "xtl": 502,
+        "ytl": 286,
+        "xbr": 639,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.615548
+      },
+      {
+        "xtl": 358,
+        "ytl": 204,
+        "xbr": 483,
+        "ybr": 429,
+        "label": "chair",
+        "score": 0.343976
+      }
+    ]
+  },
+  {
+    "name": "2007_001397",
+    "boxes": [
+      {
+        "xtl": 344,
+        "ytl": 2,
+        "xbr": 511,
+        "ybr": 196,
+        "label": "refrigerator",
+        "score": 0.317886
+      },
+      {
+        "xtl": 421,
+        "ytl": 179,
+        "xbr": 450,
+        "ybr": 225,
+        "label": "knife",
+        "score": 0.289666
+      },
+      {
+        "xtl": 434,
+        "ytl": 164,
+        "xbr": 490,
+        "ybr": 230,
+        "label": "cup",
+        "score": 0.328248
+      },
+      {
+        "xtl": 547,
+        "ytl": 174,
+        "xbr": 612,
+        "ybr": 203,
+        "label": "bowl",
+        "score": 0.400904
+      },
+      {
+        "xtl": 267,
+        "ytl": 182,
+        "xbr": 316,
+        "ybr": 297,
+        "label": "chair",
+        "score": 0.463983
+      },
+      {
+        "xtl": 297,
+        "ytl": 167,
+        "xbr": 639,
+        "ybr": 299,
+        "label": "diningtable",
+        "score": 0.703826
+      },
+      {
+        "xtl": 288,
+        "ytl": 188,
+        "xbr": 639,
+        "ybr": 454,
+        "label": "diningtable",
+        "score": 0.737026
+      },
+      {
+        "xtl": 257,
+        "ytl": 199,
+        "xbr": 460,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.815706
+      },
+      {
+        "xtl": 477,
+        "ytl": 302,
+        "xbr": 639,
+        "ybr": 478,
+        "label": "chair",
+        "score": 0.38025
+      },
+      {
+        "xtl": 518,
+        "ytl": 50,
+        "xbr": 639,
+        "ybr": 206,
+        "label": "door",
+        "score": 0.380337
+      }
+    ]
+  },
+  {
+    "name": "2007_001408",
+    "boxes": [
+      {
+        "xtl": 382,
+        "ytl": 5,
+        "xbr": 539,
+        "ybr": 189,
+        "label": "refrigerator",
+        "score": 0.354066
+      },
+      {
+        "xtl": 532,
+        "ytl": 170,
+        "xbr": 614,
+        "ybr": 207,
+        "label": "bowl",
+        "score": 0.686128
+      },
+      {
+        "xtl": 234,
+        "ytl": 185,
+        "xbr": 287,
+        "ybr": 300,
+        "label": "chair",
+        "score": 0.272917
+      },
+      {
+        "xtl": 283,
+        "ytl": 178,
+        "xbr": 639,
+        "ybr": 301,
+        "label": "diningtable",
+        "score": 0.686113
+      },
+      {
+        "xtl": 230,
+        "ytl": 188,
+        "xbr": 427,
+        "ybr": 479,
+        "label": "chair",
+        "score": 0.871721
+      },
+      {
+        "xtl": 249,
+        "ytl": 192,
+        "xbr": 639,
+        "ybr": 479,
+        "label": "diningtable",
+        "score": 0.762118
+      },
+      {
+        "xtl": 420,
+        "ytl": 312,
+        "xbr": 637,
+        "ybr": 476,
+        "label": "chair",
+        "score": 0.380538
+      },
+      {
+        "xtl": 408,
+        "ytl": 171,
+        "xbr": 456,
+        "ybr": 226,
+        "label": "tincan",
+        "score": 0.276966
+      },
+      {
+        "xtl": 481,
+        "ytl": 177,
+        "xbr": 549,
+        "ybr": 226,
+        "label": "bowl",
+        "score": 0.47587
+      }
+    ]
+  },
+  {
+    "name": "2007_001416",
+    "boxes": [
+      {
+        "xtl": 503,
+        "ytl": 91,
+        "xbr": 626,
+        "ybr": 249,
+        "label": "diningtable",
+        "score": 0.287053
+      },
+      {
+        "xtl": 588,
+        "ytl": 97,
+        "xbr": 638,
+        "ybr": 244,
+        "label": "chair",
+        "score": 0.604232
+      },
+      {
+        "xtl": 174,
+        "ytl": 134,
+        "xbr": 286,
+        "ybr": 333,
+        "label": "chair",
+        "score": 0.760756
+      },
+      {
+        "xtl": 241,
+        "ytl": 128,
+        "xbr": 399,
+        "ybr": 336,
+        "label": "diningtable",
+        "score": 0.444395
+      },
+      {
+        "xtl": 348,
+        "ytl": 137,
+        "xbr": 456,
+        "ybr": 353,
+        "label": "chair",
+        "score": 0.766452
+      },
+      {
+        "xtl": 168,
+        "ytl": 111,
+        "xbr": 294,
+        "ybr": 364,
+        "label": "chair",
+        "score": 0.77386
+      },
+      {
+        "xtl": 281,
+        "ytl": 115,
+        "xbr": 470,
+        "ybr": 368,
+        "label": "chair",
+        "score": 0.644847
+      }
+    ]
+  }
+]

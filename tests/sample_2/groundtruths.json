@@ -1,0 +1,5229 @@
+[
+  {
+    "name": "2007_000027",
+    "boxes": [
+      {
+        "xtl": 176,
+        "ytl": 206,
+        "xbr": 225,
+        "ybr": 266,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 170,
+        "ytl": 156,
+        "xbr": 350,
+        "ybr": 240,
+        "label": "heater"
+      },
+      {
+        "xtl": 272,
+        "ytl": 190,
+        "xbr": 316,
+        "ybr": 259,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 439,
+        "ytl": 157,
+        "xbr": 556,
+        "ybr": 241,
+        "label": "book"
+      },
+      {
+        "xtl": 437,
+        "ytl": 246,
+        "xbr": 518,
+        "ybr": 351,
+        "label": "book"
+      },
+      {
+        "xtl": 515,
+        "ytl": 306,
+        "xbr": 595,
+        "ybr": 375,
+        "label": "book"
+      },
+      {
+        "xtl": 407,
+        "ytl": 386,
+        "xbr": 531,
+        "ybr": 476,
+        "label": "book"
+      },
+      {
+        "xtl": 544,
+        "ytl": 419,
+        "xbr": 621,
+        "ybr": 476,
+        "label": "book"
+      },
+      {
+        "xtl": 609,
+        "ytl": 297,
+        "xbr": 636,
+        "ybr": 392,
+        "label": "book"
+      },
+      {
+        "xtl": 172,
+        "ytl": 251,
+        "xbr": 406,
+        "ybr": 476,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 2,
+        "ytl": 236,
+        "xbr": 102,
+        "ybr": 395,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 2,
+        "ytl": 10,
+        "xbr": 173,
+        "ybr": 238,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 395,
+        "ytl": 2,
+        "xbr": 639,
+        "ybr": 470,
+        "label": "bookcase"
+      },
+      {
+        "xtl": 482,
+        "ytl": 83,
+        "xbr": 515,
+        "ybr": 107,
+        "label": "doll"
+      },
+      {
+        "xtl": 276,
+        "ytl": 233,
+        "xbr": 304,
+        "ybr": 259,
+        "label": "vase"
+      }
+    ]
+  },
+  {
+    "name": "2007_000032",
+    "boxes": [
+      {
+        "xtl": 247,
+        "ytl": 205,
+        "xbr": 292,
+        "ybr": 265,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 241,
+        "ytl": 157,
+        "xbr": 418,
+        "ybr": 245,
+        "label": "heater"
+      },
+      {
+        "xtl": 339,
+        "ytl": 192,
+        "xbr": 385,
+        "ybr": 264,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 33,
+        "ytl": 18,
+        "xbr": 242,
+        "ybr": 231,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 506,
+        "ytl": 254,
+        "xbr": 599,
+        "ybr": 361,
+        "label": "book"
+      },
+      {
+        "xtl": 514,
+        "ytl": 159,
+        "xbr": 639,
+        "ybr": 251,
+        "label": "book"
+      },
+      {
+        "xtl": 477,
+        "ytl": 401,
+        "xbr": 592,
+        "ybr": 476,
+        "label": "book"
+      },
+      {
+        "xtl": 593,
+        "ytl": 330,
+        "xbr": 637,
+        "ybr": 387,
+        "label": "book"
+      },
+      {
+        "xtl": 464,
+        "ytl": 2,
+        "xbr": 637,
+        "ybr": 473,
+        "label": "bookcase"
+      },
+      {
+        "xtl": 343,
+        "ytl": 235,
+        "xbr": 368,
+        "ybr": 259,
+        "label": "vase"
+      },
+      {
+        "xtl": 245,
+        "ytl": 249,
+        "xbr": 483,
+        "ybr": 476,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 1,
+        "ytl": 215,
+        "xbr": 172,
+        "ybr": 455,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 563,
+        "ytl": 87,
+        "xbr": 597,
+        "ybr": 113,
+        "label": "doll"
+      }
+    ]
+  },
+  {
+    "name": "2007_000033",
+    "boxes": [
+      {
+        "xtl": 4,
+        "ytl": 13,
+        "xbr": 79,
+        "ybr": 154,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 93,
+        "ytl": 37,
+        "xbr": 194,
+        "ybr": 121,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 277,
+        "ytl": 2,
+        "xbr": 444,
+        "ybr": 101,
+        "label": "shelf"
+      },
+      {
+        "xtl": 469,
+        "ytl": 4,
+        "xbr": 552,
+        "ybr": 91,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 11,
+        "ytl": 152,
+        "xbr": 84,
+        "ybr": 250,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 516,
+        "ytl": 5,
+        "xbr": 638,
+        "ybr": 410,
+        "label": "door"
+      }
+    ]
+  },
+  {
+    "name": "2007_000039",
+    "boxes": [
+      {
+        "xtl": 528,
+        "ytl": 213,
+        "xbr": 602,
+        "ybr": 300,
+        "label": "wastecontainer"
+      },
+      {
+        "xtl": 47,
+        "ytl": 115,
+        "xbr": 84,
+        "ybr": 199,
+        "label": "nightstand"
+      }
+    ]
+  },
+  {
+    "name": "2007_000042",
+    "boxes": [
+      {
+        "xtl": 510,
+        "ytl": 2,
+        "xbr": 633,
+        "ybr": 179,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 556,
+        "ytl": 145,
+        "xbr": 636,
+        "ybr": 205,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 11,
+        "ytl": 151,
+        "xbr": 210,
+        "ybr": 476,
+        "label": "sofa"
+      },
+      {
+        "xtl": 495,
+        "ytl": 283,
+        "xbr": 639,
+        "ybr": 475,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 3,
+        "ytl": 145,
+        "xbr": 90,
+        "ybr": 301,
+        "label": "pillow"
+      },
+      {
+        "xtl": 518,
+        "ytl": 177,
+        "xbr": 636,
+        "ybr": 271,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 3,
+        "ytl": 79,
+        "xbr": 90,
+        "ybr": 183,
+        "label": "chair"
+      }
+    ]
+  },
+  {
+    "name": "2007_000061",
+    "boxes": [
+      {
+        "xtl": 494,
+        "ytl": 111,
+        "xbr": 562,
+        "ybr": 239,
+        "label": "chair"
+      },
+      {
+        "xtl": 505,
+        "ytl": 103,
+        "xbr": 635,
+        "ybr": 244,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 565,
+        "ytl": 142,
+        "xbr": 640,
+        "ybr": 265,
+        "label": "chair"
+      },
+      {
+        "xtl": 195,
+        "ytl": 313,
+        "xbr": 313,
+        "ybr": 433,
+        "label": "remote"
+      },
+      {
+        "xtl": 30,
+        "ytl": 97,
+        "xbr": 415,
+        "ybr": 481,
+        "label": "chair"
+      },
+      {
+        "xtl": 117,
+        "ytl": 226,
+        "xbr": 338,
+        "ybr": 406,
+        "label": "pillow"
+      },
+      {
+        "xtl": 311,
+        "ytl": 62,
+        "xbr": 330,
+        "ybr": 97,
+        "label": "cup"
+      },
+      {
+        "xtl": 353,
+        "ytl": 2,
+        "xbr": 629,
+        "ybr": 200,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 146,
+        "ytl": 229,
+        "xbr": 636,
+        "ybr": 481,
+        "label": "sofa"
+      },
+      {
+        "xtl": 328,
+        "ytl": 67,
+        "xbr": 343,
+        "ybr": 90,
+        "label": "cup"
+      },
+      {
+        "xtl": 291,
+        "ytl": 65,
+        "xbr": 302,
+        "ybr": 88,
+        "label": "tap"
+      },
+      {
+        "xtl": 603,
+        "ytl": 112,
+        "xbr": 628,
+        "ybr": 130,
+        "label": "cup"
+      },
+      {
+        "xtl": 233,
+        "ytl": 1,
+        "xbr": 353,
+        "ybr": 49,
+        "label": "shelf"
+      }
+    ]
+  },
+  {
+    "name": "2007_000063",
+    "boxes": [
+      {
+        "xtl": 4,
+        "ytl": 12,
+        "xbr": 297,
+        "ybr": 382,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 439,
+        "ytl": 210,
+        "xbr": 540,
+        "ybr": 282,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 215,
+        "ytl": 257,
+        "xbr": 252,
+        "ybr": 296,
+        "label": "vase"
+      },
+      {
+        "xtl": 266,
+        "ytl": 207,
+        "xbr": 397,
+        "ybr": 303,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 185,
+        "ytl": 256,
+        "xbr": 530,
+        "ybr": 447,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 165,
+        "ytl": 4,
+        "xbr": 483,
+        "ybr": 91,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 474,
+        "ytl": 260,
+        "xbr": 504,
+        "ybr": 299,
+        "label": "vase"
+      },
+      {
+        "xtl": 110,
+        "ytl": 341,
+        "xbr": 189,
+        "ybr": 440,
+        "label": "vase"
+      }
+    ]
+  },
+  {
+    "name": "2007_000068",
+    "boxes": [
+      {
+        "xtl": 1,
+        "ytl": 14,
+        "xbr": 126,
+        "ybr": 147,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 476,
+        "ytl": 1,
+        "xbr": 634,
+        "ybr": 448,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 360,
+        "ytl": 31,
+        "xbr": 437,
+        "ybr": 115,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 527,
+        "ytl": 356,
+        "xbr": 603,
+        "ybr": 446,
+        "label": "vase"
+      }
+    ]
+  },
+  {
+    "name": "2007_000121",
+    "boxes": [
+      {
+        "xtl": 158,
+        "ytl": 155,
+        "xbr": 291,
+        "ybr": 479,
+        "label": "chair"
+      },
+      {
+        "xtl": 159,
+        "ytl": 155,
+        "xbr": 503,
+        "ybr": 479,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 313,
+        "ytl": 133,
+        "xbr": 352,
+        "ybr": 209,
+        "label": "tincan"
+      },
+      {
+        "xtl": 3,
+        "ytl": 87,
+        "xbr": 190,
+        "ybr": 263,
+        "label": "countertop"
+      },
+      {
+        "xtl": 91,
+        "ytl": 70,
+        "xbr": 119,
+        "ybr": 98,
+        "label": "cup"
+      },
+      {
+        "xtl": 3,
+        "ytl": 59,
+        "xbr": 101,
+        "ybr": 102,
+        "label": "sink"
+      },
+      {
+        "xtl": 181,
+        "ytl": 1,
+        "xbr": 635,
+        "ybr": 272,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 258,
+        "ytl": 154,
+        "xbr": 292,
+        "ybr": 190,
+        "label": "cup"
+      },
+      {
+        "xtl": 288,
+        "ytl": 144,
+        "xbr": 316,
+        "ybr": 177,
+        "label": "cup"
+      },
+      {
+        "xtl": 3,
+        "ytl": 67,
+        "xbr": 27,
+        "ybr": 94,
+        "label": "tap"
+      },
+      {
+        "xtl": 163,
+        "ytl": 180,
+        "xbr": 334,
+        "ybr": 468,
+        "label": "chair"
+      },
+      {
+        "xtl": 359,
+        "ytl": 145,
+        "xbr": 505,
+        "ybr": 407,
+        "label": "chair"
+      },
+      {
+        "xtl": 192,
+        "ytl": 140,
+        "xbr": 305,
+        "ybr": 388,
+        "label": "chair"
+      }
+    ]
+  },
+  {
+    "name": "2007_000123",
+    "boxes": [
+      {
+        "xtl": 158,
+        "ytl": 42,
+        "xbr": 194,
+        "ybr": 65,
+        "label": "person"
+      },
+      {
+        "xtl": 2,
+        "ytl": 63,
+        "xbr": 134,
+        "ybr": 215,
+        "label": "bed"
+      },
+      {
+        "xtl": 390,
+        "ytl": 228,
+        "xbr": 480,
+        "ybr": 329,
+        "label": "wastecontainer"
+      },
+      {
+        "xtl": 494,
+        "ytl": 68,
+        "xbr": 538,
+        "ybr": 113,
+        "label": "tincan"
+      },
+      {
+        "xtl": 461,
+        "ytl": 104,
+        "xbr": 638,
+        "ybr": 350,
+        "label": "countertop"
+      },
+      {
+        "xtl": 571,
+        "ytl": 74,
+        "xbr": 605,
+        "ybr": 110,
+        "label": "tap"
+      },
+      {
+        "xtl": 324,
+        "ytl": 47,
+        "xbr": 352,
+        "ybr": 71,
+        "label": "person"
+      },
+      {
+        "xtl": 2,
+        "ytl": 96,
+        "xbr": 36,
+        "ybr": 114,
+        "label": "pillow"
+      },
+      {
+        "xtl": 42,
+        "ytl": 94,
+        "xbr": 103,
+        "ybr": 116,
+        "label": "pillow"
+      },
+      {
+        "xtl": 622,
+        "ytl": 73,
+        "xbr": 640,
+        "ybr": 116,
+        "label": "cup"
+      },
+      {
+        "xtl": 510,
+        "ytl": 102,
+        "xbr": 622,
+        "ybr": 120,
+        "label": "sink"
+      }
+    ]
+  },
+  {
+    "name": "2007_000129",
+    "boxes": [
+      {
+        "xtl": 1,
+        "ytl": 13,
+        "xbr": 156,
+        "ybr": 247,
+        "label": "door"
+      },
+      {
+        "xtl": 253,
+        "ytl": 79,
+        "xbr": 402,
+        "ybr": 333,
+        "label": "chair"
+      },
+      {
+        "xtl": 261,
+        "ytl": 112,
+        "xbr": 491,
+        "ybr": 370,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 209,
+        "ytl": 4,
+        "xbr": 504,
+        "ybr": 228,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 393,
+        "ytl": 82,
+        "xbr": 442,
+        "ybr": 154,
+        "label": "bottle"
+      },
+      {
+        "xtl": 316,
+        "ytl": 114,
+        "xbr": 366,
+        "ybr": 149,
+        "label": "cup"
+      },
+      {
+        "xtl": 433,
+        "ytl": 131,
+        "xbr": 448,
+        "ybr": 164,
+        "label": "doll"
+      }
+    ]
+  },
+  {
+    "name": "2007_000170",
+    "boxes": [
+      {
+        "xtl": 13,
+        "ytl": 161,
+        "xbr": 106,
+        "ybr": 198,
+        "label": "bowl"
+      },
+      {
+        "xtl": 314,
+        "ytl": 61,
+        "xbr": 410,
+        "ybr": 286,
+        "label": "chair"
+      },
+      {
+        "xtl": 1,
+        "ytl": 125,
+        "xbr": 190,
+        "ybr": 294,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 301,
+        "ytl": 90,
+        "xbr": 510,
+        "ybr": 302,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 1,
+        "ytl": 155,
+        "xbr": 189,
+        "ybr": 479,
+        "label": "chair"
+      },
+      {
+        "xtl": 20,
+        "ytl": 1,
+        "xbr": 189,
+        "ybr": 196,
+        "label": "door"
+      },
+      {
+        "xtl": 89,
+        "ytl": 147,
+        "xbr": 112,
+        "ybr": 176,
+        "label": "doll"
+      },
+      {
+        "xtl": 237,
+        "ytl": 4,
+        "xbr": 471,
+        "ybr": 188,
+        "label": "cabinetry"
+      }
+    ]
+  },
+  {
+    "name": "2007_000175",
+    "boxes": [
+      {
+        "xtl": 346,
+        "ytl": 172,
+        "xbr": 625,
+        "ybr": 479,
+        "label": "sofa"
+      },
+      {
+        "xtl": 291,
+        "ytl": 87,
+        "xbr": 421,
+        "ybr": 196,
+        "label": "chair"
+      },
+      {
+        "xtl": 468,
+        "ytl": 211,
+        "xbr": 635,
+        "ybr": 316,
+        "label": "backpack"
+      },
+      {
+        "xtl": 356,
+        "ytl": 129,
+        "xbr": 409,
+        "ybr": 182,
+        "label": "backpack"
+      },
+      {
+        "xtl": 625,
+        "ytl": 92,
+        "xbr": 639,
+        "ybr": 150,
+        "label": "pottedplant"
+      }
+    ]
+  },
+  {
+    "name": "2007_000187",
+    "boxes": [
+      {
+        "xtl": 223,
+        "ytl": 4,
+        "xbr": 326,
+        "ybr": 178,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 345,
+        "ytl": 130,
+        "xbr": 370,
+        "ybr": 160,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 429,
+        "ytl": 43,
+        "xbr": 640,
+        "ybr": 211,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 4,
+        "ytl": 184,
+        "xbr": 637,
+        "ybr": 461,
+        "label": "sofa"
+      },
+      {
+        "xtl": 351,
+        "ytl": 299,
+        "xbr": 424,
+        "ybr": 341,
+        "label": "remote"
+      },
+      {
+        "xtl": 279,
+        "ytl": 114,
+        "xbr": 339,
+        "ybr": 161,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 66,
+        "ytl": 209,
+        "xbr": 281,
+        "ybr": 322,
+        "label": "backpack"
+      },
+      {
+        "xtl": 21,
+        "ytl": 56,
+        "xbr": 107,
+        "ybr": 74,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 250,
+        "ytl": 170,
+        "xbr": 278,
+        "ybr": 198,
+        "label": "vase"
+      },
+      {
+        "xtl": 304,
+        "ytl": 7,
+        "xbr": 432,
+        "ybr": 73,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 282,
+        "ytl": 147,
+        "xbr": 376,
+        "ybr": 213,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 386,
+        "ytl": 175,
+        "xbr": 611,
+        "ybr": 304,
+        "label": "coffeetable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000241",
+    "boxes": [
+      {
+        "xtl": 451,
+        "ytl": 8,
+        "xbr": 639,
+        "ybr": 317,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 320,
+        "ytl": 93,
+        "xbr": 390,
+        "ybr": 152,
+        "label": "cup"
+      },
+      {
+        "xtl": 1,
+        "ytl": 116,
+        "xbr": 498,
+        "ybr": 479,
+        "label": "countertop"
+      },
+      {
+        "xtl": 222,
+        "ytl": 113,
+        "xbr": 316,
+        "ybr": 155,
+        "label": "bowl"
+      },
+      {
+        "xtl": 193,
+        "ytl": 95,
+        "xbr": 268,
+        "ybr": 138,
+        "label": "bowl"
+      },
+      {
+        "xtl": 103,
+        "ytl": 64,
+        "xbr": 174,
+        "ybr": 134,
+        "label": "tap"
+      },
+      {
+        "xtl": 7,
+        "ytl": 125,
+        "xbr": 379,
+        "ybr": 194,
+        "label": "sink"
+      }
+    ]
+  },
+  {
+    "name": "2007_000243",
+    "boxes": [
+      {
+        "xtl": 76,
+        "ytl": 1,
+        "xbr": 230,
+        "ybr": 254,
+        "label": "shelf"
+      },
+      {
+        "xtl": 6,
+        "ytl": 156,
+        "xbr": 88,
+        "ybr": 260,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 99,
+        "ytl": 197,
+        "xbr": 164,
+        "ybr": 234,
+        "label": "book"
+      },
+      {
+        "xtl": 204,
+        "ytl": 1,
+        "xbr": 364,
+        "ybr": 82,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 508,
+        "ytl": 2,
+        "xbr": 578,
+        "ybr": 199,
+        "label": "door"
+      },
+      {
+        "xtl": 373,
+        "ytl": 2,
+        "xbr": 455,
+        "ybr": 218,
+        "label": "door"
+      },
+      {
+        "xtl": 600,
+        "ytl": 3,
+        "xbr": 637,
+        "ybr": 84,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 91,
+        "ytl": 95,
+        "xbr": 144,
+        "ybr": 126,
+        "label": "book"
+      },
+      {
+        "xtl": 167,
+        "ytl": 107,
+        "xbr": 215,
+        "ybr": 125,
+        "label": "book"
+      },
+      {
+        "xtl": 169,
+        "ytl": 145,
+        "xbr": 223,
+        "ybr": 175,
+        "label": "book"
+      },
+      {
+        "xtl": 100,
+        "ytl": 134,
+        "xbr": 136,
+        "ybr": 175,
+        "label": "book"
+      },
+      {
+        "xtl": 141,
+        "ytl": 157,
+        "xbr": 167,
+        "ybr": 175,
+        "label": "book"
+      },
+      {
+        "xtl": 168,
+        "ytl": 205,
+        "xbr": 209,
+        "ybr": 229,
+        "label": "book"
+      },
+      {
+        "xtl": 3,
+        "ytl": 125,
+        "xbr": 24,
+        "ybr": 167,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 80,
+        "ytl": 3,
+        "xbr": 225,
+        "ybr": 237,
+        "label": "bookcase"
+      }
+    ]
+  },
+  {
+    "name": "2007_000250",
+    "boxes": [
+      {
+        "xtl": 248,
+        "ytl": 131,
+        "xbr": 292,
+        "ybr": 173,
+        "label": "cup"
+      },
+      {
+        "xtl": 462,
+        "ytl": 76,
+        "xbr": 557,
+        "ybr": 229,
+        "label": "chair"
+      },
+      {
+        "xtl": 169,
+        "ytl": 154,
+        "xbr": 358,
+        "ybr": 421,
+        "label": "chair"
+      },
+      {
+        "xtl": 156,
+        "ytl": 139,
+        "xbr": 500,
+        "ybr": 421,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 395,
+        "ytl": 153,
+        "xbr": 504,
+        "ybr": 402,
+        "label": "chair"
+      },
+      {
+        "xtl": 381,
+        "ytl": 116,
+        "xbr": 412,
+        "ybr": 170,
+        "label": "tincan"
+      },
+      {
+        "xtl": 354,
+        "ytl": 115,
+        "xbr": 376,
+        "ybr": 177,
+        "label": "tincan"
+      },
+      {
+        "xtl": 458,
+        "ytl": 104,
+        "xbr": 635,
+        "ybr": 264,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 290,
+        "ytl": 134,
+        "xbr": 335,
+        "ybr": 152,
+        "label": "bowl"
+      },
+      {
+        "xtl": 206,
+        "ytl": 4,
+        "xbr": 290,
+        "ybr": 130,
+        "label": "door"
+      },
+      {
+        "xtl": 5,
+        "ytl": 8,
+        "xbr": 175,
+        "ybr": 226,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 577,
+        "ytl": 112,
+        "xbr": 599,
+        "ybr": 133,
+        "label": "doll"
+      }
+    ]
+  },
+  {
+    "name": "2007_000256",
+    "boxes": [
+      {
+        "xtl": 398,
+        "ytl": 139,
+        "xbr": 640,
+        "ybr": 223,
+        "label": "sink"
+      },
+      {
+        "xtl": 182,
+        "ytl": 390,
+        "xbr": 335,
+        "ybr": 481,
+        "label": "wastecontainer"
+      },
+      {
+        "xtl": 569,
+        "ytl": 51,
+        "xbr": 634,
+        "ybr": 179,
+        "label": "tap"
+      },
+      {
+        "xtl": 319,
+        "ytl": 97,
+        "xbr": 635,
+        "ybr": 481,
+        "label": "countertop"
+      },
+      {
+        "xtl": 108,
+        "ytl": 34,
+        "xbr": 144,
+        "ybr": 65,
+        "label": "person"
+      }
+    ]
+  },
+  {
+    "name": "2007_000272",
+    "boxes": [
+      {
+        "xtl": 5,
+        "ytl": 1,
+        "xbr": 635,
+        "ybr": 324,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 457,
+        "ytl": 225,
+        "xbr": 635,
+        "ybr": 481,
+        "label": "chair"
+      },
+      {
+        "xtl": 494,
+        "ytl": 208,
+        "xbr": 635,
+        "ybr": 338,
+        "label": "diningtable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000323",
+    "boxes": [
+      {
+        "xtl": 3,
+        "ytl": 1,
+        "xbr": 386,
+        "ybr": 421,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 376,
+        "ytl": 1,
+        "xbr": 445,
+        "ybr": 259,
+        "label": "door"
+      },
+      {
+        "xtl": 480,
+        "ytl": 2,
+        "xbr": 637,
+        "ybr": 228,
+        "label": "cabinetry"
+      }
+    ]
+  },
+  {
+    "name": "2007_000332",
+    "boxes": [
+      {
+        "xtl": 5,
+        "ytl": 2,
+        "xbr": 637,
+        "ybr": 476,
+        "label": "cabinetry"
+      }
+    ]
+  },
+  {
+    "name": "2007_000333",
+    "boxes": [
+      {
+        "xtl": 512,
+        "ytl": 17,
+        "xbr": 609,
+        "ybr": 108,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 477,
+        "ytl": 75,
+        "xbr": 586,
+        "ybr": 227,
+        "label": "chair"
+      },
+      {
+        "xtl": 565,
+        "ytl": 121,
+        "xbr": 640,
+        "ybr": 281,
+        "label": "sofa"
+      },
+      {
+        "xtl": 4,
+        "ytl": 95,
+        "xbr": 341,
+        "ybr": 455,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 16,
+        "ytl": 149,
+        "xbr": 206,
+        "ybr": 471,
+        "label": "chair"
+      },
+      {
+        "xtl": 338,
+        "ytl": 92,
+        "xbr": 358,
+        "ybr": 171,
+        "label": "chair"
+      },
+      {
+        "xtl": 576,
+        "ytl": 107,
+        "xbr": 603,
+        "ybr": 134,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 561,
+        "ytl": 4,
+        "xbr": 633,
+        "ybr": 70,
+        "label": "windowblind"
+      }
+    ]
+  },
+  {
+    "name": "2007_000346",
+    "boxes": [
+      {
+        "xtl": 3,
+        "ytl": 1,
+        "xbr": 299,
+        "ybr": 475,
+        "label": "door"
+      }
+    ]
+  },
+  {
+    "name": "2007_000363",
+    "boxes": [
+      {
+        "xtl": 4,
+        "ytl": 17,
+        "xbr": 57,
+        "ybr": 92,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 51,
+        "ytl": 115,
+        "xbr": 468,
+        "ybr": 301,
+        "label": "sofa"
+      },
+      {
+        "xtl": 455,
+        "ytl": 89,
+        "xbr": 600,
+        "ybr": 284,
+        "label": "chair"
+      },
+      {
+        "xtl": 3,
+        "ytl": 67,
+        "xbr": 113,
+        "ybr": 319,
+        "label": "chair"
+      },
+      {
+        "xtl": 168,
+        "ytl": 43,
+        "xbr": 320,
+        "ybr": 147,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 130,
+        "ytl": 105,
+        "xbr": 228,
+        "ybr": 164,
+        "label": "pillow"
+      },
+      {
+        "xtl": 228,
+        "ytl": 115,
+        "xbr": 329,
+        "ybr": 159,
+        "label": "pillow"
+      },
+      {
+        "xtl": 330,
+        "ytl": 125,
+        "xbr": 416,
+        "ybr": 155,
+        "label": "pillow"
+      },
+      {
+        "xtl": 391,
+        "ytl": 1,
+        "xbr": 499,
+        "ybr": 151,
+        "label": "shelf"
+      },
+      {
+        "xtl": 485,
+        "ytl": 1,
+        "xbr": 558,
+        "ybr": 85,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 89,
+        "ytl": 107,
+        "xbr": 121,
+        "ybr": 144,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 450,
+        "ytl": 98,
+        "xbr": 479,
+        "ybr": 105,
+        "label": "book"
+      },
+      {
+        "xtl": 411,
+        "ytl": 91,
+        "xbr": 432,
+        "ybr": 110,
+        "label": "book"
+      },
+      {
+        "xtl": 441,
+        "ytl": 118,
+        "xbr": 478,
+        "ybr": 139,
+        "label": "book"
+      },
+      {
+        "xtl": 8,
+        "ytl": 1,
+        "xbr": 131,
+        "ybr": 70,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 319,
+        "ytl": 115,
+        "xbr": 338,
+        "ybr": 139,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 47,
+        "ytl": 107,
+        "xbr": 72,
+        "ybr": 137,
+        "label": "pictureframe"
+      }
+    ]
+  },
+  {
+    "name": "2007_000364",
+    "boxes": [
+      {
+        "xtl": 520,
+        "ytl": 9,
+        "xbr": 623,
+        "ybr": 89,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 501,
+        "ytl": 88,
+        "xbr": 636,
+        "ybr": 308,
+        "label": "chair"
+      },
+      {
+        "xtl": 1,
+        "ytl": 227,
+        "xbr": 263,
+        "ybr": 479,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 312,
+        "ytl": 87,
+        "xbr": 356,
+        "ybr": 196,
+        "label": "chair"
+      },
+      {
+        "xtl": 425,
+        "ytl": 58,
+        "xbr": 468,
+        "ybr": 79,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 483,
+        "ytl": 51,
+        "xbr": 511,
+        "ybr": 74,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 576,
+        "ytl": 3,
+        "xbr": 638,
+        "ybr": 84,
+        "label": "windowblind"
+      }
+    ]
+  },
+  {
+    "name": "2007_000392",
+    "boxes": [
+      {
+        "xtl": 452,
+        "ytl": 18,
+        "xbr": 633,
+        "ybr": 327,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 261,
+        "ytl": 60,
+        "xbr": 302,
+        "ybr": 156,
+        "label": "cup"
+      },
+      {
+        "xtl": 300,
+        "ytl": 48,
+        "xbr": 345,
+        "ybr": 147,
+        "label": "cup"
+      },
+      {
+        "xtl": 8,
+        "ytl": 115,
+        "xbr": 490,
+        "ybr": 476,
+        "label": "countertop"
+      },
+      {
+        "xtl": 116,
+        "ytl": 69,
+        "xbr": 186,
+        "ybr": 138,
+        "label": "tap"
+      },
+      {
+        "xtl": 228,
+        "ytl": 62,
+        "xbr": 270,
+        "ybr": 148,
+        "label": "tincan"
+      },
+      {
+        "xtl": 2,
+        "ytl": 28,
+        "xbr": 27,
+        "ybr": 169,
+        "label": "bottle"
+      },
+      {
+        "xtl": 14,
+        "ytl": 115,
+        "xbr": 365,
+        "ybr": 179,
+        "label": "sink"
+      }
+    ]
+  },
+  {
+    "name": "2007_000423",
+    "boxes": [
+      {
+        "xtl": 391,
+        "ytl": 6,
+        "xbr": 638,
+        "ybr": 225,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 92,
+        "ytl": 1,
+        "xbr": 279,
+        "ybr": 245,
+        "label": "door"
+      },
+      {
+        "xtl": 70,
+        "ytl": 209,
+        "xbr": 639,
+        "ybr": 461,
+        "label": "diningtable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000452",
+    "boxes": [
+      {
+        "xtl": 3,
+        "ytl": 91,
+        "xbr": 603,
+        "ybr": 479,
+        "label": "bed"
+      },
+      {
+        "xtl": 249,
+        "ytl": 126,
+        "xbr": 286,
+        "ybr": 153,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 200,
+        "ytl": 141,
+        "xbr": 302,
+        "ybr": 185,
+        "label": "nightstand"
+      },
+      {
+        "xtl": 147,
+        "ytl": 130,
+        "xbr": 237,
+        "ybr": 179,
+        "label": "heater"
+      },
+      {
+        "xtl": 5,
+        "ytl": 2,
+        "xbr": 152,
+        "ybr": 77,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 312,
+        "ytl": 86,
+        "xbr": 420,
+        "ybr": 170,
+        "label": "pillow"
+      },
+      {
+        "xtl": 433,
+        "ytl": 112,
+        "xbr": 589,
+        "ybr": 202,
+        "label": "pillow"
+      }
+    ]
+  },
+  {
+    "name": "2007_000464",
+    "boxes": [
+      {
+        "xtl": 161,
+        "ytl": 170,
+        "xbr": 331,
+        "ybr": 261,
+        "label": "pillow"
+      },
+      {
+        "xtl": 278,
+        "ytl": 134,
+        "xbr": 364,
+        "ybr": 259,
+        "label": "pillow"
+      },
+      {
+        "xtl": 349,
+        "ytl": 110,
+        "xbr": 426,
+        "ybr": 236,
+        "label": "pillow"
+      },
+      {
+        "xtl": 43,
+        "ytl": 11,
+        "xbr": 228,
+        "ybr": 152,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 2,
+        "ytl": 105,
+        "xbr": 257,
+        "ybr": 480,
+        "label": "chair"
+      },
+      {
+        "xtl": 364,
+        "ytl": 77,
+        "xbr": 438,
+        "ybr": 152,
+        "label": "chair"
+      },
+      {
+        "xtl": 50,
+        "ytl": 67,
+        "xbr": 153,
+        "ybr": 193,
+        "label": "chair"
+      },
+      {
+        "xtl": 86,
+        "ytl": 99,
+        "xbr": 204,
+        "ybr": 191,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 59,
+        "ytl": 141,
+        "xbr": 522,
+        "ybr": 471,
+        "label": "sofa"
+      },
+      {
+        "xtl": 153,
+        "ytl": 214,
+        "xbr": 230,
+        "ybr": 259,
+        "label": "remote"
+      }
+    ]
+  },
+  {
+    "name": "2007_000480",
+    "boxes": [
+      {
+        "xtl": 8,
+        "ytl": 8,
+        "xbr": 284,
+        "ybr": 271,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 3,
+        "ytl": 186,
+        "xbr": 233,
+        "ybr": 468,
+        "label": "diningtable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000491",
+    "boxes": [
+      {
+        "xtl": 144,
+        "ytl": 5,
+        "xbr": 636,
+        "ybr": 245,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 457,
+        "ytl": 187,
+        "xbr": 638,
+        "ybr": 475,
+        "label": "chair"
+      },
+      {
+        "xtl": 61,
+        "ytl": 72,
+        "xbr": 123,
+        "ybr": 120,
+        "label": "cup"
+      },
+      {
+        "xtl": 2,
+        "ytl": 103,
+        "xbr": 214,
+        "ybr": 475,
+        "label": "countertop"
+      },
+      {
+        "xtl": 4,
+        "ytl": 91,
+        "xbr": 58,
+        "ybr": 134,
+        "label": "bowl"
+      }
+    ]
+  },
+  {
+    "name": "2007_000504",
+    "boxes": [
+      {
+        "xtl": 206,
+        "ytl": 248,
+        "xbr": 278,
+        "ybr": 335,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 205,
+        "ytl": 173,
+        "xbr": 424,
+        "ybr": 296,
+        "label": "heater"
+      },
+      {
+        "xtl": 330,
+        "ytl": 231,
+        "xbr": 396,
+        "ybr": 330,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 2,
+        "ytl": 10,
+        "xbr": 205,
+        "ybr": 293,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 335,
+        "ytl": 281,
+        "xbr": 376,
+        "ybr": 329,
+        "label": "vase"
+      },
+      {
+        "xtl": 205,
+        "ytl": 305,
+        "xbr": 563,
+        "ybr": 476,
+        "label": "coffeetable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000515",
+    "boxes": [
+      {
+        "xtl": 2,
+        "ytl": 94,
+        "xbr": 441,
+        "ybr": 457,
+        "label": "bed"
+      },
+      {
+        "xtl": 471,
+        "ytl": 46,
+        "xbr": 525,
+        "ybr": 88,
+        "label": "person"
+      },
+      {
+        "xtl": 489,
+        "ytl": 140,
+        "xbr": 529,
+        "ybr": 167,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 159,
+        "ytl": 125,
+        "xbr": 186,
+        "ybr": 146,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 469,
+        "ytl": 157,
+        "xbr": 565,
+        "ybr": 284,
+        "label": "nightstand"
+      },
+      {
+        "xtl": 116,
+        "ytl": 138,
+        "xbr": 205,
+        "ybr": 179,
+        "label": "nightstand"
+      },
+      {
+        "xtl": 58,
+        "ytl": 125,
+        "xbr": 153,
+        "ybr": 164,
+        "label": "heater"
+      },
+      {
+        "xtl": 2,
+        "ytl": 1,
+        "xbr": 60,
+        "ybr": 82,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 213,
+        "ytl": 90,
+        "xbr": 299,
+        "ybr": 157,
+        "label": "pillow"
+      },
+      {
+        "xtl": 316,
+        "ytl": 111,
+        "xbr": 426,
+        "ybr": 173,
+        "label": "pillow"
+      }
+    ]
+  },
+  {
+    "name": "2007_000528",
+    "boxes": [
+      {
+        "xtl": 3,
+        "ytl": 198,
+        "xbr": 196,
+        "ybr": 299,
+        "label": "heater"
+      },
+      {
+        "xtl": 82,
+        "ytl": 246,
+        "xbr": 160,
+        "ybr": 345,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 329,
+        "ytl": 191,
+        "xbr": 506,
+        "ybr": 302,
+        "label": "book"
+      },
+      {
+        "xtl": 344,
+        "ytl": 318,
+        "xbr": 441,
+        "ybr": 432,
+        "label": "book"
+      },
+      {
+        "xtl": 450,
+        "ytl": 363,
+        "xbr": 543,
+        "ybr": 453,
+        "label": "book"
+      },
+      {
+        "xtl": 568,
+        "ytl": 236,
+        "xbr": 630,
+        "ybr": 316,
+        "label": "book"
+      },
+      {
+        "xtl": 557,
+        "ytl": 348,
+        "xbr": 631,
+        "ybr": 462,
+        "label": "book"
+      },
+      {
+        "xtl": 318,
+        "ytl": 3,
+        "xbr": 635,
+        "ybr": 471,
+        "label": "bookcase"
+      },
+      {
+        "xtl": 95,
+        "ytl": 292,
+        "xbr": 142,
+        "ybr": 346,
+        "label": "vase"
+      },
+      {
+        "xtl": 18,
+        "ytl": 324,
+        "xbr": 314,
+        "ybr": 477,
+        "label": "coffeetable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000529",
+    "boxes": [
+      {
+        "xtl": 425,
+        "ytl": 125,
+        "xbr": 473,
+        "ybr": 160,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 454,
+        "ytl": 111,
+        "xbr": 498,
+        "ybr": 159,
+        "label": "heater"
+      },
+      {
+        "xtl": 5,
+        "ytl": 151,
+        "xbr": 75,
+        "ybr": 223,
+        "label": "pillow"
+      },
+      {
+        "xtl": 391,
+        "ytl": 5,
+        "xbr": 492,
+        "ybr": 146,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 506,
+        "ytl": 20,
+        "xbr": 639,
+        "ybr": 242,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 3,
+        "ytl": 143,
+        "xbr": 154,
+        "ybr": 476,
+        "label": "sofa"
+      },
+      {
+        "xtl": 363,
+        "ytl": 209,
+        "xbr": 611,
+        "ybr": 414,
+        "label": "coffeetable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000549",
+    "boxes": [
+      {
+        "xtl": 346,
+        "ytl": 11,
+        "xbr": 546,
+        "ybr": 167,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 183,
+        "ytl": 14,
+        "xbr": 284,
+        "ybr": 129,
+        "label": "door"
+      },
+      {
+        "xtl": 54,
+        "ytl": 151,
+        "xbr": 209,
+        "ybr": 337,
+        "label": "chair"
+      },
+      {
+        "xtl": 150,
+        "ytl": 119,
+        "xbr": 272,
+        "ybr": 276,
+        "label": "chair"
+      },
+      {
+        "xtl": 240,
+        "ytl": 154,
+        "xbr": 380,
+        "ybr": 364,
+        "label": "chair"
+      },
+      {
+        "xtl": 512,
+        "ytl": 73,
+        "xbr": 595,
+        "ybr": 235,
+        "label": "chair"
+      },
+      {
+        "xtl": 104,
+        "ytl": 134,
+        "xbr": 352,
+        "ybr": 328,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 397,
+        "ytl": 108,
+        "xbr": 566,
+        "ybr": 252,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 152,
+        "ytl": 119,
+        "xbr": 185,
+        "ybr": 156,
+        "label": "cup"
+      }
+    ]
+  },
+  {
+    "name": "2007_000559",
+    "boxes": [
+      {
+        "xtl": 576,
+        "ytl": 93,
+        "xbr": 635,
+        "ybr": 419,
+        "label": "chair"
+      },
+      {
+        "xtl": 2,
+        "ytl": 141,
+        "xbr": 82,
+        "ybr": 317,
+        "label": "diningtable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000572",
+    "boxes": [
+      {
+        "xtl": 41,
+        "ytl": 144,
+        "xbr": 172,
+        "ybr": 240,
+        "label": "pillow"
+      },
+      {
+        "xtl": 128,
+        "ytl": 132,
+        "xbr": 226,
+        "ybr": 237,
+        "label": "pillow"
+      },
+      {
+        "xtl": 191,
+        "ytl": 140,
+        "xbr": 277,
+        "ybr": 219,
+        "label": "pillow"
+      },
+      {
+        "xtl": 596,
+        "ytl": 1,
+        "xbr": 636,
+        "ybr": 217,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 175,
+        "ytl": 76,
+        "xbr": 253,
+        "ybr": 136,
+        "label": "chair"
+      },
+      {
+        "xtl": 14,
+        "ytl": 318,
+        "xbr": 193,
+        "ybr": 477,
+        "label": "chair"
+      },
+      {
+        "xtl": 14,
+        "ytl": 137,
+        "xbr": 339,
+        "ybr": 474,
+        "label": "sofa"
+      },
+      {
+        "xtl": 543,
+        "ytl": 224,
+        "xbr": 635,
+        "ybr": 446,
+        "label": "coffeetable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000584",
+    "boxes": [
+      {
+        "xtl": 5,
+        "ytl": 210,
+        "xbr": 164,
+        "ybr": 308,
+        "label": "heater"
+      },
+      {
+        "xtl": 33,
+        "ytl": 250,
+        "xbr": 122,
+        "ybr": 353,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 293,
+        "ytl": 185,
+        "xbr": 453,
+        "ybr": 317,
+        "label": "book"
+      },
+      {
+        "xtl": 318,
+        "ytl": 325,
+        "xbr": 413,
+        "ybr": 436,
+        "label": "book"
+      },
+      {
+        "xtl": 427,
+        "ytl": 370,
+        "xbr": 524,
+        "ybr": 449,
+        "label": "book"
+      },
+      {
+        "xtl": 521,
+        "ytl": 204,
+        "xbr": 639,
+        "ybr": 312,
+        "label": "book"
+      },
+      {
+        "xtl": 509,
+        "ytl": 333,
+        "xbr": 638,
+        "ybr": 465,
+        "label": "book"
+      },
+      {
+        "xtl": 280,
+        "ytl": 4,
+        "xbr": 635,
+        "ybr": 472,
+        "label": "bookcase"
+      },
+      {
+        "xtl": 54,
+        "ytl": 306,
+        "xbr": 107,
+        "ybr": 360,
+        "label": "vase"
+      },
+      {
+        "xtl": 19,
+        "ytl": 332,
+        "xbr": 283,
+        "ybr": 477,
+        "label": "coffeetable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000629",
+    "boxes": [
+      {
+        "xtl": 448,
+        "ytl": 211,
+        "xbr": 634,
+        "ybr": 475,
+        "label": "chair"
+      },
+      {
+        "xtl": 542,
+        "ytl": 130,
+        "xbr": 633,
+        "ybr": 448,
+        "label": "chair"
+      },
+      {
+        "xtl": 519,
+        "ytl": 173,
+        "xbr": 638,
+        "ybr": 443,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 393,
+        "ytl": 59,
+        "xbr": 409,
+        "ybr": 98,
+        "label": "cup"
+      },
+      {
+        "xtl": 407,
+        "ytl": 53,
+        "xbr": 429,
+        "ybr": 101,
+        "label": "cup"
+      },
+      {
+        "xtl": 259,
+        "ytl": 83,
+        "xbr": 504,
+        "ybr": 288,
+        "label": "countertop"
+      },
+      {
+        "xtl": 330,
+        "ytl": 63,
+        "xbr": 365,
+        "ybr": 96,
+        "label": "tap"
+      },
+      {
+        "xtl": 203,
+        "ytl": 188,
+        "xbr": 262,
+        "ybr": 258,
+        "label": "wastecontainer"
+      },
+      {
+        "xtl": 372,
+        "ytl": 61,
+        "xbr": 385,
+        "ybr": 97,
+        "label": "tincan"
+      },
+      {
+        "xtl": 429,
+        "ytl": 46,
+        "xbr": 457,
+        "ybr": 92,
+        "label": "bottle"
+      }
+    ]
+  },
+  {
+    "name": "2007_000636",
+    "boxes": [
+      {
+        "xtl": 1,
+        "ytl": 73,
+        "xbr": 98,
+        "ybr": 196,
+        "label": "bed"
+      },
+      {
+        "xtl": 149,
+        "ytl": 44,
+        "xbr": 189,
+        "ybr": 67,
+        "label": "person"
+      },
+      {
+        "xtl": 372,
+        "ytl": 3,
+        "xbr": 549,
+        "ybr": 54,
+        "label": "shelf"
+      },
+      {
+        "xtl": 515,
+        "ytl": 65,
+        "xbr": 533,
+        "ybr": 107,
+        "label": "cup"
+      },
+      {
+        "xtl": 534,
+        "ytl": 59,
+        "xbr": 559,
+        "ybr": 114,
+        "label": "cup"
+      },
+      {
+        "xtl": 362,
+        "ytl": 96,
+        "xbr": 631,
+        "ybr": 290,
+        "label": "countertop"
+      },
+      {
+        "xtl": 451,
+        "ytl": 70,
+        "xbr": 489,
+        "ybr": 104,
+        "label": "tap"
+      },
+      {
+        "xtl": 307,
+        "ytl": 207,
+        "xbr": 369,
+        "ybr": 273,
+        "label": "wastecontainer"
+      },
+      {
+        "xtl": 493,
+        "ytl": 67,
+        "xbr": 513,
+        "ybr": 106,
+        "label": "tincan"
+      },
+      {
+        "xtl": 562,
+        "ytl": 52,
+        "xbr": 594,
+        "ybr": 106,
+        "label": "bottle"
+      },
+      {
+        "xtl": 401,
+        "ytl": 47,
+        "xbr": 422,
+        "ybr": 107,
+        "label": "bottle"
+      }
+    ]
+  },
+  {
+    "name": "2007_000645",
+    "boxes": [
+      {
+        "xtl": 2,
+        "ytl": 73,
+        "xbr": 99,
+        "ybr": 199,
+        "label": "bed"
+      },
+      {
+        "xtl": 200,
+        "ytl": 43,
+        "xbr": 237,
+        "ybr": 70,
+        "label": "person"
+      },
+      {
+        "xtl": 7,
+        "ytl": 85,
+        "xbr": 28,
+        "ybr": 103,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 39,
+        "ytl": 67,
+        "xbr": 101,
+        "ybr": 106,
+        "label": "pillow"
+      },
+      {
+        "xtl": 531,
+        "ytl": 87,
+        "xbr": 580,
+        "ybr": 122,
+        "label": "cup"
+      },
+      {
+        "xtl": 390,
+        "ytl": 98,
+        "xbr": 629,
+        "ybr": 335,
+        "label": "countertop"
+      },
+      {
+        "xtl": 475,
+        "ytl": 69,
+        "xbr": 525,
+        "ybr": 110,
+        "label": "tap"
+      },
+      {
+        "xtl": 307,
+        "ytl": 218,
+        "xbr": 376,
+        "ybr": 296,
+        "label": "wastecontainer"
+      },
+      {
+        "xtl": 425,
+        "ytl": 85,
+        "xbr": 607,
+        "ybr": 131,
+        "label": "sink"
+      }
+    ]
+  },
+  {
+    "name": "2007_000648",
+    "boxes": [
+      {
+        "xtl": 347,
+        "ytl": 144,
+        "xbr": 453,
+        "ybr": 239,
+        "label": "pillow"
+      },
+      {
+        "xtl": 423,
+        "ytl": 138,
+        "xbr": 509,
+        "ybr": 243,
+        "label": "pillow"
+      },
+      {
+        "xtl": 486,
+        "ytl": 143,
+        "xbr": 566,
+        "ybr": 232,
+        "label": "pillow"
+      },
+      {
+        "xtl": 109,
+        "ytl": 4,
+        "xbr": 297,
+        "ybr": 119,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 2,
+        "ytl": 8,
+        "xbr": 69,
+        "ybr": 102,
+        "label": "door"
+      },
+      {
+        "xtl": 1,
+        "ytl": 95,
+        "xbr": 454,
+        "ybr": 476,
+        "label": "chair"
+      },
+      {
+        "xtl": 470,
+        "ytl": 82,
+        "xbr": 532,
+        "ybr": 148,
+        "label": "chair"
+      },
+      {
+        "xtl": 158,
+        "ytl": 64,
+        "xbr": 205,
+        "ybr": 106,
+        "label": "chair"
+      },
+      {
+        "xtl": 228,
+        "ytl": 94,
+        "xbr": 284,
+        "ybr": 194,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 199,
+        "ytl": 206,
+        "xbr": 347,
+        "ybr": 413,
+        "label": "backpack"
+      },
+      {
+        "xtl": 68,
+        "ytl": 250,
+        "xbr": 264,
+        "ybr": 476,
+        "label": "backpack"
+      },
+      {
+        "xtl": 235,
+        "ytl": 143,
+        "xbr": 633,
+        "ybr": 476,
+        "label": "sofa"
+      }
+    ]
+  },
+  {
+    "name": "2007_000661",
+    "boxes": [
+      {
+        "xtl": 469,
+        "ytl": 151,
+        "xbr": 594,
+        "ybr": 251,
+        "label": "pillow"
+      },
+      {
+        "xtl": 548,
+        "ytl": 148,
+        "xbr": 638,
+        "ybr": 262,
+        "label": "pillow"
+      },
+      {
+        "xtl": 1,
+        "ytl": 5,
+        "xbr": 109,
+        "ybr": 155,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 244,
+        "ytl": 5,
+        "xbr": 416,
+        "ybr": 122,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 115,
+        "ytl": 8,
+        "xbr": 194,
+        "ybr": 98,
+        "label": "door"
+      },
+      {
+        "xtl": 152,
+        "ytl": 100,
+        "xbr": 577,
+        "ybr": 476,
+        "label": "chair"
+      },
+      {
+        "xtl": 10,
+        "ytl": 106,
+        "xbr": 99,
+        "ybr": 241,
+        "label": "chair"
+      },
+      {
+        "xtl": 105,
+        "ytl": 113,
+        "xbr": 157,
+        "ybr": 248,
+        "label": "chair"
+      },
+      {
+        "xtl": 288,
+        "ytl": 59,
+        "xbr": 331,
+        "ybr": 98,
+        "label": "chair"
+      },
+      {
+        "xtl": 22,
+        "ytl": 101,
+        "xbr": 149,
+        "ybr": 247,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 354,
+        "ytl": 96,
+        "xbr": 402,
+        "ybr": 197,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 203,
+        "ytl": 239,
+        "xbr": 376,
+        "ybr": 468,
+        "label": "backpack"
+      },
+      {
+        "xtl": 324,
+        "ytl": 206,
+        "xbr": 463,
+        "ybr": 419,
+        "label": "backpack"
+      },
+      {
+        "xtl": 81,
+        "ytl": 87,
+        "xbr": 103,
+        "ybr": 122,
+        "label": "tincan"
+      },
+      {
+        "xtl": 107,
+        "ytl": 88,
+        "xbr": 125,
+        "ybr": 124,
+        "label": "tincan"
+      },
+      {
+        "xtl": 388,
+        "ytl": 140,
+        "xbr": 638,
+        "ybr": 471,
+        "label": "sofa"
+      }
+    ]
+  },
+  {
+    "name": "2007_000663",
+    "boxes": [
+      {
+        "xtl": 412,
+        "ytl": 130,
+        "xbr": 439,
+        "ybr": 157,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 205,
+        "ytl": 100,
+        "xbr": 244,
+        "ybr": 127,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 414,
+        "ytl": 115,
+        "xbr": 500,
+        "ybr": 157,
+        "label": "heater"
+      },
+      {
+        "xtl": 246,
+        "ytl": 4,
+        "xbr": 317,
+        "ybr": 64,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 168,
+        "ytl": 8,
+        "xbr": 236,
+        "ybr": 152,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 242,
+        "ytl": 106,
+        "xbr": 266,
+        "ybr": 130,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 460,
+        "ytl": 123,
+        "xbr": 480,
+        "ybr": 162,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 8,
+        "ytl": 86,
+        "xbr": 324,
+        "ybr": 449,
+        "label": "chair"
+      },
+      {
+        "xtl": 283,
+        "ytl": 42,
+        "xbr": 418,
+        "ybr": 144,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 2,
+        "ytl": 115,
+        "xbr": 232,
+        "ybr": 364,
+        "label": "sofa"
+      },
+      {
+        "xtl": 235,
+        "ytl": 136,
+        "xbr": 374,
+        "ybr": 227,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 423,
+        "ytl": 153,
+        "xbr": 529,
+        "ybr": 249,
+        "label": "coffeetable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000664",
+    "boxes": [
+      {
+        "xtl": 377,
+        "ytl": 190,
+        "xbr": 529,
+        "ybr": 295,
+        "label": "pillow"
+      },
+      {
+        "xtl": 378,
+        "ytl": 151,
+        "xbr": 513,
+        "ybr": 239,
+        "label": "pillow"
+      },
+      {
+        "xtl": 490,
+        "ytl": 140,
+        "xbr": 613,
+        "ybr": 234,
+        "label": "pillow"
+      },
+      {
+        "xtl": 205,
+        "ytl": 10,
+        "xbr": 384,
+        "ybr": 124,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 84,
+        "ytl": 4,
+        "xbr": 172,
+        "ybr": 88,
+        "label": "door"
+      },
+      {
+        "xtl": 2,
+        "ytl": 91,
+        "xbr": 373,
+        "ybr": 475,
+        "label": "chair"
+      },
+      {
+        "xtl": 211,
+        "ytl": 68,
+        "xbr": 295,
+        "ybr": 191,
+        "label": "chair"
+      },
+      {
+        "xtl": 520,
+        "ytl": 77,
+        "xbr": 603,
+        "ybr": 158,
+        "label": "chair"
+      },
+      {
+        "xtl": 246,
+        "ytl": 92,
+        "xbr": 355,
+        "ybr": 177,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 226,
+        "ytl": 135,
+        "xbr": 636,
+        "ybr": 471,
+        "label": "sofa"
+      },
+      {
+        "xtl": 322,
+        "ytl": 212,
+        "xbr": 419,
+        "ybr": 260,
+        "label": "remote"
+      }
+    ]
+  },
+  {
+    "name": "2007_000676",
+    "boxes": [
+      {
+        "xtl": 471,
+        "ytl": 5,
+        "xbr": 637,
+        "ybr": 173,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 387,
+        "ytl": 75,
+        "xbr": 527,
+        "ybr": 303,
+        "label": "countertop"
+      },
+      {
+        "xtl": 362,
+        "ytl": 220,
+        "xbr": 423,
+        "ybr": 298,
+        "label": "wastecontainer"
+      },
+      {
+        "xtl": 468,
+        "ytl": 84,
+        "xbr": 496,
+        "ybr": 104,
+        "label": "bowl"
+      }
+    ]
+  },
+  {
+    "name": "2007_000713",
+    "boxes": [
+      {
+        "xtl": 202,
+        "ytl": 186,
+        "xbr": 355,
+        "ybr": 284,
+        "label": "pillow"
+      },
+      {
+        "xtl": 210,
+        "ytl": 144,
+        "xbr": 353,
+        "ybr": 240,
+        "label": "pillow"
+      },
+      {
+        "xtl": 318,
+        "ytl": 139,
+        "xbr": 427,
+        "ybr": 220,
+        "label": "pillow"
+      },
+      {
+        "xtl": 33,
+        "ytl": 6,
+        "xbr": 220,
+        "ybr": 143,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 3,
+        "ytl": 138,
+        "xbr": 220,
+        "ybr": 476,
+        "label": "chair"
+      },
+      {
+        "xtl": 20,
+        "ytl": 66,
+        "xbr": 121,
+        "ybr": 200,
+        "label": "chair"
+      },
+      {
+        "xtl": 348,
+        "ytl": 72,
+        "xbr": 514,
+        "ybr": 249,
+        "label": "chair"
+      },
+      {
+        "xtl": 56,
+        "ytl": 97,
+        "xbr": 193,
+        "ybr": 200,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 46,
+        "ytl": 145,
+        "xbr": 506,
+        "ybr": 442,
+        "label": "sofa"
+      },
+      {
+        "xtl": 150,
+        "ytl": 225,
+        "xbr": 246,
+        "ybr": 272,
+        "label": "remote"
+      }
+    ]
+  },
+  {
+    "name": "2007_000720",
+    "boxes": [
+      {
+        "xtl": 101,
+        "ytl": 46,
+        "xbr": 163,
+        "ybr": 67,
+        "label": "tvmonitor"
+      }
+    ]
+  },
+  {
+    "name": "2007_000727",
+    "boxes": [
+      {
+        "xtl": 89,
+        "ytl": 11,
+        "xbr": 390,
+        "ybr": 171,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 400,
+        "ytl": 7,
+        "xbr": 493,
+        "ybr": 97,
+        "label": "door"
+      },
+      {
+        "xtl": 358,
+        "ytl": 104,
+        "xbr": 638,
+        "ybr": 476,
+        "label": "chair"
+      },
+      {
+        "xtl": 319,
+        "ytl": 97,
+        "xbr": 375,
+        "ybr": 193,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 12,
+        "ytl": 80,
+        "xbr": 170,
+        "ybr": 286,
+        "label": "countertop"
+      },
+      {
+        "xtl": 40,
+        "ytl": 61,
+        "xbr": 75,
+        "ybr": 88,
+        "label": "tap"
+      },
+      {
+        "xtl": 3,
+        "ytl": 230,
+        "xbr": 64,
+        "ybr": 314,
+        "label": "wastecontainer"
+      },
+      {
+        "xtl": 362,
+        "ytl": 64,
+        "xbr": 381,
+        "ybr": 118,
+        "label": "bottle"
+      }
+    ]
+  },
+  {
+    "name": "2007_000733",
+    "boxes": [
+      {
+        "xtl": 390,
+        "ytl": 100,
+        "xbr": 623,
+        "ybr": 475,
+        "label": "countertop"
+      },
+      {
+        "xtl": 469,
+        "ytl": 70,
+        "xbr": 529,
+        "ybr": 121,
+        "label": "tap"
+      },
+      {
+        "xtl": 325,
+        "ytl": 355,
+        "xbr": 464,
+        "ybr": 476,
+        "label": "wastecontainer"
+      },
+      {
+        "xtl": 415,
+        "ytl": 105,
+        "xbr": 614,
+        "ybr": 146,
+        "label": "sink"
+      },
+      {
+        "xtl": 559,
+        "ytl": 41,
+        "xbr": 609,
+        "ybr": 131,
+        "label": "bottle"
+      }
+    ]
+  },
+  {
+    "name": "2007_000738",
+    "boxes": [
+      {
+        "xtl": 209,
+        "ytl": 184,
+        "xbr": 362,
+        "ybr": 289,
+        "label": "pillow"
+      },
+      {
+        "xtl": 217,
+        "ytl": 148,
+        "xbr": 361,
+        "ybr": 236,
+        "label": "pillow"
+      },
+      {
+        "xtl": 326,
+        "ytl": 134,
+        "xbr": 442,
+        "ybr": 216,
+        "label": "pillow"
+      },
+      {
+        "xtl": 35,
+        "ytl": 7,
+        "xbr": 239,
+        "ybr": 130,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 2,
+        "ytl": 101,
+        "xbr": 224,
+        "ybr": 476,
+        "label": "chair"
+      },
+      {
+        "xtl": 28,
+        "ytl": 64,
+        "xbr": 124,
+        "ybr": 190,
+        "label": "chair"
+      },
+      {
+        "xtl": 354,
+        "ytl": 77,
+        "xbr": 514,
+        "ybr": 259,
+        "label": "chair"
+      },
+      {
+        "xtl": 79,
+        "ytl": 94,
+        "xbr": 196,
+        "ybr": 181,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 31,
+        "ytl": 147,
+        "xbr": 506,
+        "ybr": 480,
+        "label": "sofa"
+      },
+      {
+        "xtl": 163,
+        "ytl": 218,
+        "xbr": 256,
+        "ybr": 260,
+        "label": "remote"
+      }
+    ]
+  },
+  {
+    "name": "2007_000762",
+    "boxes": [
+      {
+        "xtl": 588,
+        "ytl": 167,
+        "xbr": 635,
+        "ybr": 231,
+        "label": "pillow"
+      },
+      {
+        "xtl": 5,
+        "ytl": 9,
+        "xbr": 186,
+        "ybr": 158,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 306,
+        "ytl": 8,
+        "xbr": 483,
+        "ybr": 109,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 179,
+        "ytl": 9,
+        "xbr": 259,
+        "ybr": 135,
+        "label": "door"
+      },
+      {
+        "xtl": 297,
+        "ytl": 101,
+        "xbr": 637,
+        "ybr": 476,
+        "label": "chair"
+      },
+      {
+        "xtl": 93,
+        "ytl": 107,
+        "xbr": 190,
+        "ybr": 231,
+        "label": "chair"
+      },
+      {
+        "xtl": 183,
+        "ytl": 111,
+        "xbr": 286,
+        "ybr": 240,
+        "label": "chair"
+      },
+      {
+        "xtl": 351,
+        "ytl": 55,
+        "xbr": 390,
+        "ybr": 103,
+        "label": "chair"
+      },
+      {
+        "xtl": 158,
+        "ytl": 97,
+        "xbr": 213,
+        "ybr": 230,
+        "label": "chair"
+      },
+      {
+        "xtl": 112,
+        "ytl": 104,
+        "xbr": 265,
+        "ybr": 236,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 353,
+        "ytl": 240,
+        "xbr": 503,
+        "ybr": 465,
+        "label": "backpack"
+      },
+      {
+        "xtl": 447,
+        "ytl": 212,
+        "xbr": 593,
+        "ybr": 431,
+        "label": "backpack"
+      },
+      {
+        "xtl": 164,
+        "ytl": 84,
+        "xbr": 177,
+        "ybr": 120,
+        "label": "tincan"
+      },
+      {
+        "xtl": 187,
+        "ytl": 85,
+        "xbr": 204,
+        "ybr": 116,
+        "label": "tincan"
+      },
+      {
+        "xtl": 504,
+        "ytl": 152,
+        "xbr": 638,
+        "ybr": 387,
+        "label": "sofa"
+      }
+    ]
+  },
+  {
+    "name": "2007_000768",
+    "boxes": [
+      {
+        "xtl": 121,
+        "ytl": 6,
+        "xbr": 377,
+        "ybr": 87,
+        "label": "windowblind"
+      }
+    ]
+  },
+  {
+    "name": "2007_000783",
+    "boxes": [
+      {
+        "xtl": 4,
+        "ytl": 2,
+        "xbr": 449,
+        "ybr": 265,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 494,
+        "ytl": 5,
+        "xbr": 636,
+        "ybr": 248,
+        "label": "door"
+      },
+      {
+        "xtl": 10,
+        "ytl": 200,
+        "xbr": 226,
+        "ybr": 475,
+        "label": "chair"
+      },
+      {
+        "xtl": 220,
+        "ytl": 385,
+        "xbr": 635,
+        "ybr": 473,
+        "label": "chair"
+      },
+      {
+        "xtl": 18,
+        "ytl": 190,
+        "xbr": 634,
+        "ybr": 464,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 424,
+        "ytl": 222,
+        "xbr": 476,
+        "ybr": 306,
+        "label": "cup"
+      },
+      {
+        "xtl": 143,
+        "ytl": 183,
+        "xbr": 217,
+        "ybr": 239,
+        "label": "cup"
+      },
+      {
+        "xtl": 283,
+        "ytl": 73,
+        "xbr": 333,
+        "ybr": 244,
+        "label": "bottle"
+      }
+    ]
+  },
+  {
+    "name": "2007_000793",
+    "boxes": [
+      {
+        "xtl": 374,
+        "ytl": 4,
+        "xbr": 635,
+        "ybr": 160,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 247,
+        "ytl": 3,
+        "xbr": 334,
+        "ybr": 57,
+        "label": "shelf"
+      },
+      {
+        "xtl": 544,
+        "ytl": 116,
+        "xbr": 636,
+        "ybr": 262,
+        "label": "chair"
+      },
+      {
+        "xtl": 249,
+        "ytl": 92,
+        "xbr": 415,
+        "ybr": 281,
+        "label": "countertop"
+      },
+      {
+        "xtl": 302,
+        "ytl": 66,
+        "xbr": 339,
+        "ybr": 96,
+        "label": "tap"
+      },
+      {
+        "xtl": 245,
+        "ytl": 226,
+        "xbr": 309,
+        "ybr": 305,
+        "label": "wastecontainer"
+      },
+      {
+        "xtl": 366,
+        "ytl": 49,
+        "xbr": 394,
+        "ybr": 95,
+        "label": "bottle"
+      },
+      {
+        "xtl": 356,
+        "ytl": 56,
+        "xbr": 380,
+        "ybr": 101,
+        "label": "tincan"
+      }
+    ]
+  },
+  {
+    "name": "2007_000799",
+    "boxes": [
+      {
+        "xtl": 4,
+        "ytl": 87,
+        "xbr": 492,
+        "ybr": 476,
+        "label": "bed"
+      },
+      {
+        "xtl": 521,
+        "ytl": 35,
+        "xbr": 596,
+        "ybr": 86,
+        "label": "person"
+      },
+      {
+        "xtl": 542,
+        "ytl": 138,
+        "xbr": 593,
+        "ybr": 170,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 191,
+        "ytl": 120,
+        "xbr": 223,
+        "ybr": 144,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 518,
+        "ytl": 160,
+        "xbr": 631,
+        "ybr": 301,
+        "label": "nightstand"
+      },
+      {
+        "xtl": 149,
+        "ytl": 138,
+        "xbr": 242,
+        "ybr": 176,
+        "label": "nightstand"
+      },
+      {
+        "xtl": 93,
+        "ytl": 125,
+        "xbr": 174,
+        "ybr": 166,
+        "label": "heater"
+      },
+      {
+        "xtl": 3,
+        "ytl": 1,
+        "xbr": 98,
+        "ybr": 79,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 246,
+        "ytl": 83,
+        "xbr": 345,
+        "ybr": 156,
+        "label": "pillow"
+      },
+      {
+        "xtl": 350,
+        "ytl": 107,
+        "xbr": 469,
+        "ybr": 178,
+        "label": "pillow"
+      },
+      {
+        "xtl": 59,
+        "ytl": 189,
+        "xbr": 228,
+        "ybr": 288,
+        "label": "backpack"
+      }
+    ]
+  },
+  {
+    "name": "2007_000804",
+    "boxes": [
+      {
+        "xtl": 393,
+        "ytl": 7,
+        "xbr": 631,
+        "ybr": 253,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 483,
+        "ytl": 199,
+        "xbr": 636,
+        "ybr": 476,
+        "label": "chair"
+      },
+      {
+        "xtl": 486,
+        "ytl": 223,
+        "xbr": 631,
+        "ybr": 346,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 224,
+        "ytl": 80,
+        "xbr": 262,
+        "ybr": 120,
+        "label": "cup"
+      },
+      {
+        "xtl": 24,
+        "ytl": 97,
+        "xbr": 399,
+        "ybr": 389,
+        "label": "countertop"
+      },
+      {
+        "xtl": 138,
+        "ytl": 62,
+        "xbr": 197,
+        "ybr": 107,
+        "label": "tap"
+      },
+      {
+        "xtl": 2,
+        "ytl": 273,
+        "xbr": 42,
+        "ybr": 381,
+        "label": "wastecontainer"
+      },
+      {
+        "xtl": 92,
+        "ytl": 95,
+        "xbr": 255,
+        "ybr": 131,
+        "label": "sink"
+      }
+    ]
+  },
+  {
+    "name": "2007_000807",
+    "boxes": [
+      {
+        "xtl": 375,
+        "ytl": 175,
+        "xbr": 491,
+        "ybr": 308,
+        "label": "pillow"
+      },
+      {
+        "xtl": 314,
+        "ytl": 171,
+        "xbr": 417,
+        "ybr": 231,
+        "label": "pillow"
+      },
+      {
+        "xtl": 412,
+        "ytl": 160,
+        "xbr": 527,
+        "ybr": 257,
+        "label": "pillow"
+      },
+      {
+        "xtl": 206,
+        "ytl": 14,
+        "xbr": 381,
+        "ybr": 145,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 71,
+        "ytl": 4,
+        "xbr": 165,
+        "ybr": 97,
+        "label": "door"
+      },
+      {
+        "xtl": 4,
+        "ytl": 87,
+        "xbr": 368,
+        "ybr": 470,
+        "label": "chair"
+      },
+      {
+        "xtl": 501,
+        "ytl": 83,
+        "xbr": 593,
+        "ybr": 167,
+        "label": "chair"
+      },
+      {
+        "xtl": 291,
+        "ytl": 65,
+        "xbr": 366,
+        "ybr": 170,
+        "label": "chair"
+      },
+      {
+        "xtl": 227,
+        "ytl": 92,
+        "xbr": 348,
+        "ybr": 180,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 214,
+        "ytl": 142,
+        "xbr": 636,
+        "ybr": 469,
+        "label": "sofa"
+      },
+      {
+        "xtl": 498,
+        "ytl": 240,
+        "xbr": 562,
+        "ybr": 270,
+        "label": "remote"
+      }
+    ]
+  },
+  {
+    "name": "2007_000822",
+    "boxes": [
+      {
+        "xtl": 18,
+        "ytl": 4,
+        "xbr": 341,
+        "ybr": 175,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 9,
+        "ytl": 83,
+        "xbr": 140,
+        "ybr": 476,
+        "label": "chair"
+      },
+      {
+        "xtl": 14,
+        "ytl": 200,
+        "xbr": 214,
+        "ybr": 478,
+        "label": "diningtable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000830",
+    "boxes": [
+      {
+        "xtl": 416,
+        "ytl": 7,
+        "xbr": 597,
+        "ybr": 233,
+        "label": "door"
+      },
+      {
+        "xtl": 202,
+        "ytl": 166,
+        "xbr": 361,
+        "ybr": 409,
+        "label": "chair"
+      },
+      {
+        "xtl": 18,
+        "ytl": 408,
+        "xbr": 489,
+        "ybr": 477,
+        "label": "chair"
+      },
+      {
+        "xtl": 7,
+        "ytl": 192,
+        "xbr": 518,
+        "ybr": 459,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 28,
+        "ytl": 183,
+        "xbr": 94,
+        "ybr": 263,
+        "label": "cup"
+      }
+    ]
+  },
+  {
+    "name": "2007_000836",
+    "boxes": [
+      {
+        "xtl": 247,
+        "ytl": 168,
+        "xbr": 373,
+        "ybr": 300,
+        "label": "pillow"
+      },
+      {
+        "xtl": 190,
+        "ytl": 162,
+        "xbr": 296,
+        "ybr": 219,
+        "label": "pillow"
+      },
+      {
+        "xtl": 296,
+        "ytl": 149,
+        "xbr": 400,
+        "ybr": 239,
+        "label": "pillow"
+      },
+      {
+        "xtl": 79,
+        "ytl": 5,
+        "xbr": 264,
+        "ybr": 153,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 4,
+        "ytl": 97,
+        "xbr": 259,
+        "ybr": 476,
+        "label": "chair"
+      },
+      {
+        "xtl": 389,
+        "ytl": 77,
+        "xbr": 545,
+        "ybr": 263,
+        "label": "chair"
+      },
+      {
+        "xtl": 107,
+        "ytl": 93,
+        "xbr": 231,
+        "ybr": 176,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 85,
+        "ytl": 137,
+        "xbr": 521,
+        "ybr": 473,
+        "label": "sofa"
+      },
+      {
+        "xtl": 378,
+        "ytl": 229,
+        "xbr": 436,
+        "ybr": 257,
+        "label": "remote"
+      }
+    ]
+  },
+  {
+    "name": "2007_000837",
+    "boxes": [
+      {
+        "xtl": 2,
+        "ytl": 94,
+        "xbr": 589,
+        "ybr": 478,
+        "label": "bed"
+      },
+      {
+        "xtl": 235,
+        "ytl": 128,
+        "xbr": 274,
+        "ybr": 152,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 189,
+        "ytl": 144,
+        "xbr": 293,
+        "ybr": 194,
+        "label": "nightstand"
+      },
+      {
+        "xtl": 135,
+        "ytl": 123,
+        "xbr": 220,
+        "ybr": 182,
+        "label": "heater"
+      },
+      {
+        "xtl": 2,
+        "ytl": 4,
+        "xbr": 141,
+        "ybr": 79,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 300,
+        "ytl": 85,
+        "xbr": 408,
+        "ybr": 166,
+        "label": "pillow"
+      },
+      {
+        "xtl": 426,
+        "ytl": 111,
+        "xbr": 569,
+        "ybr": 200,
+        "label": "pillow"
+      },
+      {
+        "xtl": 65,
+        "ytl": 212,
+        "xbr": 274,
+        "ybr": 330,
+        "label": "backpack"
+      }
+    ]
+  },
+  {
+    "name": "2007_000847",
+    "boxes": [
+      {
+        "xtl": 367,
+        "ytl": 130,
+        "xbr": 419,
+        "ybr": 172,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 329,
+        "ytl": 2,
+        "xbr": 441,
+        "ybr": 212,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 460,
+        "ytl": 19,
+        "xbr": 638,
+        "ybr": 284,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 119,
+        "ytl": 50,
+        "xbr": 204,
+        "ybr": 80,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 288,
+        "ytl": 217,
+        "xbr": 589,
+        "ybr": 466,
+        "label": "coffeetable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000862",
+    "boxes": [
+      {
+        "xtl": 402,
+        "ytl": 128,
+        "xbr": 453,
+        "ybr": 171,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 423,
+        "ytl": 120,
+        "xbr": 485,
+        "ybr": 170,
+        "label": "heater"
+      },
+      {
+        "xtl": 371,
+        "ytl": 6,
+        "xbr": 468,
+        "ybr": 180,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 492,
+        "ytl": 2,
+        "xbr": 640,
+        "ybr": 271,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 5,
+        "ytl": 155,
+        "xbr": 75,
+        "ybr": 412,
+        "label": "sofa"
+      },
+      {
+        "xtl": 317,
+        "ytl": 224,
+        "xbr": 622,
+        "ybr": 473,
+        "label": "coffeetable"
+      }
+    ]
+  },
+  {
+    "name": "2007_000876",
+    "boxes": [
+      {
+        "xtl": 6,
+        "ytl": 5,
+        "xbr": 468,
+        "ybr": 217,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 501,
+        "ytl": 8,
+        "xbr": 639,
+        "ybr": 257,
+        "label": "door"
+      },
+      {
+        "xtl": 314,
+        "ytl": 164,
+        "xbr": 457,
+        "ybr": 206,
+        "label": "chair"
+      },
+      {
+        "xtl": 150,
+        "ytl": 331,
+        "xbr": 539,
+        "ybr": 472,
+        "label": "chair"
+      },
+      {
+        "xtl": 6,
+        "ytl": 184,
+        "xbr": 158,
+        "ybr": 466,
+        "label": "chair"
+      },
+      {
+        "xtl": 22,
+        "ytl": 192,
+        "xbr": 613,
+        "ybr": 474,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 323,
+        "ytl": 172,
+        "xbr": 366,
+        "ybr": 262,
+        "label": "tincan"
+      }
+    ]
+  },
+  {
+    "name": "2007_000904",
+    "boxes": [
+      {
+        "xtl": 5,
+        "ytl": 5,
+        "xbr": 253,
+        "ybr": 204,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 388,
+        "ytl": 11,
+        "xbr": 570,
+        "ybr": 152,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 256,
+        "ytl": 14,
+        "xbr": 335,
+        "ybr": 100,
+        "label": "door"
+      },
+      {
+        "xtl": 186,
+        "ytl": 114,
+        "xbr": 288,
+        "ybr": 264,
+        "label": "chair"
+      },
+      {
+        "xtl": 316,
+        "ytl": 124,
+        "xbr": 411,
+        "ybr": 274,
+        "label": "chair"
+      },
+      {
+        "xtl": 452,
+        "ytl": 66,
+        "xbr": 525,
+        "ybr": 204,
+        "label": "chair"
+      },
+      {
+        "xtl": 221,
+        "ytl": 100,
+        "xbr": 389,
+        "ybr": 274,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 452,
+        "ytl": 95,
+        "xbr": 593,
+        "ybr": 218,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 274,
+        "ytl": 90,
+        "xbr": 297,
+        "ybr": 129,
+        "label": "tincan"
+      },
+      {
+        "xtl": 306,
+        "ytl": 86,
+        "xbr": 324,
+        "ybr": 131,
+        "label": "tincan"
+      }
+    ]
+  },
+  {
+    "name": "2007_000999",
+    "boxes": [
+      {
+        "xtl": 482,
+        "ytl": 5,
+        "xbr": 640,
+        "ybr": 319,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 264,
+        "ytl": 97,
+        "xbr": 326,
+        "ybr": 161,
+        "label": "cup"
+      },
+      {
+        "xtl": 330,
+        "ytl": 91,
+        "xbr": 403,
+        "ybr": 161,
+        "label": "cup"
+      },
+      {
+        "xtl": 9,
+        "ytl": 121,
+        "xbr": 526,
+        "ybr": 475,
+        "label": "countertop"
+      },
+      {
+        "xtl": 145,
+        "ytl": 65,
+        "xbr": 215,
+        "ybr": 136,
+        "label": "tap"
+      },
+      {
+        "xtl": 22,
+        "ytl": 116,
+        "xbr": 407,
+        "ybr": 184,
+        "label": "sink"
+      }
+    ]
+  },
+  {
+    "name": "2007_001073",
+    "boxes": [
+      {
+        "xtl": 7,
+        "ytl": 2,
+        "xbr": 253,
+        "ybr": 191,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 395,
+        "ytl": 10,
+        "xbr": 592,
+        "ybr": 139,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 252,
+        "ytl": 10,
+        "xbr": 339,
+        "ybr": 119,
+        "label": "door"
+      },
+      {
+        "xtl": 177,
+        "ytl": 131,
+        "xbr": 310,
+        "ybr": 332,
+        "label": "chair"
+      },
+      {
+        "xtl": 322,
+        "ytl": 144,
+        "xbr": 453,
+        "ybr": 324,
+        "label": "chair"
+      },
+      {
+        "xtl": 255,
+        "ytl": 116,
+        "xbr": 360,
+        "ybr": 278,
+        "label": "chair"
+      },
+      {
+        "xtl": 472,
+        "ytl": 65,
+        "xbr": 571,
+        "ybr": 221,
+        "label": "chair"
+      },
+      {
+        "xtl": 193,
+        "ytl": 119,
+        "xbr": 426,
+        "ybr": 327,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 474,
+        "ytl": 102,
+        "xbr": 633,
+        "ybr": 240,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 280,
+        "ytl": 103,
+        "xbr": 298,
+        "ybr": 146,
+        "label": "tincan"
+      },
+      {
+        "xtl": 315,
+        "ytl": 106,
+        "xbr": 332,
+        "ybr": 148,
+        "label": "tincan"
+      },
+      {
+        "xtl": 259,
+        "ytl": 111,
+        "xbr": 284,
+        "ybr": 132,
+        "label": "bowl"
+      },
+      {
+        "xtl": 302,
+        "ytl": 110,
+        "xbr": 347,
+        "ybr": 129,
+        "label": "bowl"
+      },
+      {
+        "xtl": 589,
+        "ytl": 99,
+        "xbr": 612,
+        "ybr": 128,
+        "label": "doll"
+      }
+    ]
+  },
+  {
+    "name": "2007_001154",
+    "boxes": [
+      {
+        "xtl": 38,
+        "ytl": 4,
+        "xbr": 456,
+        "ybr": 200,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 467,
+        "ytl": 8,
+        "xbr": 561,
+        "ybr": 128,
+        "label": "door"
+      },
+      {
+        "xtl": 364,
+        "ytl": 142,
+        "xbr": 502,
+        "ybr": 328,
+        "label": "chair"
+      },
+      {
+        "xtl": 439,
+        "ytl": 120,
+        "xbr": 554,
+        "ybr": 288,
+        "label": "chair"
+      },
+      {
+        "xtl": 497,
+        "ytl": 151,
+        "xbr": 637,
+        "ybr": 383,
+        "label": "chair"
+      },
+      {
+        "xtl": 389,
+        "ytl": 131,
+        "xbr": 633,
+        "ybr": 350,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 7,
+        "ytl": 103,
+        "xbr": 147,
+        "ybr": 470,
+        "label": "countertop"
+      },
+      {
+        "xtl": 493,
+        "ytl": 112,
+        "xbr": 520,
+        "ybr": 160,
+        "label": "tincan"
+      },
+      {
+        "xtl": 533,
+        "ytl": 111,
+        "xbr": 557,
+        "ybr": 162,
+        "label": "tincan"
+      },
+      {
+        "xtl": 10,
+        "ytl": 107,
+        "xbr": 81,
+        "ybr": 151,
+        "label": "sink"
+      }
+    ]
+  },
+  {
+    "name": "2007_001175",
+    "boxes": [
+      {
+        "xtl": 589,
+        "ytl": 135,
+        "xbr": 636,
+        "ybr": 225,
+        "label": "bed"
+      },
+      {
+        "xtl": 316,
+        "ytl": 5,
+        "xbr": 404,
+        "ybr": 65,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 8,
+        "ytl": 112,
+        "xbr": 293,
+        "ybr": 470,
+        "label": "chair"
+      },
+      {
+        "xtl": 194,
+        "ytl": 96,
+        "xbr": 244,
+        "ybr": 105,
+        "label": "book"
+      },
+      {
+        "xtl": 260,
+        "ytl": 100,
+        "xbr": 303,
+        "ybr": 125,
+        "label": "book"
+      },
+      {
+        "xtl": 266,
+        "ytl": 130,
+        "xbr": 304,
+        "ybr": 167,
+        "label": "book"
+      },
+      {
+        "xtl": 196,
+        "ytl": 5,
+        "xbr": 311,
+        "ybr": 215,
+        "label": "bookcase"
+      }
+    ]
+  },
+  {
+    "name": "2007_001185",
+    "boxes": [
+      {
+        "xtl": 459,
+        "ytl": 4,
+        "xbr": 577,
+        "ybr": 64,
+        "label": "windowblind"
+      },
+      {
+        "xtl": 155,
+        "ytl": 102,
+        "xbr": 437,
+        "ybr": 465,
+        "label": "chair"
+      },
+      {
+        "xtl": 24,
+        "ytl": 38,
+        "xbr": 207,
+        "ybr": 150,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 357,
+        "ytl": 10,
+        "xbr": 455,
+        "ybr": 221,
+        "label": "bookcase"
+      },
+      {
+        "xtl": 6,
+        "ytl": 164,
+        "xbr": 235,
+        "ybr": 461,
+        "label": "sofa"
+      }
+    ]
+  },
+  {
+    "name": "2007_001225",
+    "boxes": [
+      {
+        "xtl": 324,
+        "ytl": 249,
+        "xbr": 395,
+        "ybr": 332,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 23,
+        "ytl": 125,
+        "xbr": 75,
+        "ybr": 174,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 326,
+        "ytl": 170,
+        "xbr": 557,
+        "ybr": 306,
+        "label": "heater"
+      },
+      {
+        "xtl": 3,
+        "ytl": 5,
+        "xbr": 88,
+        "ybr": 196,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 455,
+        "ytl": 242,
+        "xbr": 515,
+        "ybr": 337,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 67,
+        "ytl": 137,
+        "xbr": 104,
+        "ybr": 187,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 104,
+        "ytl": 1,
+        "xbr": 324,
+        "ybr": 286,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 456,
+        "ytl": 290,
+        "xbr": 496,
+        "ybr": 335,
+        "label": "vase"
+      }
+    ]
+  },
+  {
+    "name": "2007_001239",
+    "boxes": [
+      {
+        "xtl": 191,
+        "ytl": 113,
+        "xbr": 238,
+        "ybr": 142,
+        "label": "pictureframe"
+      },
+      {
+        "xtl": 223,
+        "ytl": 185,
+        "xbr": 369,
+        "ybr": 225,
+        "label": "pillow"
+      },
+      {
+        "xtl": 135,
+        "ytl": 37,
+        "xbr": 214,
+        "ybr": 184,
+        "label": "pottedplant"
+      },
+      {
+        "xtl": 424,
+        "ytl": 114,
+        "xbr": 636,
+        "ybr": 477,
+        "label": "chair"
+      },
+      {
+        "xtl": 313,
+        "ytl": 46,
+        "xbr": 482,
+        "ybr": 145,
+        "label": "tvmonitor"
+      },
+      {
+        "xtl": 5,
+        "ytl": 150,
+        "xbr": 453,
+        "ybr": 450,
+        "label": "sofa"
+      },
+      {
+        "xtl": 155,
+        "ytl": 149,
+        "xbr": 197,
+        "ybr": 184,
+        "label": "vase"
+      },
+      {
+        "xtl": 289,
+        "ytl": 151,
+        "xbr": 443,
+        "ybr": 205,
+        "label": "coffeetable"
+      },
+      {
+        "xtl": 177,
+        "ytl": 134,
+        "xbr": 279,
+        "ybr": 193,
+        "label": "coffeetable"
+      }
+    ]
+  },
+  {
+    "name": "2007_001284",
+    "boxes": [
+      {
+        "xtl": 2,
+        "ytl": 4,
+        "xbr": 213,
+        "ybr": 208,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 362,
+        "ytl": 6,
+        "xbr": 555,
+        "ybr": 153,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 212,
+        "ytl": 14,
+        "xbr": 304,
+        "ybr": 131,
+        "label": "door"
+      },
+      {
+        "xtl": 125,
+        "ytl": 138,
+        "xbr": 274,
+        "ybr": 350,
+        "label": "chair"
+      },
+      {
+        "xtl": 292,
+        "ytl": 148,
+        "xbr": 421,
+        "ybr": 356,
+        "label": "chair"
+      },
+      {
+        "xtl": 438,
+        "ytl": 68,
+        "xbr": 538,
+        "ybr": 237,
+        "label": "chair"
+      },
+      {
+        "xtl": 208,
+        "ytl": 119,
+        "xbr": 314,
+        "ybr": 295,
+        "label": "chair"
+      },
+      {
+        "xtl": 142,
+        "ytl": 125,
+        "xbr": 418,
+        "ybr": 336,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 438,
+        "ytl": 107,
+        "xbr": 603,
+        "ybr": 250,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 248,
+        "ytl": 111,
+        "xbr": 266,
+        "ybr": 150,
+        "label": "tincan"
+      },
+      {
+        "xtl": 276,
+        "ytl": 106,
+        "xbr": 296,
+        "ybr": 154,
+        "label": "tincan"
+      },
+      {
+        "xtl": 269,
+        "ytl": 120,
+        "xbr": 311,
+        "ybr": 131,
+        "label": "bowl"
+      },
+      {
+        "xtl": 559,
+        "ytl": 102,
+        "xbr": 578,
+        "ybr": 123,
+        "label": "doll"
+      }
+    ]
+  },
+  {
+    "name": "2007_001288",
+    "boxes": [
+      {
+        "xtl": 251,
+        "ytl": 5,
+        "xbr": 446,
+        "ybr": 164,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 52,
+        "ytl": 2,
+        "xbr": 186,
+        "ybr": 158,
+        "label": "door"
+      },
+      {
+        "xtl": 158,
+        "ytl": 183,
+        "xbr": 349,
+        "ybr": 477,
+        "label": "chair"
+      },
+      {
+        "xtl": 1,
+        "ytl": 149,
+        "xbr": 148,
+        "ybr": 451,
+        "label": "chair"
+      },
+      {
+        "xtl": 340,
+        "ytl": 64,
+        "xbr": 447,
+        "ybr": 253,
+        "label": "chair"
+      },
+      {
+        "xtl": 347,
+        "ytl": 120,
+        "xbr": 529,
+        "ybr": 282,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 7,
+        "ytl": 143,
+        "xbr": 318,
+        "ybr": 458,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 71,
+        "ytl": 124,
+        "xbr": 109,
+        "ybr": 193,
+        "label": "tincan"
+      },
+      {
+        "xtl": 127,
+        "ytl": 122,
+        "xbr": 159,
+        "ybr": 187,
+        "label": "tincan"
+      },
+      {
+        "xtl": 124,
+        "ytl": 140,
+        "xbr": 183,
+        "ybr": 158,
+        "label": "bowl"
+      },
+      {
+        "xtl": 474,
+        "ytl": 106,
+        "xbr": 501,
+        "ybr": 134,
+        "label": "doll"
+      }
+    ]
+  },
+  {
+    "name": "2007_001289",
+    "boxes": [
+      {
+        "xtl": 359,
+        "ytl": 3,
+        "xbr": 637,
+        "ybr": 332,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 98,
+        "ytl": 91,
+        "xbr": 147,
+        "ybr": 160,
+        "label": "cup"
+      },
+      {
+        "xtl": 144,
+        "ytl": 53,
+        "xbr": 194,
+        "ybr": 146,
+        "label": "cup"
+      },
+      {
+        "xtl": 184,
+        "ytl": 45,
+        "xbr": 236,
+        "ybr": 143,
+        "label": "cup"
+      },
+      {
+        "xtl": 3,
+        "ytl": 117,
+        "xbr": 389,
+        "ybr": 474,
+        "label": "countertop"
+      },
+      {
+        "xtl": 1,
+        "ytl": 69,
+        "xbr": 65,
+        "ybr": 134,
+        "label": "tap"
+      },
+      {
+        "xtl": 243,
+        "ytl": 31,
+        "xbr": 276,
+        "ybr": 134,
+        "label": "bottle"
+      },
+      {
+        "xtl": 11,
+        "ytl": 118,
+        "xbr": 234,
+        "ybr": 178,
+        "label": "sink"
+      }
+    ]
+  },
+  {
+    "name": "2007_001299",
+    "boxes": [
+      {
+        "xtl": 413,
+        "ytl": 4,
+        "xbr": 636,
+        "ybr": 316,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 174,
+        "ytl": 95,
+        "xbr": 214,
+        "ybr": 144,
+        "label": "cup"
+      },
+      {
+        "xtl": 205,
+        "ytl": 59,
+        "xbr": 258,
+        "ybr": 146,
+        "label": "cup"
+      },
+      {
+        "xtl": 250,
+        "ytl": 52,
+        "xbr": 295,
+        "ybr": 140,
+        "label": "cup"
+      },
+      {
+        "xtl": 5,
+        "ytl": 110,
+        "xbr": 427,
+        "ybr": 471,
+        "label": "countertop"
+      },
+      {
+        "xtl": 64,
+        "ytl": 61,
+        "xbr": 137,
+        "ybr": 136,
+        "label": "tap"
+      },
+      {
+        "xtl": 305,
+        "ytl": 36,
+        "xbr": 334,
+        "ybr": 143,
+        "label": "bottle"
+      },
+      {
+        "xtl": 8,
+        "ytl": 125,
+        "xbr": 203,
+        "ybr": 169,
+        "label": "sink"
+      }
+    ]
+  },
+  {
+    "name": "2007_001311",
+    "boxes": [
+      {
+        "xtl": 261,
+        "ytl": 4,
+        "xbr": 634,
+        "ybr": 250,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 129,
+        "ytl": 52,
+        "xbr": 186,
+        "ybr": 133,
+        "label": "cup"
+      },
+      {
+        "xtl": 1,
+        "ytl": 92,
+        "xbr": 37,
+        "ybr": 173,
+        "label": "cup"
+      },
+      {
+        "xtl": 10,
+        "ytl": 94,
+        "xbr": 344,
+        "ybr": 478,
+        "label": "countertop"
+      },
+      {
+        "xtl": 64,
+        "ytl": 64,
+        "xbr": 93,
+        "ybr": 134,
+        "label": "tap"
+      },
+      {
+        "xtl": 14,
+        "ytl": 107,
+        "xbr": 255,
+        "ybr": 164,
+        "label": "sink"
+      }
+    ]
+  },
+  {
+    "name": "2007_001321",
+    "boxes": [
+      {
+        "xtl": 319,
+        "ytl": 4,
+        "xbr": 637,
+        "ybr": 271,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 172,
+        "ytl": 56,
+        "xbr": 231,
+        "ybr": 130,
+        "label": "cup"
+      },
+      {
+        "xtl": 6,
+        "ytl": 83,
+        "xbr": 91,
+        "ybr": 171,
+        "label": "cup"
+      },
+      {
+        "xtl": 5,
+        "ytl": 110,
+        "xbr": 378,
+        "ybr": 471,
+        "label": "countertop"
+      },
+      {
+        "xtl": 99,
+        "ytl": 61,
+        "xbr": 144,
+        "ybr": 136,
+        "label": "tap"
+      },
+      {
+        "xtl": 66,
+        "ytl": 103,
+        "xbr": 249,
+        "ybr": 176,
+        "label": "sink"
+      }
+    ]
+  },
+  {
+    "name": "2007_001340",
+    "boxes": [
+      {
+        "xtl": 8,
+        "ytl": 7,
+        "xbr": 563,
+        "ybr": 247,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 571,
+        "ytl": 7,
+        "xbr": 640,
+        "ybr": 172,
+        "label": "door"
+      },
+      {
+        "xtl": 393,
+        "ytl": 174,
+        "xbr": 616,
+        "ybr": 456,
+        "label": "chair"
+      },
+      {
+        "xtl": 446,
+        "ytl": 165,
+        "xbr": 635,
+        "ybr": 462,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 1,
+        "ytl": 116,
+        "xbr": 128,
+        "ybr": 479,
+        "label": "countertop"
+      },
+      {
+        "xtl": 589,
+        "ytl": 153,
+        "xbr": 635,
+        "ybr": 195,
+        "label": "bowl"
+      }
+    ]
+  },
+  {
+    "name": "2007_001377",
+    "boxes": [
+      {
+        "xtl": 8,
+        "ytl": 5,
+        "xbr": 562,
+        "ybr": 259,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 552,
+        "ytl": 3,
+        "xbr": 636,
+        "ybr": 158,
+        "label": "door"
+      },
+      {
+        "xtl": 339,
+        "ytl": 180,
+        "xbr": 552,
+        "ybr": 447,
+        "label": "chair"
+      },
+      {
+        "xtl": 506,
+        "ytl": 163,
+        "xbr": 637,
+        "ybr": 400,
+        "label": "chair"
+      },
+      {
+        "xtl": 418,
+        "ytl": 158,
+        "xbr": 635,
+        "ybr": 461,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 555,
+        "ytl": 154,
+        "xbr": 603,
+        "ybr": 229,
+        "label": "tincan"
+      },
+      {
+        "xtl": 529,
+        "ytl": 153,
+        "xbr": 596,
+        "ybr": 201,
+        "label": "bowl"
+      }
+    ]
+  },
+  {
+    "name": "2007_001397",
+    "boxes": [
+      {
+        "xtl": 5,
+        "ytl": 6,
+        "xbr": 502,
+        "ybr": 270,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 509,
+        "ytl": 3,
+        "xbr": 636,
+        "ybr": 162,
+        "label": "door"
+      },
+      {
+        "xtl": 260,
+        "ytl": 187,
+        "xbr": 455,
+        "ybr": 473,
+        "label": "chair"
+      },
+      {
+        "xtl": 480,
+        "ytl": 278,
+        "xbr": 635,
+        "ybr": 472,
+        "label": "chair"
+      },
+      {
+        "xtl": 305,
+        "ytl": 163,
+        "xbr": 636,
+        "ybr": 461,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 443,
+        "ytl": 158,
+        "xbr": 488,
+        "ybr": 242,
+        "label": "tincan"
+      },
+      {
+        "xtl": 509,
+        "ytl": 155,
+        "xbr": 561,
+        "ybr": 247,
+        "label": "tincan"
+      },
+      {
+        "xtl": 548,
+        "ytl": 173,
+        "xbr": 610,
+        "ybr": 211,
+        "label": "bowl"
+      }
+    ]
+  },
+  {
+    "name": "2007_001408",
+    "boxes": [
+      {
+        "xtl": 2,
+        "ytl": 2,
+        "xbr": 520,
+        "ybr": 268,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 524,
+        "ytl": 2,
+        "xbr": 638,
+        "ybr": 175,
+        "label": "door"
+      },
+      {
+        "xtl": 223,
+        "ytl": 181,
+        "xbr": 440,
+        "ybr": 479,
+        "label": "chair"
+      },
+      {
+        "xtl": 470,
+        "ytl": 307,
+        "xbr": 640,
+        "ybr": 479,
+        "label": "chair"
+      },
+      {
+        "xtl": 423,
+        "ytl": 161,
+        "xbr": 607,
+        "ybr": 447,
+        "label": "chair"
+      },
+      {
+        "xtl": 281,
+        "ytl": 180,
+        "xbr": 636,
+        "ybr": 473,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 423,
+        "ytl": 161,
+        "xbr": 459,
+        "ybr": 242,
+        "label": "tincan"
+      },
+      {
+        "xtl": 492,
+        "ytl": 161,
+        "xbr": 535,
+        "ybr": 242,
+        "label": "tincan"
+      },
+      {
+        "xtl": 530,
+        "ytl": 171,
+        "xbr": 608,
+        "ybr": 213,
+        "label": "bowl"
+      },
+      {
+        "xtl": 455,
+        "ytl": 164,
+        "xbr": 497,
+        "ybr": 208,
+        "label": "bowl"
+      }
+    ]
+  },
+  {
+    "name": "2007_001416",
+    "boxes": [
+      {
+        "xtl": 3,
+        "ytl": 2,
+        "xbr": 269,
+        "ybr": 227,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 435,
+        "ytl": 10,
+        "xbr": 631,
+        "ybr": 164,
+        "label": "cabinetry"
+      },
+      {
+        "xtl": 286,
+        "ytl": 5,
+        "xbr": 383,
+        "ybr": 125,
+        "label": "door"
+      },
+      {
+        "xtl": 172,
+        "ytl": 137,
+        "xbr": 297,
+        "ybr": 328,
+        "label": "chair"
+      },
+      {
+        "xtl": 342,
+        "ytl": 152,
+        "xbr": 457,
+        "ybr": 336,
+        "label": "chair"
+      },
+      {
+        "xtl": 260,
+        "ytl": 116,
+        "xbr": 354,
+        "ybr": 271,
+        "label": "chair"
+      },
+      {
+        "xtl": 584,
+        "ytl": 86,
+        "xbr": 638,
+        "ybr": 240,
+        "label": "chair"
+      },
+      {
+        "xtl": 234,
+        "ytl": 116,
+        "xbr": 453,
+        "ybr": 324,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 485,
+        "ytl": 104,
+        "xbr": 627,
+        "ybr": 272,
+        "label": "diningtable"
+      },
+      {
+        "xtl": 256,
+        "ytl": 113,
+        "xbr": 287,
+        "ybr": 149,
+        "label": "cup"
+      }
+    ]
+  }
+]

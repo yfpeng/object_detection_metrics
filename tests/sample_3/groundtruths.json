@@ -1,0 +1,142 @@
+[
+  {
+    "name": "00001",
+    "boxes": [
+      {
+        "xtl": 25,
+        "ytl": 16,
+        "xbr": 63,
+        "ybr": 72,
+        "label": "person"
+      },
+      {
+        "xtl": 129,
+        "ytl": 123,
+        "xbr": 170,
+        "ybr": 185,
+        "label": "person"
+      }
+    ]
+  },
+  {
+    "name": "00002",
+    "boxes": [
+      {
+        "xtl": 123,
+        "ytl": 11,
+        "xbr": 166,
+        "ybr": 66,
+        "label": "person"
+      },
+      {
+        "xtl": 38,
+        "ytl": 132,
+        "xbr": 97,
+        "ybr": 177,
+        "label": "person"
+      }
+    ]
+  },
+  {
+    "name": "00003",
+    "boxes": [
+      {
+        "xtl": 16,
+        "ytl": 14,
+        "xbr": 51,
+        "ybr": 62,
+        "label": "person"
+      },
+      {
+        "xtl": 123,
+        "ytl": 30,
+        "xbr": 172,
+        "ybr": 74,
+        "label": "person"
+      },
+      {
+        "xtl": 99,
+        "ytl": 139,
+        "xbr": 146,
+        "ybr": 186,
+        "label": "person"
+      }
+    ]
+  },
+  {
+    "name": "00004",
+    "boxes": [
+      {
+        "xtl": 53,
+        "ytl": 42,
+        "xbr": 93,
+        "ybr": 94,
+        "label": "person"
+      },
+      {
+        "xtl": 154,
+        "ytl": 43,
+        "xbr": 185,
+        "ybr": 77,
+        "label": "person"
+      }
+    ]
+  },
+  {
+    "name": "00005",
+    "boxes": [
+      {
+        "xtl": 59,
+        "ytl": 31,
+        "xbr": 103,
+        "ybr": 82,
+        "label": "person"
+      },
+      {
+        "xtl": 48,
+        "ytl": 128,
+        "xbr": 82,
+        "ybr": 180,
+        "label": "person"
+      }
+    ]
+  },
+  {
+    "name": "00006",
+    "boxes": [
+      {
+        "xtl": 36,
+        "ytl": 89,
+        "xbr": 88,
+        "ybr": 165,
+        "label": "person"
+      },
+      {
+        "xtl": 62,
+        "ytl": 58,
+        "xbr": 106,
+        "ybr": 125,
+        "label": "person"
+      }
+    ]
+  },
+  {
+    "name": "00007",
+    "boxes": [
+      {
+        "xtl": 28,
+        "ytl": 31,
+        "xbr": 83,
+        "ybr": 94,
+        "label": "person"
+      },
+      {
+        "xtl": 58,
+        "ytl": 67,
+        "xbr": 108,
+        "ybr": 125,
+        "label": "person"
+      }
+    ]
+  }
+]
