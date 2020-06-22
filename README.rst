@@ -1,3 +1,19 @@
+.. image:: https://img.shields.io/pypi/v/object_detection_metrics.svg
+   :target: https://pypi.python.org/pypi/object_detection_metrics
+   :alt: Latest version on PyPI
+
+.. image:: https://img.shields.io/pypi/l/object_detection_metrics.svg
+   :alt: License
+   :target: https://opensource.org/licenses/BSD-3-Clause
+
+.. image:: https://requires.io/github/yfpeng/object_detection_metrics/requirements.svg?branch=master
+   :target: https://requires.io/github/yfpeng/object_detection_metrics/requirements/?branch=master
+   :alt: Requirements Status
+
+.. image:: https://hits.dwyl.com/yfpeng/object_detection_metrics.svg
+   :alt: Hits
+   :target: https://hits.dwyl.com/yfpeng/object_detection_metrics
+
 This project was forked from `rafaelpadilla/Object-Detection-Metrics <https://github.com/rafaelpadilla/Object-Detection-Metrics>`_.
 
 Getting started
