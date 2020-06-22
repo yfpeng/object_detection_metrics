@@ -1,16 +1,13 @@
-<p align="left"> 
-<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.2554189.svg">
-</p>
+## How to use this project
 
-## Citation
-This work was accepted to be presented at IWSSIP 2020. If you use this code for your research, please consider citing:
-```
-@article{padillaCITE2020,
-title = {Survey on Performance Metrics for Object-Detection Algorithms},
-author = {Rafael Padilla, Sergio Lima Netto and Eduardo A. B. da Silva},
-booktitle  = {International Conference on Systems, Signals and Image Processing (IWSSIP)},
-year = {2020}
-}
+This project was created to evaluate your detections in a very easy way. If you want to evaluate your algorithm with the most used object detection metrics, you are in the right place.  
+
+```python
+from podm.podm import get_pascal_voc_metrics
+
+gt_BoundingBoxes = ... # type: List[BoundingBox]
+pd_BoundingBoxes = ... # type: List[BoundingBox]
+results = get_pascal_voc_metrics(gt_BoundingBoxes, pd_BoundingBoxes, .5)
 ```
 
 # Metrics for object detection
@@ -315,78 +312,6 @@ Our default implementation is the same as VOC PASCAL: every point interpolation.
 If you want to reproduce these results, see the **[Sample 2](https://github.com/rafaelpadilla/Object-Detection-Metrics/tree/master/samples/sample_2/)**.
 <!--In order to evaluate your detections, you just need a simple list of `Detection` objects. A `Detection` object is a very simple class containing the class id, class probability and bounding boxes coordinates of the detected objects. This same structure is used for the groundtruth detections.-->
 
-## How to use this project
-
-This project was created to evaluate your detections in a very easy way. If you want to evaluate your algorithm with the most used object detection metrics, you are in the right place.  
-
-[Sample_1](https://github.com/rafaelpadilla/Object-Detection-Metrics/tree/master/samples/sample_1) and [sample_2](https://github.com/rafaelpadilla/Object-Detection-Metrics/tree/master/samples/sample_2) are practical examples demonstrating how to access directly the core functions of this project, providing more flexibility on the usage of the metrics. But if you don't want to spend your time understanding our code, see the instructions below to easily evaluate your detections:  
-
-Follow the steps below to start evaluating your detections:
-
-1. [Create the ground truth files](#create-the-ground-truth-files)
-2. [Create your detection files](#create-your-detection-files)
-3. For **Pascal VOC metrics**, run the command: `python pascalvoc.py`  
-   If you want to reproduce the example above, run the command: `python pascalvoc.py -t 0.3`
-4. (Optional) [You can use arguments to control the IOU threshold, bounding boxes format, etc.](#optional-arguments)
-
-### Create the ground truth files
-
-- Create a separate ground truth text file for each image in the folder **groundtruths/**.
-- In these files each line should be in the format: `<class_name> <left> <top> <right> <bottom>`.    
-- E.g. The ground truth bounding boxes of the image "2008_000034.jpg" are represented in the file "2008_000034.txt":
-  ```
-  bottle 6 234 45 362
-  person 1 156 103 336
-  person 36 111 198 416
-  person 91 42 338 500
-  ```
-    
-If you prefer, you can also have your bounding boxes in the format: `<class_name> <left> <top> <width> <height>` (see here [**\***](#asterisk) how to use it). In this case, your "2008_000034.txt" would be represented as:
-  ```
-  bottle 6 234 39 128
-  person 1 156 102 180
-  person 36 111 162 305
-  person 91 42 247 458
-  ```
-
-### Create your detection files
-
-- Create a separate detection text file for each image in the folder **detections/**.
-- The names of the detection files must match their correspond ground truth (e.g. "detections/2008_000182.txt" represents the detections of the ground truth: "groundtruths/2008_000182.txt").
-- In these files each line should be in the following format: `<class_name> <confidence> <left> <top> <right> <bottom>` (see here [**\***](#asterisk) how to use it).
-- E.g. "2008_000034.txt":
-    ```
-    bottle 0.14981 80 1 295 500  
-    bus 0.12601 36 13 404 316  
-    horse 0.12526 430 117 500 307  
-    pottedplant 0.14585 212 78 292 118  
-    tvmonitor 0.070565 388 89 500 196  
-    ```
-
-Also if you prefer, you could have your bounding boxes in the format: `<class_name> <left> <top> <width> <height>`.
-
-### Optional arguments
-
-Optional arguments:
-
-| Argument &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Description | Example | Default |
-|:-------------:|:-----------:|:-----------:|:-----------:|
-| `-h`,<br>`--help ` |	show help message | `python pascalvoc.py -h` | |  
-|  `-v`,<br>`--version` | check version | `python pascalvoc.py -v` | |  
-| `-gt`,<br>`--gtfolder` | folder that contains the ground truth bounding boxes files | `python pascalvoc.py -gt /home/whatever/my_groundtruths/` | `/Object-Detection-Metrics/groundtruths`|  
-| `-det`,<br>`--detfolder` | folder that contains your detected bounding boxes files | `python pascalvoc.py -det /home/whatever/my_detections/` | `/Object-Detection-Metrics/detections/`|  
-| `-t`,<br>`--threshold` | IOU thershold that tells if a detection is TP or FP | `python pascalvoc.py -t 0.75` | `0.50` |  
-| `-gtformat` | format of the coordinates of the ground truth bounding boxes [**\***](#asterisk) | `python pascalvoc.py -gtformat xyrb` | `xywh` |
-| `-detformat` | format of the coordinates of the detected bounding boxes [**\***](#asterisk) | `python pascalvoc.py -detformat xyrb` | `xywh` | |  
-| `-gtcoords` | reference of the ground truth bounding bounding box coordinates.<br>If the annotated coordinates are relative to the image size (as used in YOLO), set it to `rel`.<br>If the coordinates are absolute values, not depending to the image size, set it to `abs` |  `python pascalvoc.py -gtcoords rel` | `abs` |  
-| `-detcoords` | reference of the detected bounding bounding box coordinates.<br>If the coordinates are relative to the image size (as used in YOLO), set it to `rel`.<br>If the coordinates are absolute values, not depending to the image size, set it to `abs` | `python pascalvoc.py -detcoords rel` | `abs` |  
-| `-imgsize ` | image size in the format `width,height` <int,int>.<br>Required if `-gtcoords` or `-detcoords` is set to `rel` | `python pascalvoc.py -imgsize 600,400` |  
-| `-sp`,<br>`--savepath` | folder where the plots are saved | `python pascalvoc.py -sp /home/whatever/my_results/` | `Object-Detection-Metrics/results/` |  
-| `-np`,<br>`--noplot` | if present no plot is shown during execution | `python pascalvoc.py -np` | not presented.<br>Therefore, plots are shown |  
-
-<a name="asterisk"> </a>
-(**\***) set `-gtformat xywh` and/or `-detformat xywh` if format is `<left> <top> <width> <height>`. Set to `-gtformat xyrb` and/or `-detformat xyrb`  if format is `<left> <top> <right> <bottom>`.
-  
 ## References
 
 * The Relationship Between Precision-Recall and ROC Curves (Jesse Davis and Mark Goadrich)

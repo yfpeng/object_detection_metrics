@@ -1,7 +1,7 @@
 import json
-from typing import List
+from typing import List, Dict
 
-from podm.podm import BoundingBox
+from podm.podm import BoundingBox, MetricPerClass
 import numpy as np
 
 
@@ -39,28 +39,16 @@ def load_data(pathname) -> List[BoundingBox]:
     return boxes
 
 
-def test_results(actuals, expecteds, key, classes=None):
+def test_results(actuals: Dict[str, MetricPerClass], expecteds, key, classes=None):
     if classes is None:
-        classes = set(m['class'] for m in expecteds)
-    for m in expecteds:
-        label = m['class']
+        classes = set(m.label for m in actuals.values())
+
+    for m in actuals.values():
+        label = m.label
         if label in classes:
             print(f'{label}, {key}: ', end='')
-            expected = m[key]
-            # if key not in actuals[label]:
-            #     print(f'{label}: cannot find {key}')
-            #     if key in ('AP', ):
-            #         actual = np.nan
-            #     elif key in ('precision', ):
-            #         actual = [0.0]
-            #     elif key in ('recall', ):
-            #         actual = [np.nan]
-            #     elif key in ('tp', 'fp'):
-            #         actual = 0
-            #     else:
-            #         raise TypeError(type(expected))
-            # else:
-            actual = actuals[label][key]
+            actual = m.__dict__[key]
+            expected = expecteds[label][key]
             try:
                 if np.allclose(actual, expected, rtol=1e-1, equal_nan=True):
                     print(f'{bcolors.OKGREEN}Passed{bcolors.ENDC}')

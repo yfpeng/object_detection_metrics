@@ -6,7 +6,7 @@ from tests.test_utils import load_data, test_results
 
 RESULT0_3 = {
     'person': {
-        'AP': 0.245687
+        'ap': 0.245687
     }
 }
 
@@ -18,9 +18,9 @@ if __name__ == '__main__':
 
     RESULT0_5 = json.load(open(dir / 'expected0_5.json'))
     results = get_pascal_voc_metrics(gt_BoundingBoxes, pd_BoundingBoxes, .5)
-    test_results(RESULT0_5, results, 'AP')
-    test_results(RESULT0_5, results, 'precision')
-    test_results(RESULT0_5, results, 'recall')
+    test_results(results, RESULT0_5, 'ap')
+    test_results(results, RESULT0_5, 'precision')
+    test_results(results, RESULT0_5, 'recall')
 
     results = get_pascal_voc_metrics(gt_BoundingBoxes, pd_BoundingBoxes, .3)
-    test_results(RESULT0_3, results, 'AP')
+    test_results(results, RESULT0_3, 'ap')

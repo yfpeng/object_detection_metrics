@@ -1,7 +1,7 @@
 {
   "backpack": {
     "class_name": "backpack",
-    "AP": 0.22727272727272724,
+    "ap": 0.22727272727272724,
     "precision": [
       1.0,
       0.5,
@@ -16,14 +16,14 @@
       0.2727272727272727,
       0.2727272727272727
     ],
-    "Number of ground-truth objects": 11,
-    "Number of detected objects": 5,
+    "num_groundtruth": 11,
+    "num_detection": 5,
     "tp": 3,
     "fp": 2
   },
   "bed": {
     "class_name": "bed",
-    "AP": 0.859375,
+    "ap": 0.859375,
     "precision": [
       1.0,
       1.0,
@@ -44,14 +44,14 @@
       0.75,
       0.875
     ],
-    "Number of ground-truth objects": 8,
-    "Number of detected objects": 8,
+    "num_groundtruth": 8,
+    "num_detection": 8,
     "tp": 7,
     "fp": 1
   },
   "book": {
     "class_name": "book",
-    "AP": 0.1752305665349143,
+    "ap": 0.1752305665349143,
     "precision": [
       1.0,
       0.5,
@@ -106,28 +106,28 @@
       0.3333333333333333,
       0.3333333333333333
     ],
-    "Number of ground-truth objects": 33,
-    "Number of detected objects": 25,
+    "num_groundtruth": 33,
+    "num_detection": 25,
     "tp": 11,
     "fp": 14
   },
   "bookcase": {
     "class_name": "bookcase",
-    "AP": 0.14285714285714285,
+    "ap": 0.14285714285714285,
     "precision": [
       1.0
     ],
     "recall": [
       0.14285714285714285
     ],
-    "Number of ground-truth objects": 7,
-    "Number of detected objects": 1,
+    "num_groundtruth": 7,
+    "num_detection": 1,
     "tp": 1,
     "fp": 0
   },
   "bottle": {
     "class_name": "bottle",
-    "AP": 0.23484848484848486,
+    "ap": 0.23484848484848486,
     "precision": [
       0.0,
       0.5,
@@ -172,14 +172,14 @@
       0.45454545454545453,
       0.45454545454545453
     ],
-    "Number of ground-truth objects": 11,
-    "Number of detected objects": 20,
+    "num_groundtruth": 11,
+    "num_detection": 20,
     "tp": 5,
     "fp": 15
   },
   "bowl": {
     "class_name": "bowl",
-    "AP": 0.3185714285714286,
+    "ap": 0.3185714285714286,
     "precision": [
       1.0,
       1.0,
@@ -204,14 +204,14 @@
       0.3333333333333333,
       0.4
     ],
-    "Number of ground-truth objects": 15,
-    "Number of detected objects": 10,
+    "num_groundtruth": 15,
+    "num_detection": 10,
     "tp": 6,
     "fp": 4
   },
   "cabinetry": {
     "class_name": "cabinetry",
-    "AP": 0.07932692307692307,
+    "ap": 0.07932692307692307,
     "precision": [
       0.0,
       0.0,
@@ -244,14 +244,14 @@
       0.11538461538461539,
       0.1346153846153846
     ],
-    "Number of ground-truth objects": 52,
-    "Number of detected objects": 14,
+    "num_groundtruth": 52,
+    "num_detection": 14,
     "tp": 7,
     "fp": 7
   },
   "chair": {
     "class_name": "chair",
-    "AP": 0.5384346220032401,
+    "ap": 0.5384346220032401,
     "precision": [
       1.0,
       1.0,
@@ -526,14 +526,14 @@
       0.6886792452830188,
       0.6886792452830188
     ],
-    "Number of ground-truth objects": 106,
-    "Number of detected objects": 135,
+    "num_groundtruth": 106,
+    "num_detection": 135,
     "tp": 73,
     "fp": 62
   },
   "coffeetable": {
     "class_name": "coffeetable",
-    "AP": 0.045454545454545456,
+    "ap": 0.045454545454545456,
     "precision": [
       0.0,
       0.0,
@@ -546,14 +546,14 @@
       0.045454545454545456,
       0.09090909090909091
     ],
-    "Number of ground-truth objects": 22,
-    "Number of detected objects": 4,
+    "num_groundtruth": 22,
+    "num_detection": 4,
     "tp": 2,
     "fp": 2
   },
   "countertop": {
     "class_name": "countertop",
-    "AP": 0.19047619047619047,
+    "ap": 0.19047619047619047,
     "precision": [
       1.0,
       1.0,
@@ -566,14 +566,14 @@
       0.14285714285714285,
       0.19047619047619047
     ],
-    "Number of ground-truth objects": 21,
-    "Number of detected objects": 4,
+    "num_groundtruth": 21,
+    "num_detection": 4,
     "tp": 4,
     "fp": 0
   },
   "cup": {
     "class_name": "cup",
-    "AP": 0.42500329735623854,
+    "ap": 0.42500329735623854,
     "precision": [
       1.0,
       1.0,
@@ -632,14 +632,14 @@
       0.4722222222222222,
       0.4722222222222222
     ],
-    "Number of ground-truth objects": 36,
-    "Number of detected objects": 27,
+    "num_groundtruth": 36,
+    "num_detection": 27,
     "tp": 17,
     "fp": 10
   },
   "diningtable": {
     "class_name": "diningtable",
-    "AP": 0.39655709330302574,
+    "ap": 0.39655709330302574,
     "precision": [
       1.0,
       1.0,
@@ -734,24 +734,24 @@
       0.5531914893617021,
       0.5531914893617021
     ],
-    "Number of ground-truth objects": 47,
-    "Number of detected objects": 45,
+    "num_groundtruth": 47,
+    "num_detection": 45,
     "tp": 26,
     "fp": 19
   },
   "doll": {
     "class_name": "doll",
-    "AP": 0.0,
+    "ap": 0.0,
     "precision": [],
     "recall": [],
-    "Number of ground-truth objects": 8,
-    "Number of detected objects": 0,
+    "num_groundtruth": 8,
+    "num_detection": 0,
     "tp": 0,
     "fp": 0
   },
   "door": {
     "class_name": "door",
-    "AP": 0.20689655172413793,
+    "ap": 0.20689655172413793,
     "precision": [
       1.0,
       1.0,
@@ -768,14 +768,14 @@
       0.1724137931034483,
       0.20689655172413793
     ],
-    "Number of ground-truth objects": 29,
-    "Number of detected objects": 6,
+    "num_groundtruth": 29,
+    "num_detection": 6,
     "tp": 6,
     "fp": 0
   },
   "heater": {
     "class_name": "heater",
-    "AP": 0.07692307692307693,
+    "ap": 0.07692307692307693,
     "precision": [
       1.0,
       0.5
@@ -784,14 +784,14 @@
       0.07692307692307693,
       0.07692307692307693
     ],
-    "Number of ground-truth objects": 13,
-    "Number of detected objects": 2,
+    "num_groundtruth": 13,
+    "num_detection": 2,
     "tp": 1,
     "fp": 1
   },
   "nightstand": {
     "class_name": "nightstand",
-    "AP": 0.7142857142857143,
+    "ap": 0.7142857142857143,
     "precision": [
       1.0,
       1.0,
@@ -806,14 +806,14 @@
       0.5714285714285714,
       0.7142857142857143
     ],
-    "Number of ground-truth objects": 7,
-    "Number of detected objects": 5,
+    "num_groundtruth": 7,
+    "num_detection": 5,
     "tp": 5,
     "fp": 0
   },
   "person": {
     "class_name": "person",
-    "AP": 0.42857142857142855,
+    "ap": 0.42857142857142855,
     "precision": [
       1.0,
       1.0,
@@ -824,14 +824,14 @@
       0.2857142857142857,
       0.42857142857142855
     ],
-    "Number of ground-truth objects": 7,
-    "Number of detected objects": 3,
+    "num_groundtruth": 7,
+    "num_detection": 3,
     "tp": 3,
     "fp": 0
   },
   "pictureframe": {
     "class_name": "pictureframe",
-    "AP": 0.17708333333333331,
+    "ap": 0.17708333333333331,
     "precision": [
       0.0,
       0.5,
@@ -862,14 +862,14 @@
       0.2916666666666667,
       0.2916666666666667
     ],
-    "Number of ground-truth objects": 24,
-    "Number of detected objects": 13,
+    "num_groundtruth": 24,
+    "num_detection": 13,
     "tp": 7,
     "fp": 6
   },
   "pillow": {
     "class_name": "pillow",
-    "AP": 0.13012345679012347,
+    "ap": 0.13012345679012347,
     "precision": [
       1.0,
       1.0,
@@ -906,14 +906,14 @@
       0.15555555555555556,
       0.17777777777777778
     ],
-    "Number of ground-truth objects": 45,
-    "Number of detected objects": 16,
+    "num_groundtruth": 45,
+    "num_detection": 16,
     "tp": 8,
     "fp": 8
   },
   "pottedplant": {
     "class_name": "pottedplant",
-    "AP": 0.6231254377806101,
+    "ap": 0.6231254377806101,
     "precision": [
       1.0,
       1.0,
@@ -978,14 +978,14 @@
       0.6896551724137931,
       0.6896551724137931
     ],
-    "Number of ground-truth objects": 29,
-    "Number of detected objects": 30,
+    "num_groundtruth": 29,
+    "num_detection": 30,
     "tp": 20,
     "fp": 10
   },
   "remote": {
     "class_name": "remote",
-    "AP": 0.7321428571428571,
+    "ap": 0.7321428571428571,
     "precision": [
       1.0,
       1.0,
@@ -1004,24 +1004,24 @@
       0.625,
       0.75
     ],
-    "Number of ground-truth objects": 8,
-    "Number of detected objects": 7,
+    "num_groundtruth": 8,
+    "num_detection": 7,
     "tp": 6,
     "fp": 1
   },
   "shelf": {
     "class_name": "shelf",
-    "AP": 0.0,
+    "ap": 0.0,
     "precision": [],
     "recall": [],
-    "Number of ground-truth objects": 6,
-    "Number of detected objects": 0,
+    "num_groundtruth": 6,
+    "num_detection": 0,
     "tp": 0,
     "fp": 0
   },
   "sink": {
     "class_name": "sink",
-    "AP": 0.16326530612244897,
+    "ap": 0.16326530612244897,
     "precision": [
       0.0,
       0.5,
@@ -1042,14 +1042,14 @@
       0.2857142857142857,
       0.2857142857142857
     ],
-    "Number of ground-truth objects": 14,
-    "Number of detected objects": 8,
+    "num_groundtruth": 14,
+    "num_detection": 8,
     "tp": 4,
     "fp": 4
   },
   "sofa": {
     "class_name": "sofa",
-    "AP": 0.9047619047619048,
+    "ap": 0.9047619047619048,
     "precision": [
       1.0,
       1.0,
@@ -1098,14 +1098,14 @@
       0.9047619047619048,
       0.9047619047619048
     ],
-    "Number of ground-truth objects": 21,
-    "Number of detected objects": 22,
+    "num_groundtruth": 21,
+    "num_detection": 22,
     "tp": 19,
     "fp": 3
   },
   "tap": {
     "class_name": "tap",
-    "AP": 0.013888888888888888,
+    "ap": 0.013888888888888888,
     "precision": [
       0.0,
       0.0,
@@ -1118,28 +1118,28 @@
       0.0,
       0.05555555555555555
     ],
-    "Number of ground-truth objects": 18,
-    "Number of detected objects": 4,
+    "num_groundtruth": 18,
+    "num_detection": 4,
     "tp": 1,
     "fp": 3
   },
   "tincan": {
     "class_name": "tincan",
-    "AP": 0.0,
+    "ap": 0.0,
     "precision": [
       0.0
     ],
     "recall": [
       0.0
     ],
-    "Number of ground-truth objects": 28,
-    "Number of detected objects": 1,
+    "num_groundtruth": 28,
+    "num_detection": 1,
     "tp": 0,
     "fp": 1
   },
   "tvmonitor": {
     "class_name": "tvmonitor",
-    "AP": 0.6325,
+    "ap": 0.6325,
     "precision": [
       1.0,
       1.0,
@@ -1180,14 +1180,14 @@
       0.65,
       0.65
     ],
-    "Number of ground-truth objects": 20,
-    "Number of detected objects": 18,
+    "num_groundtruth": 20,
+    "num_detection": 18,
     "tp": 13,
     "fp": 5
   },
   "vase": {
     "class_name": "vase",
-    "AP": 0.1875,
+    "ap": 0.1875,
     "precision": [
       0.0,
       0.5,
@@ -1208,14 +1208,14 @@
       0.25,
       0.25
     ],
-    "Number of ground-truth objects": 12,
-    "Number of detected objects": 8,
+    "num_groundtruth": 12,
+    "num_detection": 8,
     "tp": 3,
     "fp": 5
   },
   "wastecontainer": {
     "class_name": "wastecontainer",
-    "AP": 0.45454545454545453,
+    "ap": 0.45454545454545453,
     "precision": [
       1.0,
       1.0,
@@ -1230,14 +1230,14 @@
       0.36363636363636365,
       0.45454545454545453
     ],
-    "Number of ground-truth objects": 11,
-    "Number of detected objects": 5,
+    "num_groundtruth": 11,
+    "num_detection": 5,
     "tp": 5,
     "fp": 0
   },
   "windowblind": {
     "class_name": "windowblind",
-    "AP": 0.23529411764705882,
+    "ap": 0.23529411764705882,
     "precision": [
       1.0,
       1.0,
@@ -1250,56 +1250,56 @@
       0.17647058823529413,
       0.23529411764705882
     ],
-    "Number of ground-truth objects": 17,
-    "Number of detected objects": 4,
+    "num_groundtruth": 17,
+    "num_detection": 4,
     "tp": 4,
     "fp": 0
   },
   "keyboard": {
     "class_name": "keyboard",
-    "AP": NaN,
+    "ap": NaN,
     "precision": [
       0
     ],
     "recall": [
       NaN
     ],
-    "Number of ground-truth objects": 0,
-    "Number of detected objects": 1,
+    "num_groundtruth": 0,
+    "num_detection": 1,
     "tp": 0,
     "fp": 1
   },
   "knife": {
     "class_name": "knife",
-    "AP": NaN,
+    "ap": NaN,
     "precision": [
       0
     ],
     "recall": [
       NaN
     ],
-    "Number of ground-truth objects": 0,
-    "Number of detected objects": 1,
+    "num_groundtruth": 0,
+    "num_detection": 1,
     "tp": 0,
     "fp": 1
   },
   "lamp": {
     "class_name": "lamp",
-    "AP": NaN,
+    "ap": NaN,
     "precision": [
       0
     ],
     "recall": [
       NaN
     ],
-    "Number of ground-truth objects": 0,
-    "Number of detected objects": 1,
+    "num_groundtruth": 0,
+    "num_detection": 1,
     "tp": 0,
     "fp": 1
   },
   "laptop": {
     "class_name": "laptop",
-    "AP": NaN,
+    "ap": NaN,
     "precision": [
       0,
       0
@@ -1308,14 +1308,14 @@
       NaN,
       NaN
     ],
-    "Number of ground-truth objects": 0,
-    "Number of detected objects": 2,
+    "num_groundtruth": 0,
+    "num_detection": 2,
     "tp": 0,
     "fp": 2
   },
   "oven": {
     "class_name": "oven",
-    "AP": NaN,
+    "ap": NaN,
     "precision": [
       0,
       0,
@@ -1328,14 +1328,14 @@
       NaN,
       NaN
     ],
-    "Number of ground-truth objects": 0,
-    "Number of detected objects": 4,
+    "num_groundtruth": 0,
+    "num_detection": 4,
     "tp": 0,
     "fp": 4
   },
   "refrigerator": {
     "class_name": "refrigerator",
-    "AP": NaN,
+    "ap": NaN,
     "precision": [
       0,
       0,
@@ -1404,14 +1404,14 @@
       NaN,
       NaN
     ],
-    "Number of ground-truth objects": 0,
-    "Number of detected objects": 32,
+    "num_groundtruth": 0,
+    "num_detection": 32,
     "tp": 0,
     "fp": 32
   },
   "toilet": {
     "class_name": "toilet",
-    "AP": NaN,
+    "ap": NaN,
     "precision": [
       0,
       0
@@ -1420,22 +1420,22 @@
       NaN,
       NaN
     ],
-    "Number of ground-truth objects": 0,
-    "Number of detected objects": 2,
+    "num_groundtruth": 0,
+    "num_detection": 2,
     "tp": 0,
     "fp": 2
   },
   "toothbrush": {
     "class_name": "toothbrush",
-    "AP": NaN,
+    "ap": NaN,
     "precision": [
       0
     ],
     "recall": [
       NaN
     ],
-    "Number of ground-truth objects": 0,
-    "Number of detected objects": 1,
+    "num_groundtruth": 0,
+    "num_detection": 1,
     "tp": 0,
     "fp": 1
   },
