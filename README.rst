@@ -23,12 +23,14 @@ Implemented metrics
 
 `Tutorial <https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173>`_.
 
-- Intersection Over Union (IOU)
-- TP and FP
-    - True Positive (TP): IOU ≥ *IOU threshold* (default: 0.5)
-    - False Positive (FP): IOU < *IOU threshold* (default: 0.5)
-- Precision and Recall
-- Average Precision
-    - 11-point AP
-    - all-point AP
+* Intersection Over Union (IOU)
+* TP and FP
 
+  * True Positive (TP): IOU ≥ *IOU threshold* (default: 0.5)
+  * False Positive (FP): IOU < *IOU threshold* (default: 0.5)
+  
+* Precision and Recall
+* Average Precision
+
+  * 11-point AP
+  * all-point AP
