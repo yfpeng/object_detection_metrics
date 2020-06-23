@@ -217,8 +217,8 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
         r.precision = precisions
         r.recall = recalls
         r.ap = ap
-        r.interpolated_recall = mrec
-        r.interpolated_precision = mpre
+        r.interpolated_recall = np.array(mrec)
+        r.interpolated_precision = np.array(mpre)
         r.tp = np.sum(tps)
         r.fp = np.sum(fps)
         r.num_groundtruth = len(golds)
