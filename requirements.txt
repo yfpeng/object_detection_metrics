@@ -2,3 +2,5 @@ matplotlib
 numpy
 coveralls
 pytest-cov
+# pycocotools-fix
+pycocotools-windows

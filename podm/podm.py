@@ -25,8 +25,8 @@ class Box:
             xbr: the X bottom-right coordinate of the bounding box.
             ybr: the Y bottom-right coordinate of the bounding box.
         """
-        assert xtl < xbr, f'xtl < xbr: xtl:{xtl}, xbr:{xbr}'
-        assert ytl < ybr, f'ytl < ybr: xtl:{ytl}, xbr:{ybr}'
+        assert xtl <= xbr, f'xtl < xbr: xtl:{xtl}, xbr:{xbr}'
+        assert ytl <= ybr, f'ytl < ybr: ytl:{ytl}, xbr:{ybr}'
 
         self.xtl = xtl
         self.ytl = ytl
