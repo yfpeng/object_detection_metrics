@@ -94,14 +94,21 @@ class PCOCOCategory:
         }
 
 
-class PCOCOAnnotation(Box):
+class PCOCOAnnotation:
     def __init__(self):
-        super(PCOCOAnnotation, self).__init__(0, 0, 0, 0)
         self.id = 0  # type:int
         self.image_id = 0  # type:int
         self.category_id = 0  # type:int
         self.iscrowd = 0  # type:int
         self.score = 0.  # type:float
+        self.xtl = 0
+        self.ytl = 0
+        self.xbr = 0
+        self.ybr = 0
+
+    @property
+    def area(self) -> float:
+        return (self.xbr - self.xtl) * (self.ybr - self.ytl)
 
     def to_dict(self):
         return {

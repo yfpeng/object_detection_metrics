@@ -4,3 +4,4 @@ coveralls
 pytest-cov
 # pycocotools-fix
 pycocotools-windows
+scikit-image
