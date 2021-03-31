@@ -1,5 +1,5 @@
 import sys
-from collections import Counter
+from collections import Counter, defaultdict
 from enum import Enum
 from typing import List, Dict
 
@@ -180,10 +180,15 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
         for key, val in counter.items():
             counter[key] = np.zeros(val)
 
+        # Pre-processing groundtruths of the some image
+        image_name2gt = defaultdict(list)
+        for b in golds:
+            image_name2gt[b.image_name].append(b)
+
         # Loop through detections
         for i in range(len(preds)):
             # Find ground truth image
-            gt = [b for b in golds if b.image_name == preds[i].image_name]
+            gt = image_name2gt[preds[i].image_name]
             max_iou = sys.float_info.min
             mas_idx = -1
             for j in range(len(gt)):
@@ -243,7 +248,7 @@ def calculate_all_points_average_precision(recall, precision):
         mpre[i - 1] = max(mpre[i - 1], mpre[i])
     ii = []
     for i in range(len(mrec) - 1):
-        if mrec[1:][i] != mrec[0:-1][i]:
+        if mrec[i + 1] != mrec[i]:
             ii.append(i + 1)
     ap = 0
     for i in ii:
