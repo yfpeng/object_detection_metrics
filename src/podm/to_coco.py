@@ -7,8 +7,9 @@ import io
 
 from pycocotools.coco import COCO
 
-from src.podm import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation
-from src.podm import pcoco
+# from podm import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation
+from podm import pcoco
+from podm.pcoco import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation
 
 
 class BBFormat(Enum):
@@ -80,7 +81,6 @@ def convert_pascal_voc_to_coco_gold(src, dest, format=BBFormat.X1Y1X2Y2):
 
     with open(dest, 'w') as fp:
         json.dump(dataset.to_dict(), fp, indent=2)
-
 
 
 def convert_pascal_voc_to_coco_pred(coco_gold_file, src, dest, format=BBFormat.X1Y1X2Y2):

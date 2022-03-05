@@ -9,7 +9,7 @@ import skimage.io as io
 from pycocotools.cocoeval import COCOeval
 
 if __name__ == '__main__':
-    dir = Path(r'D:\pengy6\data\ImageCLEF2016\total')
+    dir = Path(r'ImageCLEF2016\total')
     annFile = dir / 'instances_default.json'
     coco = COCO(annFile)
 

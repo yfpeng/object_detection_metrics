@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/pypi/l/object_detection_metrics.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![Downloads](https://img.shields.io/pypi/dm/object_detection_metrics.svg)](https://pypi.python.org/pypi/object_detection_metrics)
 [![Pythong version](https://img.shields.io/pypi/pyversions/object_detection_metrics)](https://pypi.python.org/pypi/object_detection_metrics)
+[![codecov](https://codecov.io/gh/yfpeng/object_detection_metrics/branch/master/graph/badge.svg?token=m4mJ9fD88s)](https://codecov.io/gh/yfpeng/object_detection_metrics)
 [![Hits](https://hits.dwyl.com/yfpeng/object_detection_metrics.svg)](https://hits.dwyl.com/yfpeng/object_detection_metrics)
 
 
