@@ -1,8 +1,7 @@
 from pathlib import Path
 
-from podm import get_pascal_voc_metrics
+from podm import get_pascal_voc_metrics, load_data
 from podm import plot_precision_recall_curve_all
-from helpers.utils import load_data
 
 if __name__ == '__main__':
     dir = Path('sample_2')

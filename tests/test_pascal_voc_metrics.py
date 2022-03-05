@@ -39,6 +39,14 @@ def test_sample3(tests_dir):
     assert_results(results, RESULT0_5, 'precision')
     assert_results(results, RESULT0_5, 'recall')
 
+    RESULT0_3 = {
+        'person': {
+            'ap': 0.245687
+        }
+    }
+    results = get_pascal_voc_metrics(gt_BoundingBoxes, pd_BoundingBoxes, .3)
+    assert_results(results, RESULT0_3, 'ap')
+
 
 if __name__ == '__main__':
     test_sample3(Path(__file__).parent)
