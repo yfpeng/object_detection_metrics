@@ -1,3 +1,4 @@
+[![Build status](https://github.com/yfpeng/object_detection_metrics/actions/workflows/pytest.yml/badge.svg)](https://github.com/yfpeng/object_detection_metrics/)
 [![Latest version on PyPI](https://img.shields.io/pypi/v/object_detection_metrics.svg)](https://pypi.python.org/pypi/object_detection_metrics)
 [![License](https://img.shields.io/pypi/l/object_detection_metrics.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![Downloads](https://img.shields.io/pypi/dm/object_detection_metrics.svg)](https://pypi.python.org/pypi/object_detection_metrics)
