@@ -1,18 +1,24 @@
+import math
 from pathlib import Path
 
 from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
-import numpy as np
 
 
-RESULT0_3 = {
-    'person': {
-        'ap': 0.245687
-    }
-}
+def test_sample2():
+    dir = Path('tests/sample_2')
+    coco_gld = COCO(dir / 'groundtruths_coco.json')
+    coco_rst = coco_gld.loadRes(str(dir / 'detections_coco.json'))
+
+    cocoEval = COCOeval(coco_gld, coco_rst, iouType='bbox')
+    cocoEval.evaluate()
+    cocoEval.accumulate()
+    cocoEval.summarize()
+    assert math.isclose(cocoEval.stats[1], 0.31195, rel_tol=1e-2)
+    assert math.isclose(cocoEval.stats[-1], 0.307, rel_tol=1e-2)
 
 
-def test_sample2_coco():
+def test_sample3():
     dir = Path('tests/sample_3')
     coco_gld = COCO(dir / 'groundtruths_coco.json')
     coco_rst = coco_gld.loadRes(str(dir / 'detections_coco.json'))
@@ -25,8 +31,9 @@ def test_sample2_coco():
     cocoEval.evaluate()
     cocoEval.accumulate()
     cocoEval.summarize()
-    print(cocoEval.stats[1])
+    assert math.isclose(cocoEval.stats[1], 0.0231, rel_tol=1e-2)
+    assert math.isclose(cocoEval.stats[-1], -1.000, rel_tol=1e-2)
 
 
 if __name__ == '__main__':
-    test_sample2_coco()
+    test_sample3()
