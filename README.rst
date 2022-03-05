@@ -6,10 +6,6 @@
    :alt: License
    :target: https://opensource.org/licenses/BSD-3-Clause
 
-.. image:: https://requires.io/github/yfpeng/object_detection_metrics/requirements.svg?branch=master
-   :target: https://requires.io/github/yfpeng/object_detection_metrics/requirements/?branch=master
-   :alt: Requirements Status
-
 .. image:: https://hits.dwyl.com/yfpeng/object_detection_metrics.svg
    :alt: Hits
    :target: https://hits.dwyl.com/yfpeng/object_detection_metrics
