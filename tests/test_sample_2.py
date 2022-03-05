@@ -3,7 +3,8 @@ from pathlib import Path
 import numpy as np
 
 from podm import get_pascal_voc_metrics, MetricPerClass
-from helpers.utils import load_data, assert_results, load_data_coco
+from helpers.utils import load_data, assert_results
+from podm.utils import load_data_coco
 
 
 def test_sample2():

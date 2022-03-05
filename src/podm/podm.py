@@ -106,7 +106,7 @@ class MethodAveragePrecision(Enum):
 
 class BoundingBox(Box):
     def __init__(self, image_name: str, label: str, xtl: float, ytl: float, xbr: float, ybr: float,
-                 score=None):
+                 score: float = None):
         """Constructor.
         Args:
             image_name: the image name.
