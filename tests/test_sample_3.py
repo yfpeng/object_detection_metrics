@@ -1,8 +1,8 @@
 import json
 from pathlib import Path
 
-from podm.podm import get_pascal_voc_metrics
-from tests.utils import load_data, assert_results, load_data_coco
+from podm import get_pascal_voc_metrics
+from helpers.utils import load_data, assert_results, load_data_coco
 
 RESULT0_3 = {
     'person': {

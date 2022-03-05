@@ -1,7 +1,7 @@
 import json
 from typing import List, Dict, Tuple
 
-from podm.podm import BoundingBox, MetricPerClass
+from podm import BoundingBox, MetricPerClass
 import numpy as np
 
 
@@ -76,6 +76,27 @@ def load_data_coco(gd_pathname, rt_pathname=None) -> Tuple[List[BoundingBox], Li
     return gt_boxes, rt_boxes
 
 
+# def assert_results(actuals: Dict[str, MetricPerClass], expecteds, key, classes=None):
+#     if classes is None:
+#         classes = set(m.label for m in actuals.values())
+#
+#     for m in actuals.values():
+#         label = m.label
+#         if label in classes:
+#             print(f'{label}, {key}: ', end='')
+#             actual = m.__dict__[key]
+#             expected = expecteds[label][key]
+#             try:
+#                 if np.allclose(actual, expected, rtol=1e-1, equal_nan=True):
+#                     print(f'{bcolors.OKGREEN}Passed{bcolors.ENDC}')
+#                 else:
+#                     print(f'{bcolors.FAIL}Failed. Expected:{expected}, Actual:{actual}{bcolors.ENDC}')
+#                     exit(1)
+#             except Exception as e:
+#                 print(f'{bcolors.FAIL}Failed. Expected:{expected}, Actual:{actual}{bcolors.ENDC}')
+#                 exit(1)
+
+
 def assert_results(actuals: Dict[str, MetricPerClass], expecteds, key, classes=None):
     if classes is None:
         classes = set(m.label for m in actuals.values())
@@ -83,16 +104,7 @@ def assert_results(actuals: Dict[str, MetricPerClass], expecteds, key, classes=N
     for m in actuals.values():
         label = m.label
         if label in classes:
-            print(f'{label}, {key}: ', end='')
             actual = m.__dict__[key]
             expected = expecteds[label][key]
-            try:
-                if np.allclose(actual, expected, rtol=1e-1, equal_nan=True):
-                    print(f'{bcolors.OKGREEN}Passed{bcolors.ENDC}')
-                else:
-                    print(f'{bcolors.FAIL}Failed. Expected:{expected}, Actual:{actual}{bcolors.ENDC}')
-                    exit(1)
-            except Exception as e:
-                print(f'{bcolors.FAIL}Failed. Expected:{expected}, Actual:{actual}{bcolors.ENDC}')
-                exit(1)
-
+            assert np.allclose(actual, expected, rtol=1e-1, equal_nan=True),\
+                f'Failed. Expected:{expected}, Actual:{actual}'

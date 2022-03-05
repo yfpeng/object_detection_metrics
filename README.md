@@ -16,10 +16,10 @@ $ pip install object_detection_metrics
 ```
 
 ```python
-from podm.podm import get_pascal_voc_metrics
+from src.podm import get_pascal_voc_metrics
 
-gt_BoundingBoxes = ... # type: List[BoundingBox]
-pd_BoundingBoxes = ... # type: List[BoundingBox]
+gt_BoundingBoxes = ...  # type: List[BoundingBox]
+pd_BoundingBoxes = ...  # type: List[BoundingBox]
 results = get_pascal_voc_metrics(gt_BoundingBoxes, pd_BoundingBoxes, .5)
 ```
 

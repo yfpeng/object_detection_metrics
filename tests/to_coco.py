@@ -7,8 +7,8 @@ import io
 
 from pycocotools.coco import COCO
 
-from podm.pcoco import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation
-from podm import pcoco
+from src.podm import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation
+from src.podm import pcoco
 
 
 class BBFormat(Enum):

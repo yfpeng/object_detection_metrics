@@ -1,8 +1,6 @@
 import json
 from typing import List
 
-from podm.podm import Box
-
 
 class PCOCODataset:
     def __init__(self):

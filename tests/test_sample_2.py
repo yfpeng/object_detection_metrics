@@ -1,10 +1,9 @@
 import json
 from pathlib import Path
-
 import numpy as np
 
-from podm.podm import get_pascal_voc_metrics, MetricPerClass
-from tests.utils import load_data, assert_results, load_data_coco
+from podm import get_pascal_voc_metrics, MetricPerClass
+from helpers.utils import load_data, assert_results, load_data_coco
 
 
 def test_sample2():

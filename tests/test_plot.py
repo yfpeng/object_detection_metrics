@@ -1,9 +1,8 @@
-import json
 from pathlib import Path
 
-from podm.podm import get_pascal_voc_metrics
-from podm.visualize import plot_precision_recall_curve_all
-from tests.utils import load_data
+from podm import get_pascal_voc_metrics
+from podm import plot_precision_recall_curve_all
+from helpers.utils import load_data
 
 if __name__ == '__main__':
     dir = Path('sample_2')

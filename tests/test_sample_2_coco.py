@@ -1,12 +1,7 @@
-import json
 from pathlib import Path
 
-import numpy as np
 from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
-
-from podm.podm import get_pascal_voc_metrics, MetricPerClass
-from tests.utils import load_data, assert_results
 
 
 def test_sample2_coco():
