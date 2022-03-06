@@ -49,4 +49,4 @@ def test_sample3(tests_dir):
 
 
 if __name__ == '__main__':
-    test_sample3(Path(__file__).parent)
+    test_sample2(Path(__file__).parent)

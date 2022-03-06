@@ -13,16 +13,61 @@ This project was forked from [rafaelpadilla/Object-Detection-Metrics](https://gi
 
 Installing `object_detection_metrics`
 
-```bash
+```shell
 $ pip install object_detection_metrics
 ```
 
-```python
-from src.podm import get_pascal_voc_metrics
+Reading Josn file
 
-gt_BoundingBoxes = ...  # type: List[BoundingBox]
-pd_BoundingBoxes = ...  # type: List[BoundingBox]
-results = get_pascal_voc_metrics(gt_BoundingBoxes, pd_BoundingBoxes, .5)
+```python
+import podm
+bounding_boxes = podm.load_data('tests/sample_2/groundtruths.json')
+```
+
+Reading COCO file
+
+```python
+import podm
+bounding_boxes = podm.load_data_coco('tests/sample_2/groundtruths_coco.json')
+```
+
+PASCAL VOC Metrics
+
+```python
+import podm
+gt_BoundingBoxes = podm.load_data('tests/sample_2/groundtruths.json')
+pd_BoundingBoxes = podm.load_data('tests/sample_2/detections.json')
+results = podm.get_pascal_voc_metrics(gt_BoundingBoxes, pd_BoundingBoxes, .5)
+```
+
+ap, precision, recall, tp, fp, etc
+
+```python
+for cls, metric in actuals.items():
+    label = m.label
+    print('ap', metric.ap)
+    print('precision', metric.precision)
+    print('interpolated_recall', metric.interpolated_recall)
+    print('interpolated_precision', metric.interpolated_precision)
+    print('tp', metric.tp)
+    print('fp', metric.fp)
+    print('num_groundtruth', metric.num_groundtruth)
+    print('num_detection', metric.num_detection)
+```
+
+mAP
+
+```python
+from podm import MetricPerClass
+mAP = MetricPerClass.mAP(results)
+```
+
+IoU
+
+```python
+box1 = Box(0., 0., 10., 10.)
+box2 = Box(1., 1., 11., 11.)
+Box.intersection_over_union(box1, box2)
 ```
 
 ## Implemented metrics

@@ -1,3 +1,5 @@
+import pytest
+
 from podm import Box
 import numpy as np
 
@@ -19,3 +21,12 @@ def test_iou():
     box1 = Box(0., 0., 2., 2.)
     box2 = Box(1., 1., 3., 3.)
     assert np.isclose(Box.intersection_over_union(box1, box2), 0.142857142857, 1e-6)
+
+
+def test_box():
+    box = Box(0., 0., 10., 10.)
+    assert box.width == 10
+    assert box.height == 10
+
+    with pytest.raises(AssertionError):
+        Box(0., 0., -1, 10.)
