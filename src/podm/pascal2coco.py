@@ -1,15 +1,29 @@
+"""
+Convert from a PASCAL VOC zip file to a COCO file.
+
+Usage:
+    pascal2coco gold --gold=<file> --output-gold=<file>
+    pascal2coco pred --gold=<file> --pred=<file> --output-gold=<file> --output-pred=<file>
+
+Options:
+    --gold=<file>           PASCAL VOC groundtruths zip file
+    --pred=<file>           PASCAL VOC predictions zip file
+    --output-gold=<file>    Groundtruths JSON file
+    --output-pred=<file>    Predictions JSON file
+"""
 import json
 import zipfile
 from enum import Enum
 from pathlib import Path
 from typing import Dict
 import io
+import docopt
+import tqdm
 
 from pycocotools.coco import COCO
 
 # from podm import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation
-from podm import pcoco
-from podm.pcoco import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation
+from pcoco import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation, load as pcoco_load
 
 
 class BBFormat(Enum):
@@ -33,7 +47,7 @@ def convert_pascal_voc_to_coco_gold(src, dest, format=BBFormat.X1Y1X2Y2):
     dataset = PCOCODataset()
     with zipfile.ZipFile(src, 'r') as myzip:
         namelist = myzip.namelist()
-        for name in namelist:
+        for name in tqdm.tqdm(namelist):
             if not name.endswith('.txt'):
                 continue
             img = PCOCOImage()
@@ -83,18 +97,20 @@ def convert_pascal_voc_to_coco_gold(src, dest, format=BBFormat.X1Y1X2Y2):
         json.dump(dataset.to_dict(), fp, indent=2)
 
 
-def convert_pascal_voc_to_coco_pred(coco_gold_file, src, dest, format=BBFormat.X1Y1X2Y2):
-    with open(coco_gold_file) as fp:
-        dataset = pcoco.load(fp)
+def convert_pascal_voc_to_coco_pred(src_gold, src_pred, dest_gold, dest_pred, format=BBFormat.X1Y1X2Y2):
+    convert_pascal_voc_to_coco_gold(src_gold, dest_gold)
+
+    with open(dest_gold) as fp:
+        dataset = pcoco_load(fp)
 
     cat_map = dataset.cat_name_to_id
     img_map = dataset.img_name_to_id
 
     annotations = []
     ann_id = 1
-    with zipfile.ZipFile(src, 'r') as myzip:
+    with zipfile.ZipFile(src_pred, 'r') as myzip:
         namelist = myzip.namelist()
-        for name in namelist:
+        for name in tqdm.tqdm(namelist):
             if not name.endswith('.txt'):
                 continue
             file_name = name[name.find('/') + 1:] + '.jpg'
@@ -141,19 +157,22 @@ def convert_pascal_voc_to_coco_pred(coco_gold_file, src, dest, format=BBFormat.X
 
             image_id += 1
 
-    with open(dest, 'w') as fp:
+    with open(dest_pred, 'w') as fp:
         json.dump([a.to_dict() for a in annotations], fp, indent=2)
 
-    with open(coco_gold_file, 'w') as fp:
+    with open(dest_gold, 'w') as fp:
         json.dump(dataset.to_dict(), fp, indent=2)
 
 
+def main():
+    argv = docopt.docopt(__doc__)
+    if argv['gold']:
+        convert_pascal_voc_to_coco_gold(argv['--gold'], argv['--output-gold'], BBFormat.X1Y1X2Y2)
+    if argv['pred']:
+        convert_pascal_voc_to_coco_pred(argv['--gold'], argv['--pred'],
+                                        argv['--output-gold'], argv['--output-pred'],
+                                        BBFormat.X1Y1X2Y2)
+
+
 if __name__ == '__main__':
-    dir = Path('tests/sample_2')
-    convert_pascal_voc_to_coco_gold(dir / 'groundtruths.zip',
-                                    dir / 'groundtruths_coco.json',
-                                    BBFormat.X1Y1X2Y2)
-    convert_pascal_voc_to_coco_pred(dir / 'groundtruths_coco.json',
-                                    dir / 'detections.zip',
-                                    dir / 'detections_coco.json',
-                                    BBFormat.X1Y1X2Y2)
+    main()

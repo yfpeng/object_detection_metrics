@@ -2,3 +2,4 @@ matplotlib
 numpy
 pycocotools
 scikit-image
+tqdm

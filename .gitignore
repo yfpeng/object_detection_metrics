@@ -1,5 +1,6 @@
 coverage_html_report
 .idea
+output
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
