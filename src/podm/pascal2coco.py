@@ -14,15 +14,11 @@ Options:
 import json
 import zipfile
 from enum import Enum
-from pathlib import Path
 from typing import Dict
 import io
 import docopt
 import tqdm
 
-from pycocotools.coco import COCO
-
-# from podm import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation
 from pcoco import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation, load as pcoco_load
 
 
@@ -140,19 +136,18 @@ def convert_pascal_voc_to_coco_pred(src_gold, src_pred, dest_gold, dest_pred, fo
                         cat.id = cat_map[label]
                         cat.name = label
                         dataset.categories.append(cat)
-                    try:
-                        ann = PCOCOAnnotation()
-                        ann.image_id = image_id
-                        ann.id = ann_id
-                        ann.category_id = cat_map[label]
-                        ann.xtl = xtl
-                        ann.ytl = ytl
-                        ann.xbr = xbr
-                        ann.ybr = ybr
-                        ann.score = score
-                        annotations.append(ann)
-                    except:
-                        print(label)
+
+                    ann = PCOCOAnnotation()
+                    ann.image_id = image_id
+                    ann.id = ann_id
+                    ann.category_id = cat_map[label]
+                    ann.xtl = xtl
+                    ann.ytl = ytl
+                    ann.xbr = xbr
+                    ann.ybr = ybr
+                    ann.score = score
+                    annotations.append(ann)
+
                     ann_id += 1
 
             image_id += 1

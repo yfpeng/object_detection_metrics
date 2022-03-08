@@ -20,7 +20,7 @@ class PCOCODataset:
             "licenses": [i.to_dict() for i in self.licenses],
             "info": {
                 "contributor": self.contributor,
-                "description": self.contributor,
+                "description": self.description,
                 "url": self.url,
                 "date_created": self.date_created,
                 "version": self.version,
