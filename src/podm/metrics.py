@@ -58,13 +58,13 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
     ret = {}  # list containing metrics (precision, recall, average precision) of each class
 
     # Get all classes
-    categories = sorted(set(b.category_id for b in gold_standard + predictions))
+    categories = sorted(set(b.category for b in gold_standard + predictions))
 
     # Precision x Recall is obtained individually by each class
     # Loop through by classes
     for category_id in categories:
-        preds = [b for b in predictions if b.category_id == category_id]  # type: List[BoundingBox]
-        golds = [b for b in gold_standard if b.category_id == category_id]  # type: List[BoundingBox]
+        preds = [b for b in predictions if b.category == category_id]  # type: List[BoundingBox]
+        golds = [b for b in gold_standard if b.category == category_id]  # type: List[BoundingBox]
         npos = len(golds)
 
         # sort detections by decreasing confidence
@@ -73,19 +73,19 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
         fps = np.zeros(len(preds))
 
         # create dictionary with amount of gts for each image
-        counter = Counter([cc.image_id for cc in golds])
+        counter = Counter([cc.image for cc in golds])
         for key, val in counter.items():
             counter[key] = np.zeros(val)
 
         # Pre-processing groundtruths of the some image
         image_name2gt = defaultdict(list)
         for b in golds:
-            image_name2gt[b.image_id].append(b)
+            image_name2gt[b.image].append(b)
 
         # Loop through detections
         for i in range(len(preds)):
             # Find ground truth image
-            gt = image_name2gt[preds[i].image_id]
+            gt = image_name2gt[preds[i].image]
             max_iou = sys.float_info.min
             mas_idx = -1
             for j in range(len(gt)):
@@ -95,9 +95,9 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
                     mas_idx = j
             # Assign detection as true positive/don't care/false positive
             if max_iou >= iou_threshold:
-                if counter[preds[i].image_id][mas_idx] == 0:
+                if counter[preds[i].image][mas_idx] == 0:
                     tps[i] = 1  # count as true positive
-                    counter[preds[i].image_id][mas_idx] = 1  # flag as already 'seen'
+                    counter[preds[i].image][mas_idx] = 1  # flag as already 'seen'
                 else:
                     # - A detected "cat" is overlaped with a GT "cat" with IOU >= IOUThreshold.
                     fps[i] = 1  # count as false positive

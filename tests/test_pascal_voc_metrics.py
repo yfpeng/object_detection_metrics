@@ -12,22 +12,15 @@ def _get_dataset_helper(dir):
         gold_dataset = pcoco_decoder.load_object_detection(fp)
     with open(dir / 'detections_coco.json') as fp:
         pred_dataset = pcoco_decoder.load_object_detection_result(fp, gold_dataset)
-
     RESULT0_5 = json.load(open(dir / 'expected0_5.json'))
-    expects = {}
-    for cat in RESULT0_5.keys():
-        category = gold_dataset.get_category_name(cat)
-        if category is not None:
-            expects[gold_dataset.get_category_name(cat).id] = RESULT0_5[cat]
-    expects.update(**RESULT0_5)
-    return gold_dataset, pred_dataset, expects
+    return gold_dataset, pred_dataset, RESULT0_5
 
 
 def test_sample2(tests_dir):
     dir = tests_dir / 'sample_2'
     gold_dataset, pred_dataset, expects = _get_dataset_helper(dir)
 
-    results = get_pascal_voc_metrics(gold_dataset.bboxes, pred_dataset.bboxes, .5)
+    results = get_pascal_voc_metrics(gold_dataset.bboxes(True), pred_dataset.bboxes(True), .5)
     assert_results(results, expects, 'ap')
     assert_results(results, expects, 'precision')
     assert_results(results, expects, 'recall')
@@ -44,7 +37,7 @@ def test_sample3(tests_dir):
     dir = tests_dir / 'sample_3'
     gold_dataset, pred_dataset, expects = _get_dataset_helper(dir)
 
-    results = get_pascal_voc_metrics(gold_dataset.bboxes, pred_dataset.bboxes, .5)
+    results = get_pascal_voc_metrics(gold_dataset.bboxes(True), pred_dataset.bboxes(True), .5)
     assert_results(results, expects, 'ap')
     assert_results(results, expects, 'precision')
     assert_results(results, expects, 'recall')
@@ -54,7 +47,7 @@ def test_sample3(tests_dir):
             'ap': 0.245687
         }
     }
-    results = get_pascal_voc_metrics(gold_dataset.bboxes, pred_dataset.bboxes, .3)
+    results = get_pascal_voc_metrics(gold_dataset.bboxes(True), pred_dataset.bboxes(True), .3)
     assert_results(results, RESULT0_3, 'ap')
 
 

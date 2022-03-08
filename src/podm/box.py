@@ -108,12 +108,12 @@ class BBFormat(Enum):
 
 
 class BoundingBox(Box):
-    def __init__(self, image_id, category_id, xtl: float, ytl: float, xbr: float, ybr: float,
+    def __init__(self, image, category, xtl: float, ytl: float, xbr: float, ybr: float,
                  score: float = None):
         """Constructor.
         Args:
-            image_id: image id.
-            category_id: category id.
+            image: image.
+            category: category.
             xtl: the X top-left coordinate of the bounding box.
             ytl: the Y top-left coordinate of the bounding box.
             xbr: the X bottom-right coordinate of the bounding box.
@@ -121,6 +121,6 @@ class BoundingBox(Box):
             score: (optional) the confidence of the detected class.
         """
         super().__init__(xtl, ytl, xbr, ybr)
-        self.image_id = image_id
+        self.image = image
         self.score = score
-        self.category_id = category_id
+        self.category = category

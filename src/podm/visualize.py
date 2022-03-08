@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, Any
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -61,7 +61,7 @@ def plot_precision_recall_curve(result: MetricPerClass,
     plt.savefig(str(dest))
 
 
-def plot_precision_recall_curve_all(results: Dict[str, MetricPerClass],
+def plot_precision_recall_curve_all(results: Dict[Any, MetricPerClass],
                                     dest_dir,
                                     method: MethodAveragePrecision = MethodAveragePrecision.AllPointsInterpolation,
                                     show_ap: bool=False,

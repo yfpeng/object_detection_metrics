@@ -101,8 +101,9 @@ class PCOCOObjectDetection(PCOCOAnnotation):
     def bbox(self) -> 'box.BoundingBox' or None:
         b = self.box
         if b is None:
-            return b
-        return box.BoundingBox(self.image_id, self.category_id, b.xtl, b.ytl, b.xbr, b.ybr)
+            return None
+        else:
+            return box.BoundingBox(self.image_id, self.category_id, b.xtl, b.ytl, b.xbr, b.ybr)
 
     @classmethod
     def box_polygon(cls, polygon: List[int]) -> 'box.Box':
@@ -122,8 +123,9 @@ class PCOCOObjectDetectionResult(PCOCOObjectDetection):
     def bbox(self) -> 'box.BoundingBox' or None:
         b = self.box
         if b is None:
-            return b
-        return box.BoundingBox(self.image_id, self.category_id, b.xtl, b.ytl, b.xbr, b.ybr, self.score)
+            return None
+        else:
+            return box.BoundingBox(self.image_id, self.category_id, b.xtl, b.ytl, b.xbr, b.ybr, self.score)
 
 
 class PCOCOObjectDetectionDataset(PCOCODataset):
@@ -169,6 +171,12 @@ class PCOCOObjectDetectionDataset(PCOCODataset):
             new_dataset.add_annotation(ann)
         return new_dataset
 
-    @property
-    def bboxes(self):
-        return [ann.bbox for ann in self.annotations]
+    def bboxes(self, use_name: bool = True) -> List[box.BoundingBox]:
+        if use_name:
+            bboxes = [ann.bbox for ann in self.annotations]
+            for bb in bboxes:
+                bb.image = self.get_image_id(bb.image).file_name
+                bb.category = self.get_category_id(bb.category).name
+            return bboxes
+        else:
+            return [ann.bbox for ann in self.annotations]

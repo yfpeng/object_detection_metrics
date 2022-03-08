@@ -2,10 +2,8 @@ import json
 import tempfile
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import numpy as np
 from pycocotools.coco import COCO
-import skimage.io as io
 from pycocotools.cocoeval import COCOeval
 
 if __name__ == '__main__':

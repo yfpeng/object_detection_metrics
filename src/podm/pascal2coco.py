@@ -17,7 +17,7 @@ import io
 import docopt
 import tqdm
 
-from podm.pcoco import PCOCOImage, PCOCOObjectDetectionDataset, PCOCOCategory, PCOCOAnnotation, PCOCOObjectDetection, \
+from podm.pcoco import PCOCOImage, PCOCOObjectDetectionDataset, PCOCOCategory, PCOCOObjectDetection, \
     PCOCOObjectDetectionResult
 from podm.box import BBFormat, Box
 from podm.pcoco_encoder import dump as pcoco_dump, PCOCOJSONEncoder
@@ -48,17 +48,14 @@ def convert_pascal_voc_to_coco_gold(src, dest, format=BBFormat.X1Y1X2Y2) -> PCOC
                 for line in items_file:
                     tok = line.strip().split(' ')
                     if len(tok) == 5:
-                        xtl = int(tok[1])
-                        ytl = int(tok[2])
-                        xbr = int(tok[3])
-                        ybr = int(tok[4])
+                        box = Box(int(tok[1]), int(tok[2]), int(tok[3]), int(tok[4]))
                         label = tok[0]
                     else:
                         raise ValueError
 
                     if format == BBFormat.XYWH:
-                        xbr += xtl
-                        ybr += ytl
+                        box.xbr += box.xtl
+                        box.ybr += box.ytl
 
                     # add cat
                     cat = dataset.get_category_name(label)
@@ -73,7 +70,7 @@ def convert_pascal_voc_to_coco_gold(src, dest, format=BBFormat.X1Y1X2Y2) -> PCOC
                     ann.image_id = img.id
                     ann.id = ann_id
                     ann.category_id = cat.id
-                    ann.add_box(Box(xtl, ytl, xbr, ybr))
+                    ann.add_box(box)
                     dataset.add_annotation(ann)
 
                     ann_id += 1
@@ -105,18 +102,15 @@ def convert_pascal_voc_to_coco_pred(src_gold, src_pred, dest_gold, dest_pred, fo
                 for line in items_file:
                     tok = line.strip().split(' ')
                     if len(tok) == 6:
-                        xtl = int(tok[2])
-                        ytl = int(tok[3])
-                        xbr = int(tok[4])
-                        ybr = int(tok[5])
+                        box = Box(int(tok[2]), int(tok[3]), int(tok[4]), int(tok[5]))
                         label = tok[0]
                         score = float(tok[1])
                     else:
                         raise ValueError
 
                     if format == BBFormat.XYWH:
-                        xbr += xtl
-                        ybr += ytl
+                        box.xbr += box.xtl
+                        box.ybr += box.ytl
 
                     cat = gold_dataset.get_category_name(label)
                     if cat is None:
@@ -130,7 +124,7 @@ def convert_pascal_voc_to_coco_pred(src_gold, src_pred, dest_gold, dest_pred, fo
                     ann.image_id = image.id
                     ann.id = ann_id
                     ann.category_id = cat.id
-                    ann.add_box(Box(xtl, ytl, xbr, ybr))
+                    ann.add_box(box)
                     ann.score = score
                     annotations.append(ann)
 
