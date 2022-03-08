@@ -1,11 +1,16 @@
 import json
-from typing import Union, TextIO, Dict
+from typing import Union, TextIO, Dict, List
 
 from podm.pcoco import PCOCOImage, PCOCOLicense, PCOCOInfo, \
-    PCOCOObjectDetectionDataset, PCOCOCategory, PCOCOObjectDetection, PCOCOObjectDetectionResult, PCOCODataset
+    PCOCOCategory, PCOCOBoundingBox, \
+    PCOCOSegments, PCOCOBoundingBoxDataset
 
-PCOCO_OBJ = Union[PCOCOImage, PCOCOLicense, PCOCOInfo,
-                  PCOCOObjectDetectionDataset, PCOCOCategory, PCOCOObjectDetection, PCOCOObjectDetectionResult]
+PCOCO_OBJ = Union[
+    PCOCOImage, PCOCOLicense, PCOCOInfo,
+    PCOCOCategory,
+    PCOCOBoundingBoxDataset,
+    List[PCOCOBoundingBox],
+]
 
 
 class PCOCOJSONEncoder(json.JSONEncoder):
@@ -17,7 +22,7 @@ class PCOCOJSONEncoder(json.JSONEncoder):
         # print('xxxxxxxxxxxxxxxxxxxx')
         # print(type(o))
         # print(isinstance(o, PCOCOObjectDetectionDataset))
-        # print(repr(o.__class__), repr(PCOCOObjectDetectionDataset))
+        # print(repr(o.__class__), repr(PCOCOObjectDetectionResult))
         if isinstance(o, PCOCOImage):
             return {
                 "width": o.width,
@@ -50,8 +55,17 @@ class PCOCOJSONEncoder(json.JSONEncoder):
                 "name": o.name,
                 "supercategory": o.supercategory,
             }
-        if isinstance(o, PCOCOObjectDetection):
-            bb = o.box
+        if isinstance(o, PCOCOBoundingBox):
+            return {
+                "id": o.id,
+                "image_id": o.image_id,
+                "category_id": o.category_id,
+                "bbox": [o.xtl, o.ytl, o.width, o.height],
+                "score": o.score,
+                "contributor": o.contributor,
+            }
+        if isinstance(o, PCOCOSegments):
+            bb = o.bbox
             return {
                 "id": o.id,
                 "image_id": o.image_id,
@@ -60,20 +74,10 @@ class PCOCOJSONEncoder(json.JSONEncoder):
                 "bbox": [bb.xtl, bb.ytl, bb.width, bb.height],
                 "area": bb.area,
                 "iscrowd": o.iscrowd,
+                "score": o.score,
+                "contributor": o.contributor,
             }
-        if isinstance(o, PCOCOObjectDetectionResult):
-            bb = o.box
-            return {
-                "id": o.id,
-                "image_id": o.image_id,
-                "category_id": o.category_id,
-                "segmentation": o.segmentation,
-                "bbox": [bb.xtl, bb.ytl, bb.width, bb.height],
-                "area": bb.area,
-                "iscrowd": o.iscrowd,
-                "score": o.score
-            }
-        if isinstance(o, PCOCOObjectDetectionDataset):
+        if isinstance(o, PCOCOBoundingBoxDataset):
             return {
                 "info": self.default(o.info),
                 'images': [self.default(img) for img in o.images],

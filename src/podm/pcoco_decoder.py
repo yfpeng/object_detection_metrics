@@ -2,8 +2,8 @@ import copy
 import json
 from typing import Dict
 
-from podm.pcoco import PCOCOLicense, PCOCOInfo, PCOCOObjectDetectionDataset, PCOCOImage, PCOCOObjectDetection, \
-    PCOCOCategory, PCOCOObjectDetectionResult
+from podm.pcoco import PCOCOLicense, PCOCOInfo, PCOCOImage, \
+    PCOCOCategory, PCOCOBoundingBox, PCOCOSegments, PCOCOBoundingBoxDataset
 
 
 def parse_infon(obj: Dict) -> PCOCOInfo:
@@ -38,24 +38,33 @@ def parse_image(obj: Dict) -> PCOCOImage:
     return img
 
 
-def parse_object_detection_annotation(obj: Dict) -> PCOCOObjectDetection:
-    ann = PCOCOObjectDetection()
+def parse_bounding_box(obj: Dict) -> PCOCOBoundingBox:
+    ann = PCOCOBoundingBox()
     ann.id = obj['id']
     ann.category_id = obj['category_id']
     ann.image_id = obj['image_id']
-    ann.iscrowd = obj['iscrowd']
-    ann.segmentation = obj['segmentation']
+    ann.xtl = obj['bbox'][0]
+    ann.ytl = obj['bbox'][1]
+    ann.xbr = ann.xtl + obj['bbox'][2]
+    ann.ybr = ann.ytl + obj['bbox'][3]
+    if 'contributor' in obj:
+        ann.contributor = obj['contributor']
+    if 'score' in obj:
+        ann.score = obj['score']
     return ann
 
 
-def parse_object_detection_annotation_result(obj: Dict) -> PCOCOObjectDetectionResult:
-    ann = PCOCOObjectDetectionResult()
+def parse_segments(obj: Dict) -> PCOCOSegments:
+    ann = PCOCOSegments()
     ann.id = obj['id']
     ann.category_id = obj['category_id']
     ann.image_id = obj['image_id']
     ann.iscrowd = obj['iscrowd']
     ann.segmentation = obj['segmentation']
-    ann.score = obj['score']
+    if 'score' in obj:
+        ann.score = obj['score']
+    if 'contributor' in obj:
+        ann.contributor = obj['contributor']
     return ann
 
 
@@ -67,8 +76,8 @@ def parse_category(obj: Dict) -> PCOCOCategory:
     return cat
 
 
-def parse_object_detection(coco_obj: Dict) -> PCOCOObjectDetectionDataset:
-    dataset = PCOCOObjectDetectionDataset()
+def parse_bounding_box_dataset(coco_obj: Dict) -> PCOCOBoundingBoxDataset:
+    dataset = PCOCOBoundingBoxDataset()
     dataset.info = parse_infon(coco_obj['info'])
 
     for lic_obj in coco_obj['licenses']:
@@ -80,8 +89,8 @@ def parse_object_detection(coco_obj: Dict) -> PCOCOObjectDetectionDataset:
         dataset.images.append(img)
 
     for ann_obj in coco_obj['annotations']:
-        ann = parse_object_detection_annotation(ann_obj)
-        dataset.annotations.append(ann)
+        ann = parse_bounding_box(ann_obj)
+        dataset.add_annotation(ann)
 
     for cat_obj in coco_obj['categories']:
         cat = parse_category(cat_obj)
@@ -90,18 +99,13 @@ def parse_object_detection(coco_obj: Dict) -> PCOCOObjectDetectionDataset:
     return dataset
 
 
-def loads_object_detection(s, **kwargs) -> PCOCOObjectDetectionDataset:
-    coco_obj = json.loads(s, **kwargs)
-    return parse_object_detection(coco_obj)
-
-
-def load_object_detection(fp, **kwargs) -> PCOCOObjectDetectionDataset:
+def load_true_bounding_box_dataset(fp, **kwargs) -> PCOCOBoundingBoxDataset:
     coco_obj = json.load(fp, **kwargs)
-    return parse_object_detection(coco_obj)
+    return parse_bounding_box_dataset(coco_obj)
 
 
-def load_object_detection_result(fp, dataset: PCOCOObjectDetectionDataset, **kwargs) -> PCOCOObjectDetectionDataset:
-    new_dataset = PCOCOObjectDetectionDataset()
+def load_pred_bounding_box_dataset(fp, dataset: PCOCOBoundingBoxDataset, **kwargs) -> PCOCOBoundingBoxDataset:
+    new_dataset = PCOCOBoundingBoxDataset()
     new_dataset.info = copy.deepcopy(dataset.info)
     new_dataset.licenses = copy.deepcopy(dataset.licenses)
     new_dataset.images = copy.deepcopy(dataset.images)
@@ -110,7 +114,7 @@ def load_object_detection_result(fp, dataset: PCOCOObjectDetectionDataset, **kwa
     coco_obj = json.load(fp, **kwargs)
     annotations = []
     for obj in coco_obj:
-        ann = parse_object_detection_annotation_result(obj)
+        ann = parse_bounding_box(obj)
         if new_dataset.get_image_id(ann.image_id) is None:
             print('%s: Cannot find image' % ann.image_id)
         if new_dataset.get_category_id(ann.category_id) is None:

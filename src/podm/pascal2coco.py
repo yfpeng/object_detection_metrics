@@ -70,7 +70,7 @@ def convert_pascal_voc_to_coco_gold(src, dest, format=BBFormat.X1Y1X2Y2) -> PCOC
                     ann.image_id = img.id
                     ann.id = ann_id
                     ann.category_id = cat.id
-                    ann.add_box(box)
+                    ann.set_box(box)
                     dataset.add_annotation(ann)
 
                     ann_id += 1
@@ -124,7 +124,7 @@ def convert_pascal_voc_to_coco_pred(src_gold, src_pred, dest_gold, dest_pred, fo
                     ann.image_id = image.id
                     ann.id = ann_id
                     ann.category_id = cat.id
-                    ann.add_box(box)
+                    ann.set_box(box)
                     ann.score = score
                     annotations.append(ann)
 

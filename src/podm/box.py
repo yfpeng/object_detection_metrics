@@ -2,31 +2,53 @@ from enum import Enum
 
 
 class Box:
-    def __init__(self, xtl: float, ytl: float, xbr: float, ybr: float):
-        """
-                    0,0 ------> x (width)
-             |
-             |  (Left,Top)
-             |      *_________
-             |      |         |
-                    |         |
-             y      |_________|
-          (height)            *
-                        (Right,Bottom)
+    """
+                0,0 ------> x (width)
+         |
+         |  (Left,Top)
+         |      *_________
+         |      |         |
+                |         |
+         y      |_________|
+      (height)            *
+                    (Right,Bottom)
 
-        Args:
-            xtl: the X top-left coordinate of the bounding box.
-            ytl: the Y top-left coordinate of the bounding box.
-            xbr: the X bottom-right coordinate of the bounding box.
-            ybr: the Y bottom-right coordinate of the bounding box.
-        """
-        assert xtl <= xbr, f'xtl < xbr: xtl:{xtl}, xbr:{xbr}'
-        assert ytl <= ybr, f'ytl < ybr: ytl:{ytl}, xbr:{ybr}'
+    xtl: the X top-left coordinate of the bounding box.
+    ytl: the Y top-left coordinate of the bounding box.
+    xbr: the X bottom-right coordinate of the bounding box.
+    ybr: the Y bottom-right coordinate of the bounding box.
+    """
+    def __init__(self):
+        self.xtl = None  # type: float or None
+        self.ytl = None  # type: float or None
+        self.xbr = None  # type: float or None
+        self.ybr = None  # type: float or None
 
-        self.xtl = xtl
-        self.ytl = ytl
-        self.xbr = xbr
-        self.ybr = ybr
+    @classmethod
+    def of_box(cls, xtl: float, ytl: float, xbr: float, ybr: float) -> 'Box':
+        """
+        :param xtl: the X top-left coordinate of the bounding box.
+        :param ytl: the Y top-left coordinate of the bounding box.
+        :param xbr: the X bottom-right coordinate of the bounding box.
+        :param ybr: the Y bottom-right coordinate of the bounding box.
+        """
+        box = Box()
+        box.xtl = xtl
+        box.ytl = ytl
+        box.xbr = xbr
+        box.ybr = ybr
+        box.verify()
+        return box
+
+    def set_box(self, box: 'Box'):
+        self.xtl = box.xtl
+        self.ytl = box.ytl
+        self.xbr = box.xbr
+        self.ybr = box.ybr
+
+    def verify(self):
+        assert self.xtl <= self.xbr, f'xtl < xbr: xtl:{self.xtl}, xbr:{self.xbr}'
+        assert self.ytl <= self.ybr, f'ytl < ybr: ytl:{self.ytl}, xbr:{self.ybr}'
 
     @property
     def width(self) -> float:
@@ -83,7 +105,7 @@ def union(box1: 'Box', box2: 'Box'):
     ytl = min(box1.ytl, box2.ytl)
     xbr = max(box1.xbr, box2.xbr)
     ybr = max(box1.ybr, box2.ybr)
-    return Box(xtl, ytl, xbr, ybr)
+    return Box.of_box(xtl, ytl, xbr, ybr)
 
 
 def intersection(box1: 'Box', box2: 'Box'):
@@ -91,7 +113,7 @@ def intersection(box1: 'Box', box2: 'Box'):
     ytl = max(box1.ytl, box2.ytl)
     xbr = min(box1.xbr, box2.xbr)
     ybr = min(box1.ybr, box2.ybr)
-    return Box(xtl, ytl, xbr, ybr)
+    return Box.of_box(xtl, ytl, xbr, ybr)
 
 
 class BBFormat(Enum):
@@ -107,20 +129,32 @@ class BBFormat(Enum):
     X1Y1X2Y2 = 2
 
 
-class BoundingBox(Box):
-    def __init__(self, image, category, xtl: float, ytl: float, xbr: float, ybr: float,
-                 score: float = None):
-        """Constructor.
-        Args:
-            image: image.
-            category: category.
-            xtl: the X top-left coordinate of the bounding box.
-            ytl: the Y top-left coordinate of the bounding box.
-            xbr: the X bottom-right coordinate of the bounding box.
-            ybr: the Y bottom-right coordinate of the bounding box.
-            score: (optional) the confidence of the detected class.
-        """
-        super().__init__(xtl, ytl, xbr, ybr)
-        self.image = image
-        self.score = score
-        self.category = category
+# class BoundingBox(Box):
+#     def __init__(self):
+#         """Constructor.
+#         Args:
+#             image: image.
+#             category: category.
+#             xtl: the X top-left coordinate of the bounding box.
+#             ytl: the Y top-left coordinate of the bounding box.
+#             xbr: the X bottom-right coordinate of the bounding box.
+#             ybr: the Y bottom-right coordinate of the bounding box.
+#             score: (optional) the confidence of the detected class.
+#         """
+#         super(BoundingBox, self).__init__()
+#         self.image = None
+#         self.category = None
+#         self.score = None  # type: float or None
+#
+#     @classmethod
+#     def of_bbox(cls, image, category, xtl: float, ytl: float, xbr: float, ybr: float, score: float = None) \
+#             -> 'BoundingBox':
+#         bbox = BoundingBox()
+#         bbox.xtl = xtl
+#         bbox.ytl = ytl
+#         bbox.xbr = xbr
+#         bbox.ybr = ybr
+#         bbox.image = image
+#         bbox.score = score
+#         bbox.category = category
+#         return bbox

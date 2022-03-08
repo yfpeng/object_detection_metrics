@@ -3,7 +3,7 @@ from podm import pcoco_decoder
 
 def test_sample2(tests_dir):
     with open(tests_dir / 'sample_2/groundtruths_coco.json') as fp:
-        dataset = pcoco_decoder.load_object_detection(fp)
+        dataset = pcoco_decoder.load_true_bounding_box_dataset(fp)
 
     assert len(dataset.images) == 85
     assert len(dataset.categories) == 38
@@ -12,7 +12,7 @@ def test_sample2(tests_dir):
 
 def test_sample3(tests_dir):
     with open(tests_dir / 'sample_3/groundtruths_coco.json') as fp:
-        dataset = pcoco_decoder.load_object_detection(fp)
+        dataset = pcoco_decoder.load_true_bounding_box_dataset(fp)
 
     assert len(dataset.images) == 7
     assert len(dataset.categories) == 1
@@ -21,9 +21,9 @@ def test_sample3(tests_dir):
 
 def test_sample2_result(tests_dir):
     with open(tests_dir / 'sample_2/groundtruths_coco.json') as fp:
-        gold_dataset = pcoco_decoder.load_object_detection(fp)
+        gold_dataset = pcoco_decoder.load_true_bounding_box_dataset(fp)
     with open(tests_dir / 'sample_2/detections_coco.json') as fp:
-        pred_dataset = pcoco_decoder.load_object_detection_result(fp, gold_dataset)
+        pred_dataset = pcoco_decoder.load_pred_bounding_box_dataset(fp, gold_dataset)
 
     assert len(gold_dataset.images) == 85
     assert len(gold_dataset.categories) == 38
@@ -36,9 +36,9 @@ def test_sample2_result(tests_dir):
 
 def test_sample3_result(tests_dir):
     with open(tests_dir / 'sample_3/groundtruths_coco.json') as fp:
-        gold_dataset = pcoco_decoder.load_object_detection(fp)
+        gold_dataset = pcoco_decoder.load_true_bounding_box_dataset(fp)
     with open(tests_dir / 'sample_3/detections_coco.json') as fp:
-        pred_dataset = pcoco_decoder.load_object_detection_result(fp, gold_dataset)
+        pred_dataset = pcoco_decoder.load_pred_bounding_box_dataset(fp, gold_dataset)
 
     assert len(gold_dataset.images) == 7
     assert len(gold_dataset.categories) == 1

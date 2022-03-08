@@ -1,11 +1,54 @@
 import sys
 from collections import Counter, defaultdict
 from enum import Enum
-from typing import List, Dict
+from typing import List, Dict, Any
 
 import numpy as np
 
-from podm.box import intersection_over_union, BoundingBox
+from podm import box
+from podm.pcoco import PCOCOBoundingBoxDataset, PCOCOBoundingBox
+
+
+class BoundingBox(box.Box):
+    def __init__(self):
+        """Constructor.
+        Args:
+            image: image.
+            category: category.
+            xtl: the X top-left coordinate of the bounding box.
+            ytl: the Y top-left coordinate of the bounding box.
+            xbr: the X bottom-right coordinate of the bounding box.
+            ybr: the Y bottom-right coordinate of the bounding box.
+            score: (optional) the confidence of the detected class.
+        """
+        super(BoundingBox, self).__init__()
+        self.image = None
+        self.category = None
+        self.score = None  # type: float or None
+
+    @classmethod
+    def of_bbox(cls, image, category, xtl: float, ytl: float, xbr: float, ybr: float, score: float = None) \
+            -> 'BoundingBox':
+        bbox = BoundingBox()
+        bbox.xtl = xtl
+        bbox.ytl = ytl
+        bbox.xbr = xbr
+        bbox.ybr = ybr
+        bbox.image = image
+        bbox.score = score
+        bbox.category = category
+        return bbox
+
+
+def get_bounding_boxes(dataset: PCOCOBoundingBoxDataset, use_name: bool = True) -> List[BoundingBox]:
+    bboxes = []
+    for ann in dataset.annotations:
+        bb = BoundingBox.of_bbox(ann.image_id, ann.category_id, ann.xtl, ann.ytl, ann.xbr, ann.ybr, ann.score)
+        if use_name:
+            bb.image = dataset.get_image_id(ann.image_id).file_name
+            bb.category = dataset.get_category_id(ann.category_id).name
+        bboxes.append(bb)
+    return bboxes
 
 
 class MethodAveragePrecision(Enum):
@@ -34,7 +77,7 @@ class MetricPerClass:
         self.fp = None
 
     @staticmethod
-    def mAP(results: Dict[str, 'MetricPerClass']):
+    def mAP(results: Dict[Any, 'MetricPerClass']):
         return np.average([m.ap for m in results.values() if m.num_groundtruth > 0])
 
 
@@ -62,9 +105,9 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
 
     # Precision x Recall is obtained individually by each class
     # Loop through by classes
-    for category_id in categories:
-        preds = [b for b in predictions if b.category == category_id]  # type: List[BoundingBox]
-        golds = [b for b in gold_standard if b.category == category_id]  # type: List[BoundingBox]
+    for category in categories:
+        preds = [b for b in predictions if b.category == category]  # type: List[BoundingBox]
+        golds = [b for b in gold_standard if b.category == category]  # type: List[BoundingBox]
         npos = len(golds)
 
         # sort detections by decreasing confidence
@@ -89,7 +132,7 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
             max_iou = sys.float_info.min
             mas_idx = -1
             for j in range(len(gt)):
-                iou = intersection_over_union(preds[i], gt[j])
+                iou = box.intersection_over_union(preds[i], gt[j])
                 if iou > max_iou:
                     max_iou = iou
                     mas_idx = j
@@ -115,7 +158,7 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
             ap, mpre, mrec = calculate_11_points_average_precision(recalls, precisions)
         # add class result in the dictionary to be returned
         r = MetricPerClass()
-        r.label = category_id
+        r.label = category
         r.precision = precisions
         r.recall = recalls
         r.ap = ap
@@ -125,7 +168,7 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
         r.fp = np.sum(fps)
         r.num_groundtruth = len(golds)
         r.num_detection = len(preds)
-        ret[category_id] = r
+        ret[category] = r
     return ret
 
 
