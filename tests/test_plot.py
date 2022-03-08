@@ -1,7 +1,8 @@
 from pathlib import Path
 
-from podm import get_pascal_voc_metrics, load_data
-from podm import plot_precision_recall_curve_all
+from podm.podm import get_pascal_voc_metrics
+from podm.utils import load_data
+from podm.visualize import plot_precision_recall_curve_all
 
 
 def test_plot(tests_dir, tmp_path):

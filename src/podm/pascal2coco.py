@@ -19,7 +19,8 @@ import io
 import docopt
 import tqdm
 
-from pcoco import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation, load as pcoco_load
+from pcoco import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation
+from podm.pcoco_decoder import load as pcoco_load
 
 
 class BBFormat(Enum):

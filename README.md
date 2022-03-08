@@ -44,7 +44,7 @@ ap, precision, recall, tp, fp, etc
 
 ```python
 for cls, metric in actuals.items():
-    label = m.label
+    label = m.category_id
     print('ap', metric.ap)
     print('precision', metric.precision)
     print('interpolated_recall', metric.interpolated_recall)

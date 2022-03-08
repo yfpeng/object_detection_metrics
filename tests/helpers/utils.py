@@ -1,6 +1,6 @@
 from typing import Dict
 
-from podm import MetricPerClass
+from podm.podm import MetricPerClass
 import numpy as np
 
 

@@ -1,7 +1,7 @@
 import json
 from typing import List, Tuple
 
-from podm import BoundingBox
+from podm.podm import BoundingBox
 
 
 def load_data(pathname) -> List[BoundingBox]:

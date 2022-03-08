@@ -5,91 +5,8 @@ from typing import List, Dict
 
 import numpy as np
 
-
-class Box:
-    def __init__(self, xtl: float, ytl: float, xbr: float, ybr: float):
-        """
-                    0,0 ------> x (width)
-             |
-             |  (Left,Top)
-             |      *_________
-             |      |         |
-                    |         |
-             y      |_________|
-          (height)            *
-                        (Right,Bottom)
-
-        Args:
-            xtl: the X top-left coordinate of the bounding box.
-            ytl: the Y top-left coordinate of the bounding box.
-            xbr: the X bottom-right coordinate of the bounding box.
-            ybr: the Y bottom-right coordinate of the bounding box.
-        """
-        assert xtl <= xbr, f'xtl < xbr: xtl:{xtl}, xbr:{xbr}'
-        assert ytl <= ybr, f'ytl < ybr: ytl:{ytl}, xbr:{ybr}'
-
-        self.xtl = xtl
-        self.ytl = ytl
-        self.xbr = xbr
-        self.ybr = ybr
-
-    @property
-    def width(self) -> float:
-        return self.xbr - self.xtl
-
-    @property
-    def height(self) -> float:
-        return self.ybr - self.ytl
-
-    @property
-    def area(self) -> float:
-        return (self.xbr - self.xtl) * (self.ybr - self.ytl)
-
-    def __str__(self):
-        return 'Box[xtl={},ytl={},xbr={},ybr={}]'.format(self.xtl, self.ytl, self.xbr, self.ybr)
-
-    @classmethod
-    def intersection_over_union(cls, box1: 'Box', box2: 'Box') -> float:
-        """
-        Intersection Over Union (IOU) is measure based on Jaccard Index that evaluates the overlap between
-        two bounding boxes.
-        """
-        # if boxes dont intersect
-        if not Box.is_intersecting(box1, box2):
-            return 0
-        intersection = Box.intersection_area(box1, box2)
-        union = Box.union_areas(box1, box2, intersection_area=intersection)
-        # intersection over union
-        iou = intersection / union
-        assert iou >= 0, '{} = {} / {}, box1={}, box2={}'.format(iou, intersection, union, box1, box2)
-        return iou
-
-    @classmethod
-    def is_intersecting(cls, box1: 'Box', box2: 'Box') -> bool:
-        if box1.xtl > box2.xbr:
-            return False  # boxA is right of boxB
-        if box2.xtl > box1.xbr:
-            return False  # boxA is left of boxB
-        if box1.ybr < box2.ytl:
-            return False  # boxA is above boxB
-        if box1.ytl > box2.ybr:
-            return False  # boxA is below boxB
-        return True
-
-    @classmethod
-    def intersection_area(cls, box1: 'Box', box2: 'Box') -> float:
-        xtl = max(box1.xtl, box2.xtl)
-        ytl = max(box1.ytl, box2.ytl)
-        xbr = min(box1.xbr, box2.xbr)
-        ybr = min(box1.ybr, box2.ybr)
-        # intersection area
-        return (xbr - xtl) * (ybr - ytl)
-
-    @staticmethod
-    def union_areas(box1: 'Box', box2: 'Box', intersection_area: float = None) -> float:
-        if intersection_area is None:
-            intersection_area = Box.intersection_area(box1, box2)
-        return box1.area + box2.area - intersection_area
+from podm import box
+from podm.box import Box
 
 
 class MethodAveragePrecision(Enum):
@@ -105,12 +22,12 @@ class MethodAveragePrecision(Enum):
 
 
 class BoundingBox(Box):
-    def __init__(self, image_name: str, label: str, xtl: float, ytl: float, xbr: float, ybr: float,
+    def __init__(self, image_id, category_id, xtl: float, ytl: float, xbr: float, ybr: float,
                  score: float = None):
         """Constructor.
         Args:
-            image_name: the image name.
-            label: class id.
+            image_id: image id.
+            category_id: category id.
             xtl: the X top-left coordinate of the bounding box.
             ytl: the Y top-left coordinate of the bounding box.
             xbr: the X bottom-right coordinate of the bounding box.
@@ -118,9 +35,9 @@ class BoundingBox(Box):
             score: (optional) the confidence of the detected class.
         """
         super().__init__(xtl, ytl, xbr, ybr)
-        self.image_name = image_name
+        self.image_id = image_id
         self.score = score
-        self.label = label
+        self.category_id = category_id
 
 
 class MetricPerClass:
@@ -161,13 +78,13 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
     ret = {}  # list containing metrics (precision, recall, average precision) of each class
 
     # Get all classes
-    classes = sorted(set(b.label for b in gold_standard + predictions))
+    categories = sorted(set(b.category_id for b in gold_standard + predictions))
 
     # Precision x Recall is obtained individually by each class
     # Loop through by classes
-    for c in classes:
-        preds = [b for b in predictions if b.label == c]  # type: List[BoundingBox]
-        golds = [b for b in gold_standard if b.label == c]  # type: List[BoundingBox]
+    for category_id in categories:
+        preds = [b for b in predictions if b.category_id == category_id]  # type: List[BoundingBox]
+        golds = [b for b in gold_standard if b.category_id == category_id]  # type: List[BoundingBox]
         npos = len(golds)
 
         # sort detections by decreasing confidence
@@ -176,31 +93,31 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
         fps = np.zeros(len(preds))
 
         # create dictionary with amount of gts for each image
-        counter = Counter([cc.image_name for cc in golds])
+        counter = Counter([cc.image_id for cc in golds])
         for key, val in counter.items():
             counter[key] = np.zeros(val)
 
         # Pre-processing groundtruths of the some image
         image_name2gt = defaultdict(list)
         for b in golds:
-            image_name2gt[b.image_name].append(b)
+            image_name2gt[b.image_id].append(b)
 
         # Loop through detections
         for i in range(len(preds)):
             # Find ground truth image
-            gt = image_name2gt[preds[i].image_name]
+            gt = image_name2gt[preds[i].image_id]
             max_iou = sys.float_info.min
             mas_idx = -1
             for j in range(len(gt)):
-                iou = Box.intersection_over_union(preds[i], gt[j])
+                iou = box.intersection_over_union(preds[i], gt[j])
                 if iou > max_iou:
                     max_iou = iou
                     mas_idx = j
             # Assign detection as true positive/don't care/false positive
             if max_iou >= iou_threshold:
-                if counter[preds[i].image_name][mas_idx] == 0:
+                if counter[preds[i].image_id][mas_idx] == 0:
                     tps[i] = 1  # count as true positive
-                    counter[preds[i].image_name][mas_idx] = 1  # flag as already 'seen'
+                    counter[preds[i].image_id][mas_idx] = 1  # flag as already 'seen'
                 else:
                     # - A detected "cat" is overlaped with a GT "cat" with IOU >= IOUThreshold.
                     fps[i] = 1  # count as false positive
@@ -218,7 +135,7 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
             ap, mpre, mrec = calculate_11_points_average_precision(recalls, precisions)
         # add class result in the dictionary to be returned
         r = MetricPerClass()
-        r.label = c
+        r.label = category_id
         r.precision = precisions
         r.recall = recalls
         r.ap = ap
@@ -228,7 +145,7 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
         r.fp = np.sum(fps)
         r.num_groundtruth = len(golds)
         r.num_detection = len(preds)
-        ret[c] = r
+        ret[category_id] = r
     return ret
 
 

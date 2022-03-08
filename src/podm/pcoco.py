@@ -1,208 +1,133 @@
-import json
+from abc import ABC
 from typing import List
+from datetime import date, datetime
 
-from podm import BoundingBox, Box
+from podm import box
 
 
-class PCOCODataset:
+class PCOCODataset(ABC):
     def __init__(self):
-        self.annotations = []  # type: List[PCOCOAnnotation]
+        self.info = PCOCOInfo()  # type: PCOCOInfo or None
         self.images = []  # type: List[PCOCOImage]
-        self.categories = []  # type: List[PCOCOCategory]
         self.licenses = []  # type: List[PCOCOLicense]
-        self.contributor = ''
-        self.description = ''
-        self.url = ''
-        self.date_created = ''
-        self.version = ''
-        self.year = 0
-
         # flag
-        self.category_name_to_id = {}
-        # self.category_name_to_id_dirty = False
         self.img_name_to_id = {}
+        self.img_id_to_name = {}
         # self.img_name_to_id_dirty = False
 
-
-    def to_dict(self):
-        return {
-            "licenses": [i.to_dict() for i in self.licenses],
-            "info": {
-                "contributor": self.contributor,
-                "description": self.description,
-                "url": self.url,
-                "date_created": self.date_created,
-                "version": self.version,
-                "year": self.year
-            },
-            'annotations': [i.to_dict() for i in self.annotations],
-            'images': [i.to_dict() for i in self.images],
-            'categories': [i.to_dict() for i in self.categories],
-        }
+    def create_index(self):
+        self.img_name_to_id = {v.file_name: v.id for v in self.images}
+        self.img_id_to_name = {v.id: v.file_name for v in self.images}
 
     def add_image(self, image: 'PCOCOImage'):
         self.images.append(image)
 
-    def add_annotation(self, annotation: 'PCOCOAnnotation'):
-        self.annotations.append(annotation)
+    def has_image_id(self, image_id: int):
+        return image_id in self.img_id_to_name
 
-    def create_index(self):
-        self.category_name_to_id = {v.name: v.id for v in self.categories}
-        self.img_name_to_id = {v.file_name: v.id for v in self.images}
 
-    def add_category(self, category):
-        self.categories.append(category)
+class PCOCOInfo:
+    def __init__(self):
+        self.year = date.today().year  # type:int
+        self.version = ''  # type: str
+        self.description = ''  # type: str
+        self.contributor = ''  # type: str
+        self.url = ''  # type: str
+        self.date_created = datetime.now().strftime('%m/%d/%Y')  # type:str
 
-    def get_category_id(self, category_name):
-        return self.category_name_to_id[category_name]
+
+class PCOCOAnnotation(ABC):
+    pass
 
 
 class PCOCOImage:
     def __init__(self):
+        self.id = None  # type:int or None
         self.width = 0  # type:int
         self.height = 0  # type:int
+        self.file_name = ''  # type:str
+        self.license = None  # type:int or None
         self.flickr_url = ''  # type:str
         self.coco_url = ''  # type:str
-        self.file_name = ''  # type:str
-        self.license = 0  # type:int
-        self.id = None  # type:int or str or None
-        self.date_captured = 0
-
-    def to_dict(self):
-        return {
-            "width": self.width,
-            "height": self.height,
-            "flickr_url": self.flickr_url,
-            "coco_url": self.coco_url,
-            "file_name": self.file_name,
-            "date_captured": self.date_captured,
-            "license": self.license,
-            "id": self.id,
-        }
+        self.date_captured = datetime.now()  # type:datetime
 
 
 class PCOCOLicense:
     def __init__(self):
-        self.id = 0  # type:int
+        self.id = None  # type:int or None
         self.name = ''  # type:str
         self.url = ''  # type:str
-
-    def to_dict(self):
-        return {
-            "id": self.id,
-            "name": self.name,
-            "url": self.url,
-        }
 
 
 class PCOCOCategory:
     def __init__(self):
-        self.id = 0  # type:int
+        self.id = None  # type:int or None
         self.name = ''  # type:str
         self.supercategory = ''  # type:str
 
-    def to_dict(self):
-        return {
-            "id": self.id,
-            "name": self.name,
-            "supercategory": self.supercategory,
-        }
 
+##############################################################################
+# object detection
+##############################################################################
 
-class PCOCOAnnotation:
+class PCOCOObjectDetectionDataset(PCOCODataset):
     def __init__(self):
-        self.id = 0  # type:int
-        self.image_id = 0  # type:int
-        self.category_id = 0  # type:int
-        self.iscrowd = 0  # type:int
+        super(PCOCOObjectDetectionDataset, self).__init__()
+        self.annotations = []  # type: List[PCOCOAnnotation]
+        self.categories = []  # type: List[PCOCOCategory]
+        # flag
+        self.category_name_to_id = {}
+        self.category_id_to_name = {}
+
+    def add_annotation(self, annotation: 'PCOCOObjectDetection'):
+        self.annotations.append(annotation)
+
+    def create_index(self):
+        super(PCOCOObjectDetectionDataset, self).create_index()
+        self.category_name_to_id = {v.name: v.id for v in self.categories}
+        self.category_id_to_name = {v.id: v.name for v in self.categories}
+
+    def add_category(self, category: PCOCOCategory):
+        self.categories.append(category)
+
+    def get_category_id(self, category_name: str):
+        return self.category_name_to_id[category_name]
+
+    def has_category_id(self, category_id: int):
+        return category_id in self.category_id_to_name
+
+
+class PCOCOObjectDetection(PCOCOAnnotation):
+    def __init__(self):
+        self.id = None  # type:int or None
+        self.image_id = None  # type:int or None
+        self.category_id = None  # type:int or None
+        self.segmentation = []  # type: List[List[int]]
+        self.iscrowd = False  # type:bool
+
+    def add_box(self, box: box.Box):
+        self.segmentation = [[box.xtl, box.ytl, box.xtl, box.ybr, box.xbr, box.ybr, box.xbr, box.ytl]]
+
+    @property
+    def bbox(self) -> box.Box or None:
+        if len(self.segmentation) == 0:
+            return None
+        else:
+            bb = self.bbox_polygon(self.segmentation[0])
+            for polygon in self.segmentation[1:]:
+                bb = box.union(bb, self.bbox_polygon(polygon))
+            return bb
+
+    @classmethod
+    def bbox_polygon(cls, polygon: List[int]) -> box.Box:
+        xtl = min(polygon[i] for i in range(0, len(polygon), 2))
+        ytl = min(polygon[i] for i in range(1, len(polygon), 2))
+        xbr = max(polygon[i] for i in range(0, len(polygon), 2))
+        ybr = max(polygon[i] for i in range(1, len(polygon), 2))
+        return box.Box(xtl, ytl, xbr, ybr)
+
+
+class PCOCOObjectDetectionResult(PCOCOObjectDetection):
+    def __init__(self):
+        super(PCOCOObjectDetectionResult, self).__init__()
         self.score = 0.  # type:float
-
-    def to_dict(self):
-        raise NotImplemented
-    
-
-class PCOCOAnnotationBBox(PCOCOAnnotation, Box):
-    def __init__(self):
-        super(PCOCOAnnotationBBox, self).__init__()
-        self.xtl = None
-        self.ytl = None
-        self.xbr = None
-        self.ybr = None
-
-    @property
-    def area(self) -> float:
-        return (self.xbr - self.xtl) * (self.ybr - self.ytl)
-
-    @property
-    def box(self) -> Box:
-        return Box(self.xtl, self.ytl, self.xbr, self.ybr)
-
-    def to_dict(self):
-        return {
-            "id": self.id,
-            "image_id": self.image_id,
-            "area": self.area,
-            "category_id": self.category_id,
-            "bbox": [self.xtl, self.ytl, self.xbr - self.xtl, self.ybr - self.ytl],
-            "segmentation": [[self.xtl, self.ytl, self.xbr, self.ytl, self.xbr, self.ybr, self.xtl, self.ybr]],
-            "iscrowd": self.iscrowd,
-            "score": self.score
-        }
-
-
-def dump(dataset: PCOCODataset, fp, **kwargs):
-    json.dump(dataset.to_dict(), fp, **kwargs)
-
-
-def load(fp, **kwargs) -> PCOCODataset:
-    coco_obj = json.load(fp, **kwargs)
-
-    dataset = PCOCODataset()
-    dataset.contributor = coco_obj['info']['contributor']
-    dataset.description = coco_obj['info']['description']
-    dataset.url = coco_obj['info']['url']
-    dataset.date_created = coco_obj['info']['date_created']
-    dataset.version = coco_obj['info']['version']
-    dataset.year = coco_obj['info']['year']
-
-    for ann_obj in coco_obj['annotations']:
-        ann = PCOCOAnnotation()
-        ann.id = ann_obj['id']
-        ann.category_id = ann_obj['category_id']
-        ann.image_id = ann_obj['image_id']
-        ann.iscrowd = ann_obj['iscrowd']
-        ann.xtl = ann_obj['bbox'][0]
-        ann.ytl = ann_obj['bbox'][1]
-        ann.xbr = ann_obj['bbox'][0] + ann_obj['bbox'][2]
-        ann.ybr = ann_obj['bbox'][1] + ann_obj['bbox'][3]
-        if 'score' in ann_obj:
-            ann.score = ann_obj['score']
-        dataset.annotations.append(ann)
-
-    for cat_obj in coco_obj['categories']:
-        cat = PCOCOCategory()
-        cat.id = cat_obj['id']
-        cat.name = cat_obj['name']
-        cat.supercategory = cat_obj['supercategory']
-        dataset.categories.append(cat)
-
-    for img_obj in coco_obj['images']:
-        img = PCOCOImage()
-        img.id = img_obj['id']
-        img.height = img_obj['height']
-        img.width = img_obj['width']
-        img.file_name = img_obj['file_name']
-        img.flickr_url = img_obj['flickr_url']
-        img.coco_url = img_obj['coco_url']
-        img.date_captured = img_obj['date_captured']
-        img.license = img_obj['license']
-        dataset.images.append(img)
-
-    for lic_obj in coco_obj['licenses']:
-        lic = PCOCOLicense()
-        lic.id = lic_obj['id']
-        lic.name = lic_obj['name']
-        lic.url = lic_obj['url']
-        dataset.licenses.append(lic)
-
-    return dataset
