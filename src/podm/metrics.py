@@ -5,8 +5,7 @@ from typing import List, Dict
 
 import numpy as np
 
-from podm import box
-from podm.box import Box
+from podm.box import intersection_over_union, BoundingBox
 
 
 class MethodAveragePrecision(Enum):
@@ -19,25 +18,6 @@ class MethodAveragePrecision(Enum):
     """
     AllPointsInterpolation = 1
     ElevenPointsInterpolation = 2
-
-
-class BoundingBox(Box):
-    def __init__(self, image_id, category_id, xtl: float, ytl: float, xbr: float, ybr: float,
-                 score: float = None):
-        """Constructor.
-        Args:
-            image_id: image id.
-            category_id: category id.
-            xtl: the X top-left coordinate of the bounding box.
-            ytl: the Y top-left coordinate of the bounding box.
-            xbr: the X bottom-right coordinate of the bounding box.
-            ybr: the Y bottom-right coordinate of the bounding box.
-            score: (optional) the confidence of the detected class.
-        """
-        super().__init__(xtl, ytl, xbr, ybr)
-        self.image_id = image_id
-        self.score = score
-        self.category_id = category_id
 
 
 class MetricPerClass:
@@ -109,7 +89,7 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
             max_iou = sys.float_info.min
             mas_idx = -1
             for j in range(len(gt)):
-                iou = box.intersection_over_union(preds[i], gt[j])
+                iou = intersection_over_union(preds[i], gt[j])
                 if iou > max_iou:
                     max_iou = iou
                     mas_idx = j

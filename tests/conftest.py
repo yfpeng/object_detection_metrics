@@ -1,9 +1,6 @@
 from pathlib import Path
-from typing import Dict
 
 import pytest
-import numpy as np
-from podm.podm import MetricPerClass
 
 
 @pytest.fixture(scope="module")

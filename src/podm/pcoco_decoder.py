@@ -106,15 +106,14 @@ def load_object_detection_result(fp, dataset: PCOCOObjectDetectionDataset, **kwa
     new_dataset.licenses = copy.deepcopy(dataset.licenses)
     new_dataset.images = copy.deepcopy(dataset.images)
     new_dataset.categories = copy.deepcopy(dataset.categories)
-    new_dataset.create_index()
     # check annotation
     coco_obj = json.load(fp, **kwargs)
     annotations = []
     for obj in coco_obj:
         ann = parse_object_detection_annotation_result(obj)
-        if not new_dataset.has_image_id(ann.image_id):
+        if new_dataset.get_image_id(ann.image_id) is None:
             print('%s: Cannot find image' % ann.image_id)
-        if not new_dataset.has_category_id(ann.category_id):
+        if new_dataset.get_category_id(ann.category_id) is None:
             print('%s: Cannot find category' % ann.category_id)
         annotations.append(ann)
     new_dataset.annotations = annotations

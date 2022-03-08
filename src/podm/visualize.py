@@ -3,7 +3,7 @@ from typing import Dict
 import matplotlib.pyplot as plt
 import numpy as np
 
-from podm.podm import MethodAveragePrecision, MetricPerClass
+from podm.metrics import MethodAveragePrecision, MetricPerClass
 
 
 def plot_precision_recall_curve(result: MetricPerClass,

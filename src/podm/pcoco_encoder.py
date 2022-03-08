@@ -1,26 +1,11 @@
 import json
 from typing import Union, TextIO, Dict
 
-from .pcoco import PCOCOImage, PCOCOLicense, PCOCOInfo,\
-    PCOCOObjectDetectionDataset, PCOCOCategory, PCOCOObjectDetection, PCOCOObjectDetectionResult
+from podm.pcoco import PCOCOImage, PCOCOLicense, PCOCOInfo, \
+    PCOCOObjectDetectionDataset, PCOCOCategory, PCOCOObjectDetection, PCOCOObjectDetectionResult, PCOCODataset
 
 PCOCO_OBJ = Union[PCOCOImage, PCOCOLicense, PCOCOInfo,
                   PCOCOObjectDetectionDataset, PCOCOCategory, PCOCOObjectDetection, PCOCOObjectDetectionResult]
-
-
-def dumps(obj: PCOCO_OBJ, **kwargs) -> str:
-    """
-    Serialize a BioC ``obj`` to a JSON formatted ``str``. kwargs are passed to json.
-    """
-    return json.dumps(obj, cls=PCOCOJSONEncoder, indent=2, **kwargs)
-
-
-def dump(obj: PCOCO_OBJ, fp: TextIO, **kwargs):
-    """
-    Serialize ``obj`` as a JSON formatted stream to ``fp``
-    (a ``.write()``-supporting file-like object). kwargs are passed to json.
-    """
-    return json.dump(obj, fp, cls=PCOCOJSONEncoder, indent=2, **kwargs)
 
 
 class PCOCOJSONEncoder(json.JSONEncoder):
@@ -29,6 +14,10 @@ class PCOCOJSONEncoder(json.JSONEncoder):
     """
 
     def default(self, o):
+        # print('xxxxxxxxxxxxxxxxxxxx')
+        # print(type(o))
+        # print(isinstance(o, PCOCOObjectDetectionDataset))
+        # print(repr(o.__class__), repr(PCOCOObjectDetectionDataset))
         if isinstance(o, PCOCOImage):
             return {
                 "width": o.width,
@@ -62,7 +51,7 @@ class PCOCOJSONEncoder(json.JSONEncoder):
                 "supercategory": o.supercategory,
             }
         if isinstance(o, PCOCOObjectDetection):
-            bb = o.bbox
+            bb = o.box
             return {
                 "id": o.id,
                 "image_id": o.image_id,
@@ -73,7 +62,7 @@ class PCOCOJSONEncoder(json.JSONEncoder):
                 "iscrowd": o.iscrowd,
             }
         if isinstance(o, PCOCOObjectDetectionResult):
-            bb = o.bbox
+            bb = o.box
             return {
                 "id": o.id,
                 "image_id": o.image_id,
@@ -101,3 +90,18 @@ def toJSON(o) -> Dict:
     Convert a pcoco obj to a Python `dict`
     """
     return PCOCOJSONEncoder().default(o)
+
+
+def dumps(obj: PCOCO_OBJ, **kwargs) -> str:
+    """
+    Serialize a BioC ``obj`` to a JSON formatted ``str``. kwargs are passed to json.
+    """
+    return json.dumps(obj, cls=PCOCOJSONEncoder, indent=2, **kwargs)
+
+
+def dump(obj: PCOCO_OBJ, fp: TextIO, **kwargs):
+    """
+    Serialize ``obj`` as a JSON formatted stream to ``fp``
+    (a ``.write()``-supporting file-like object). kwargs are passed to json.
+    """
+    return json.dump(obj, fp, cls=PCOCOJSONEncoder, indent=2, **kwargs)

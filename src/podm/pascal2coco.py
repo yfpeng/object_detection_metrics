@@ -13,45 +13,36 @@ Options:
 """
 import json
 import zipfile
-from enum import Enum
-from typing import Dict
 import io
 import docopt
 import tqdm
 
-from pcoco import PCOCOImage, PCOCODataset, PCOCOCategory, PCOCOAnnotation
-from podm.pcoco_decoder import load as pcoco_load
+from podm.pcoco import PCOCOImage, PCOCOObjectDetectionDataset, PCOCOCategory, PCOCOAnnotation, PCOCOObjectDetection, \
+    PCOCOObjectDetectionResult
+from podm.box import BBFormat, Box
+from podm.pcoco_encoder import dump as pcoco_dump, PCOCOJSONEncoder
 
 
-class BBFormat(Enum):
-    """
-    Class representing the format of a bounding box.
-    It can be (X,Y,width,height) => XYWH
-    or (X1,Y1,X2,Y2) => XYX2Y2
-
-        Developed by: Rafael Padilla
-        Last modification: May 24 2018
-    """
-    XYWH = 1
-    X1Y1X2Y2 = 2
-
-
-def convert_pascal_voc_to_coco_gold(src, dest, format=BBFormat.X1Y1X2Y2):
+def convert_pascal_voc_to_coco_gold(src, dest, format=BBFormat.X1Y1X2Y2) -> PCOCOObjectDetectionDataset:
     image_id = 1
     ann_id = 1
-    cat_map = {}  # type: Dict[str, int]
+    cat_id = 1
 
-    dataset = PCOCODataset()
+    dataset = PCOCOObjectDetectionDataset()
     with zipfile.ZipFile(src, 'r') as myzip:
         namelist = myzip.namelist()
+
+        # add image
         for name in tqdm.tqdm(namelist):
             if not name.endswith('.txt'):
                 continue
             img = PCOCOImage()
             img.id = image_id
             img.file_name = name[name.find('/')+1:] + '.jpg'
-            dataset.images.append(img)
+            dataset.add_image(img)
+            image_id += 1
 
+            # add annotation
             with myzip.open(name,'r') as fp:
                 items_file = io.TextIOWrapper(fp)
                 for line in items_file:
@@ -69,39 +60,35 @@ def convert_pascal_voc_to_coco_gold(src, dest, format=BBFormat.X1Y1X2Y2):
                         xbr += xtl
                         ybr += ytl
 
-                    if label not in cat_map:
-                        cat_map[label] = len(cat_map) + 1
+                    # add cat
+                    cat = dataset.get_category_name(label)
+                    if cat is None:
                         cat = PCOCOCategory()
-                        cat.id = cat_map[label]
+                        cat.id = cat_id
                         cat.name = label
-                        dataset.categories.append(cat)
+                        dataset.add_category(cat)
+                        cat_id += 1
 
-                    ann = PCOCOAnnotation()
-                    ann.image_id = image_id
+                    ann = PCOCOObjectDetection()
+                    ann.image_id = img.id
                     ann.id = ann_id
-                    ann.category_id = cat_map[label]
-                    ann.xtl = xtl
-                    ann.ytl = ytl
-                    ann.xbr = xbr
-                    ann.ybr = ybr
-                    dataset.annotations.append(ann)
+                    ann.category_id = cat.id
+                    ann.add_box(Box(xtl, ytl, xbr, ybr))
+                    dataset.add_annotation(ann)
 
                     ann_id += 1
 
             image_id += 1
 
     with open(dest, 'w') as fp:
-        json.dump(dataset.to_dict(), fp, indent=2)
+        pcoco_dump(dataset, fp)
+
+    return dataset
 
 
 def convert_pascal_voc_to_coco_pred(src_gold, src_pred, dest_gold, dest_pred, format=BBFormat.X1Y1X2Y2):
-    convert_pascal_voc_to_coco_gold(src_gold, dest_gold)
-
-    with open(dest_gold) as fp:
-        dataset = pcoco_load(fp)
-
-    cat_map = dataset.cat_name_to_id
-    img_map = dataset.img_name_to_id
+    gold_dataset = convert_pascal_voc_to_coco_gold(src_gold, dest_gold)
+    cat_id = gold_dataset.get_max_category_id() + 1
 
     annotations = []
     ann_id = 1
@@ -111,7 +98,7 @@ def convert_pascal_voc_to_coco_pred(src_gold, src_pred, dest_gold, dest_pred, fo
             if not name.endswith('.txt'):
                 continue
             file_name = name[name.find('/') + 1:] + '.jpg'
-            image_id = img_map[file_name]
+            image = gold_dataset.get_image_name(file_name)
 
             with myzip.open(name,'r') as fp:
                 items_file = io.TextIOWrapper(fp)
@@ -131,33 +118,27 @@ def convert_pascal_voc_to_coco_pred(src_gold, src_pred, dest_gold, dest_pred, fo
                         xbr += xtl
                         ybr += ytl
 
-                    if label not in cat_map:
-                        cat_map[label] = len(cat_map) + 1
+                    cat = gold_dataset.get_category_name(label)
+                    if cat is None:
                         cat = PCOCOCategory()
-                        cat.id = cat_map[label]
+                        cat.id = cat_id
                         cat.name = label
-                        dataset.categories.append(cat)
+                        gold_dataset.add_category(cat)
+                        cat_id += 1
 
-                    ann = PCOCOAnnotation()
-                    ann.image_id = image_id
+                    ann = PCOCOObjectDetectionResult()
+                    ann.image_id = image.id
                     ann.id = ann_id
-                    ann.category_id = cat_map[label]
-                    ann.xtl = xtl
-                    ann.ytl = ytl
-                    ann.xbr = xbr
-                    ann.ybr = ybr
+                    ann.category_id = cat.id
+                    ann.add_box(Box(xtl, ytl, xbr, ybr))
                     ann.score = score
                     annotations.append(ann)
 
                     ann_id += 1
 
-            image_id += 1
-
+    pred_dataset = gold_dataset.get_new_dataset(annotations)
     with open(dest_pred, 'w') as fp:
-        json.dump([a.to_dict() for a in annotations], fp, indent=2)
-
-    with open(dest_gold, 'w') as fp:
-        json.dump(dataset.to_dict(), fp, indent=2)
+        json.dump(pred_dataset.annotations, fp, cls=PCOCOJSONEncoder, indent=2)
 
 
 def main():

@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 
 from helpers.utils import assert_results
-from podm.podm import get_pascal_voc_metrics, MetricPerClass
+from podm.metrics import get_pascal_voc_metrics, MetricPerClass
 from podm.utils import load_data, load_data_coco
 
 

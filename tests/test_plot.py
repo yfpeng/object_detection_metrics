@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from podm.podm import get_pascal_voc_metrics
+from podm.metrics import get_pascal_voc_metrics
 from podm.utils import load_data
 from podm.visualize import plot_precision_recall_curve_all
 

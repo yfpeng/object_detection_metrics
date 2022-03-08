@@ -1,3 +1,6 @@
+from enum import Enum
+
+
 class Box:
     def __init__(self, xtl: float, ytl: float, xbr: float, ybr: float):
         """
@@ -89,3 +92,35 @@ def intersection(box1: 'Box', box2: 'Box'):
     xbr = min(box1.xbr, box2.xbr)
     ybr = min(box1.ybr, box2.ybr)
     return Box(xtl, ytl, xbr, ybr)
+
+
+class BBFormat(Enum):
+    """
+    Class representing the format of a bounding box.
+    It can be (X,Y,width,height) => XYWH
+    or (X1,Y1,X2,Y2) => XYX2Y2
+
+        Developed by: Rafael Padilla
+        Last modification: May 24 2018
+    """
+    XYWH = 1
+    X1Y1X2Y2 = 2
+
+
+class BoundingBox(Box):
+    def __init__(self, image_id, category_id, xtl: float, ytl: float, xbr: float, ybr: float,
+                 score: float = None):
+        """Constructor.
+        Args:
+            image_id: image id.
+            category_id: category id.
+            xtl: the X top-left coordinate of the bounding box.
+            ytl: the Y top-left coordinate of the bounding box.
+            xbr: the X bottom-right coordinate of the bounding box.
+            ybr: the Y bottom-right coordinate of the bounding box.
+            score: (optional) the confidence of the detected class.
+        """
+        super().__init__(xtl, ytl, xbr, ybr)
+        self.image_id = image_id
+        self.score = score
+        self.category_id = category_id
