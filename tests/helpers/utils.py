@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, Any
 
 from podm.metrics import MetricPerClass
 import numpy as np
@@ -59,7 +59,7 @@ class bcolors:
 #                 exit(1)
 
 
-def assert_results(actuals: Dict[str, MetricPerClass], expecteds, key, classes=None):
+def assert_results(actuals: Dict[Any, MetricPerClass], expecteds, key, classes=None):
     if classes is None:
         classes = set(m.label for m in actuals.values())
 

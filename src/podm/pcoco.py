@@ -118,6 +118,13 @@ class PCOCOObjectDetectionResult(PCOCOObjectDetection):
         super(PCOCOObjectDetectionResult, self).__init__()
         self.score = 0.  # type:float
 
+    @property
+    def bbox(self) -> 'box.BoundingBox' or None:
+        b = self.box
+        if b is None:
+            return b
+        return box.BoundingBox(self.image_id, self.category_id, b.xtl, b.ytl, b.xbr, b.ybr, self.score)
+
 
 class PCOCOObjectDetectionDataset(PCOCODataset):
     def __init__(self):
@@ -162,5 +169,6 @@ class PCOCOObjectDetectionDataset(PCOCODataset):
             new_dataset.add_annotation(ann)
         return new_dataset
 
+    @property
     def bboxes(self):
         return [ann.bbox for ann in self.annotations]
