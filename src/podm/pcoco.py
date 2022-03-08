@@ -1,6 +1,8 @@
 import json
 from typing import List
 
+from podm import BoundingBox, Box
+
 
 class PCOCODataset:
     def __init__(self):
@@ -14,6 +16,13 @@ class PCOCODataset:
         self.date_created = ''
         self.version = ''
         self.year = 0
+
+        # flag
+        self.category_name_to_id = {}
+        # self.category_name_to_id_dirty = False
+        self.img_name_to_id = {}
+        # self.img_name_to_id_dirty = False
+
 
     def to_dict(self):
         return {
@@ -31,13 +40,21 @@ class PCOCODataset:
             'categories': [i.to_dict() for i in self.categories],
         }
 
-    @property
-    def cat_name_to_id(self):
-        return {v.name: v.id for v in self.categories}
+    def add_image(self, image: 'PCOCOImage'):
+        self.images.append(image)
 
-    @property
-    def img_name_to_id(self):
-        return {v.file_name: v.id for v in self.images}
+    def add_annotation(self, annotation: 'PCOCOAnnotation'):
+        self.annotations.append(annotation)
+
+    def create_index(self):
+        self.category_name_to_id = {v.name: v.id for v in self.categories}
+        self.img_name_to_id = {v.file_name: v.id for v in self.images}
+
+    def add_category(self, category):
+        self.categories.append(category)
+
+    def get_category_id(self, category_name):
+        return self.category_name_to_id[category_name]
 
 
 class PCOCOImage:
@@ -48,7 +65,7 @@ class PCOCOImage:
         self.coco_url = ''  # type:str
         self.file_name = ''  # type:str
         self.license = 0  # type:int
-        self.id = 0  # type:int
+        self.id = None  # type:int or str or None
         self.date_captured = 0
 
     def to_dict(self):
@@ -99,14 +116,26 @@ class PCOCOAnnotation:
         self.category_id = 0  # type:int
         self.iscrowd = 0  # type:int
         self.score = 0.  # type:float
-        self.xtl = 0
-        self.ytl = 0
-        self.xbr = 0
-        self.ybr = 0
+
+    def to_dict(self):
+        raise NotImplemented
+    
+
+class PCOCOAnnotationBBox(PCOCOAnnotation, Box):
+    def __init__(self):
+        super(PCOCOAnnotationBBox, self).__init__()
+        self.xtl = None
+        self.ytl = None
+        self.xbr = None
+        self.ybr = None
 
     @property
     def area(self) -> float:
         return (self.xbr - self.xtl) * (self.ybr - self.ytl)
+
+    @property
+    def box(self) -> Box:
+        return Box(self.xtl, self.ytl, self.xbr, self.ybr)
 
     def to_dict(self):
         return {
@@ -121,8 +150,8 @@ class PCOCOAnnotation:
         }
 
 
-# def dump(dataset: PCOCODataset, fp, **kwargs):
-#     json.dump(dataset.to_dict(), fp, **kwargs)
+def dump(dataset: PCOCODataset, fp, **kwargs):
+    json.dump(dataset.to_dict(), fp, **kwargs)
 
 
 def load(fp, **kwargs) -> PCOCODataset:
