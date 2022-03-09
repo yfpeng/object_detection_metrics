@@ -17,34 +17,35 @@ Installing `object_detection_metrics`
 $ pip install object_detection_metrics
 ```
 
-Reading Josn file
-
-```python
-import podm
-bounding_boxes = podm.load_data('tests/sample_2/groundtruths.json')
-```
-
 Reading COCO file
 
 ```python
-import podm
-bounding_boxes = podm.load_data_coco('tests/sample_2/groundtruths_coco.json')
+from podm import coco_decoder
+with open('tests/sample/groundtruths_coco.json') as fp:
+    gold_dataset = coco_decoder.load_true_bounding_box_dataset(fp)
 ```
 
 PASCAL VOC Metrics
 
 ```python
-import podm
-gt_BoundingBoxes = podm.load_data('tests/sample_2/groundtruths.json')
-pd_BoundingBoxes = podm.load_data('tests/sample_2/detections.json')
-results = podm.get_pascal_voc_metrics(gt_BoundingBoxes, pd_BoundingBoxes, .5)
+from podm import coco_decoder
+from podm.metrics import get_pascal_voc_metrics, MetricPerClass, get_bounding_boxes
+
+with open('tests/sample/groundtruths_coco.json') as fp:
+    gold_dataset = coco_decoder.load_true_bounding_box_dataset(fp)
+with open('tests/sample/detections_coco.json') as fp:
+    pred_dataset = coco_decoder.load_pred_bounding_box_dataset(fp, gold_dataset)
+
+gt_BoundingBoxes = get_bounding_boxes(gold_dataset)
+pd_BoundingBoxes = get_bounding_boxes(pred_dataset)
+results = get_pascal_voc_metrics(gt_BoundingBoxes, pd_BoundingBoxes, .5)
 ```
 
 ap, precision, recall, tp, fp, etc
 
 ```python
-for cls, metric in actuals.items():
-    label = m.category
+for cls, metric in results.items():
+    label = metric.category
     print('ap', metric.ap)
     print('precision', metric.precision)
     print('interpolated_recall', metric.interpolated_recall)
@@ -58,27 +59,51 @@ for cls, metric in actuals.items():
 mAP
 
 ```python
-from podm import MetricPerClass
+from podm.metrics import MetricPerClass
 mAP = MetricPerClass.mAP(results)
 ```
 
 IoU
 
 ```python
-box1 = Box(0., 0., 10., 10.)
-box2 = Box(1., 1., 11., 11.)
-Box.intersection_over_union(box1, box2)
+from podm.box import Box, intersection_over_union
+
+box1 = Box.of_box(0., 0., 10., 10.)
+box2 = Box.of_box(1., 1., 11., 11.)
+intersection_over_union(box1, box2)
+```
+
+Official COCO Eval
+
+```python
+from pycocotools.coco import COCO
+from pycocotools.cocoeval import COCOeval
+
+coco_gld = COCO('tests/sample/groundtruths_coco.json')
+coco_rst = coco_gld.loadRes('tests/sample/detections_coco.json')
+cocoEval = COCOeval(coco_gld, coco_rst, iouType='bbox')
+cocoEval.evaluate()
+cocoEval.accumulate()
+cocoEval.summarize()
 ```
 
 ## Implemented metrics
 
 [Tutorial](https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173)
 
--   Intersection Over Union (IOU)
--   TP and FP
-    -   True Positive (TP): IOU ≥ *IOU threshold* (default: 0.5)
-    -   False Positive (FP): IOU \< *IOU threshold* (default: 0.5)
--   Precision and Recall
--   Average Precision
-    -   11-point AP
-    -   all-point AP
+- Intersection Over Union (IOU)
+- TP and FP
+  - True Positive (TP): IOU ≥ *IOU threshold* (default: 0.5)
+  - False Positive (FP): IOU \< *IOU threshold* (default: 0.5)
+- Precision and Recall
+- Average Precision
+  - 11-point AP
+  - all-point AP
+- Official COCO Eval
+
+## License
+
+Copyright BioNLP Lab at Weill Cornell Medicine, 2022.
+
+Distributed under the terms of the [MIT](https://github.com/yfpeng/object_detection_metrics/blob/master/LICENSE)
+license, this is free and open source software.
