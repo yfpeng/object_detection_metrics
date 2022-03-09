@@ -1,7 +1,7 @@
 import json
 from typing import Union, TextIO, Dict, List
 
-from podm.pcoco import PCOCOImage, PCOCOLicense, PCOCOInfo, \
+from podm.coco import PCOCOImage, PCOCOLicense, PCOCOInfo, \
     PCOCOCategory, PCOCOBoundingBox, \
     PCOCOSegments, PCOCOBoundingBoxDataset
 

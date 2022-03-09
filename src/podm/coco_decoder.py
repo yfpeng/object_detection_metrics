@@ -2,7 +2,7 @@ import copy
 import json
 from typing import Dict
 
-from podm.pcoco import PCOCOLicense, PCOCOInfo, PCOCOImage, \
+from podm.coco import PCOCOLicense, PCOCOInfo, PCOCOImage, \
     PCOCOCategory, PCOCOBoundingBox, PCOCOSegments, PCOCOBoundingBoxDataset
 
 

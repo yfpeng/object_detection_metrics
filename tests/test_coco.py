@@ -1,61 +1,38 @@
-import json
-import tempfile
-from pathlib import Path
+import pytest
 
-import numpy as np
-from pycocotools.coco import COCO
-from pycocotools.cocoeval import COCOeval
+from podm import coco
 
-if __name__ == '__main__':
-    dir = Path(r'ImageCLEF2016\total')
-    annFile = dir / 'instances_default.json'
-    coco = COCO(annFile)
 
-    # display COCO categories and supercategories
-    cats = coco.loadCats(coco.getCatIds())
-    nms = [cat['name'] for cat in cats]
-    print('COCO categories: \n{}\n'.format(' '.join(nms)))
+def test_cat():
+    dataset = coco.PCOCOBoundingBoxDataset()
 
-    nms = set([cat['supercategory'] for cat in cats])
-    print('COCO supercategories: \n{}'.format(' '.join(nms)))
+    for i in range(0, 10):
+        cat = coco.PCOCOCategory()
+        cat.id = i
+        cat.name = str(i)
+        dataset.add_category(cat)
+        assert dataset.get_category_id(cat.id).name == cat.name
+        assert dataset.get_category_name(cat.name).name == cat.name
+    assert dataset.get_max_category_id() == 9
 
-    # get all images containing given categories, select one at random
-    catIds = coco.getCatIds(catNms=['cxr'])
-    imgIds = coco.getImgIds(catIds=catIds)
-    img = coco.loadImgs(imgIds[np.random.randint(0, len(imgIds))])[0]
-    print(img)
+    with pytest.raises(KeyError):
+        cat = coco.PCOCOCategory()
+        cat.id = 0
+        dataset.add_category(cat)
 
-    # I = io.imread(img['coco_url'])
-    # plt.axis('off')
-    # plt.imshow(I)
-    # plt.show()
 
-    # load and display instance annotations
-    # plt.imshow(I)
-    # plt.axis('off')
-    annIds = coco.getAnnIds(imgIds=img['id'], catIds=catIds, iscrowd=None)
-    anns = coco.loadAnns(annIds)
-    print(anns)
-    # coco.showAnns(anns)
+def test_image():
+    dataset = coco.PCOCOBoundingBoxDataset()
 
-    res = []
-    print(coco.getCatIds(catNms='cxr'))
-    annIds = coco.getAnnIds()
-    for ann in coco.loadAnns(annIds):
-        ann['score'] = np.random.uniform(.5, 1)
-        res.append(ann)
+    for i in range(0, 10):
+        img = coco.PCOCOImage()
+        img.id = i
+        img.file_name = str(i)
+        dataset.add_image(img)
+        assert dataset.get_image_id(img.id).file_name == img.file_name
+        assert dataset.get_image_name(img.file_name).file_name == img.file_name
 
-    rstFile = tempfile.mktemp()
-    with open(rstFile, 'w') as fp:
-        json.dump(res, fp, indent=2)
-
-    cocoDt = coco.loadRes(rstFile)
-    cocoEval = COCOeval(coco, cocoDt, iouType='bbox')
-
-    cocoEval.params.imgIds = imgIds
-    cocoEval.evaluate()
-    cocoEval.accumulate()
-    cocoEval.summarize()
-    print(cocoEval.stats[1])
-    # print(cocoEval.eval)
-    # print(cocoEval.ious)
+    with pytest.raises(KeyError):
+        img = coco.PCOCOImage()
+        img.id = 0
+        dataset.add_image(img)

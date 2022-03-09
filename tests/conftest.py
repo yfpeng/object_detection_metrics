@@ -4,8 +4,8 @@ import pytest
 
 
 @pytest.fixture(scope="module")
-def example_dir():
-    return Path(__file__).parent / '../examples/'
+def sample_dir():
+    return Path(__file__).parent / 'sample'
 
 
 @pytest.fixture(scope="module")

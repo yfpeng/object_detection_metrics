@@ -128,13 +128,13 @@ class PCOCOBoundingBoxDataset(PCOCODataset):
     def add_annotation(self, annotation: 'PCOCOBoundingBox'):
         for ann in self.annotations:
             if ann.id == annotation.id:
-                warnings.warn('%s: Annotation exists' % ann.id)
+                raise KeyError('%s: Annotation exists' % ann.id)
         self.annotations.append(annotation)
 
     def add_category(self, category: PCOCOCategory):
         for cat in self.categories:
             if cat.id == category.id or cat.name == category.name:
-                warnings.warn('%s: Category exists' % cat.id)
+                raise KeyError('%s: Category exists' % cat.id)
         self.categories.append(category)
 
     def get_category_name(self, category_name: str, default=None) -> PCOCOCategory:
