@@ -119,6 +119,12 @@ class PCOCOSegments(PCOCOAnnotation):
         return box.Box.of_box(xtl, ytl, xbr, ybr)
 
 
+class PCOCOImageCaptioning(PCOCOAnnotation):
+    def __init__(self):
+        super(PCOCOImageCaptioning, self).__init__()
+        self.caption = None  # type:str or None
+
+
 class PCOCOBoundingBoxDataset(PCOCODataset):
     def __init__(self):
         super(PCOCOBoundingBoxDataset, self).__init__()

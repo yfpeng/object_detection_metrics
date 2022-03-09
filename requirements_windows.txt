@@ -4,3 +4,5 @@ pycocotools-windows
 scikit-image
 Pillow
 tqdm
+pandas
+docopt
