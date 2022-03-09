@@ -60,7 +60,7 @@ class PCOCODataset(ABC):
     def add_image(self, image: PCOCOImage):
         for img in self.images:
             if img.id == image.id or img.file_name == image.file_name:
-                warnings.warn('%s: Image exists' % img.id)
+                raise KeyError('%s: Image exists' % img.id)
         self.images.append(image)
 
     def get_image_id(self, image_id: int, default=None) -> PCOCOImage:

@@ -6,7 +6,7 @@ from typing import List, Dict, Any
 import numpy as np
 
 from podm import box
-from podm.pcoco import PCOCOBoundingBoxDataset, PCOCOBoundingBox
+from podm.coco import PCOCOBoundingBoxDataset
 
 
 class BoundingBox(box.Box):

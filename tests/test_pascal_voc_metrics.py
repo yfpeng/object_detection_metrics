@@ -3,22 +3,21 @@ import math
 from pathlib import Path
 
 from helpers.utils import assert_results
-from podm import pcoco_decoder
+from podm import coco_decoder
 from podm.metrics import get_pascal_voc_metrics, MetricPerClass, get_bounding_boxes
 
 
-def _get_dataset_helper(dir):
-    with open(dir / 'groundtruths_coco.json') as fp:
-        gold_dataset = pcoco_decoder.load_true_bounding_box_dataset(fp)
-    with open(dir / 'detections_coco.json') as fp:
-        pred_dataset = pcoco_decoder.load_pred_bounding_box_dataset(fp, gold_dataset)
-    RESULT0_5 = json.load(open(dir / 'expected0_5.json'))
+def _get_dataset_helper(sample_dir):
+    with open(sample_dir / 'groundtruths_coco.json') as fp:
+        gold_dataset = coco_decoder.load_true_bounding_box_dataset(fp)
+    with open(sample_dir / 'detections_coco.json') as fp:
+        pred_dataset = coco_decoder.load_pred_bounding_box_dataset(fp, gold_dataset)
+    RESULT0_5 = json.load(open(sample_dir / 'expected0_5.json'))
     return get_bounding_boxes(gold_dataset), get_bounding_boxes(pred_dataset), RESULT0_5
 
 
-def test_sample2(tests_dir):
-    dir = tests_dir / 'sample_2'
-    gold_dataset, pred_dataset, expects = _get_dataset_helper(dir)
+def test_sample2(sample_dir):
+    gold_dataset, pred_dataset, expects = _get_dataset_helper(sample_dir)
 
     results = get_pascal_voc_metrics(gold_dataset, pred_dataset, .5)
     assert_results(results, expects, 'ap')

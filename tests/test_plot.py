@@ -1,8 +1,10 @@
+import pytest
+
 from podm import coco_decoder
 from podm.metrics import get_pascal_voc_metrics, get_bounding_boxes
 from podm.visualize import plot_precision_recall_curve_all
 
-
+@pytest.mark.skip()
 def test_plot(sample_dir, tmp_path):
     with open(sample_dir / 'groundtruths_coco.json') as fp:
         gold_dataset = coco_decoder.load_true_bounding_box_dataset(fp)
