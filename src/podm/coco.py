@@ -1,10 +1,15 @@
 import copy
-import warnings
+import itertools
 from abc import ABC
-from typing import List
+from typing import List, Union, NewType, Tuple
 from datetime import date, datetime
 
 from podm import box
+from podm.utils import _isArrayLike, _default_argument
+
+ListStr = NewType('ListStr', Union[List[str], str])
+ListInt = NewType('ListInt', Union[List[int], int])
+Range = NewType('Range', Tuple[float, float])
 
 
 class PCOCOInfo:
@@ -74,6 +79,15 @@ class PCOCODataset(ABC):
             if img.file_name == image_file_name:
                 return img
         return default
+
+    def loadImgs(self, ids: ListInt=None) -> List[PCOCOImage]:
+        """
+        Load anns with the specified ids.
+        :param ids: integer ids specifying img
+        :return: imgs: loaded img objects
+        """
+        ids = _default_argument(ids)
+        return [img for img in self.images if img.id in ids]
 
 
 ##############################################################################
@@ -167,6 +181,95 @@ class PCOCOBoundingBoxDataset(PCOCODataset):
         for ann in annotations:
             new_dataset.add_annotation(ann)
         return new_dataset
+
+    def get_category_ids(self, category_names: ListStr = None,
+                         supercategory_name: ListStr = None,
+                         category_ids: ListInt = None) -> List[int]:
+        """
+        filtering parameters. default skips that filter.
+        :param category_names: get cats for given cat names
+        :param supercategory_name: get cats for given supercategory names
+        :param category_ids: get cats for given cat ids
+        :return: integer array of cat ids
+        """
+        category_names = _default_argument(category_names)
+        supercategory_name = _default_argument(supercategory_name)
+        category_ids = _default_argument(category_ids)
+
+        if len(category_names) == len(supercategory_name) == len(category_ids) == 0:
+            cats = self.categories
+        else:
+            cats = self.categories
+            cats = cats if len(category_names) == 0 else [cat for cat in cats if cat.name in category_names]
+            cats = cats if len(supercategory_name) == 0 else [cat for cat in cats if cat.supercategory in supercategory_name]
+            cats = cats if len(category_ids) == 0 else [cat for cat in cats if cat.id in category_ids]
+        ids = [cat.id for cat in cats]
+        return ids
+
+    def get_annotation_ids(self, image_ids: ListInt = None,
+                           category_ids: ListInt = None,
+                           area_range: Range = None) -> List[int]:
+        """
+        Get ann ids that satisfy given filter conditions. default skips that filter
+        :param image_ids: get anns for given imgs
+        :param category_ids: get anns for given cats
+        :param area_range: get anns for given area range (e.g. [0 inf])
+        :param iscrowd: get anns for given crowd label (False or True)
+        :return: integer array of ann ids
+        """
+        image_ids = _default_argument(image_ids)
+        category_ids = _default_argument(category_ids)
+
+        if len(image_ids) == len(category_ids) == len(area_range) == 0:
+            anns = self.annotations
+        else:
+            if not len(image_ids) == 0:
+                anns = [ann for ann in self.annotations if ann.image_id in image_ids]
+            else:
+                anns = self.annotations
+            anns = anns if len(category_ids) == 0 else [ann for ann in anns if ann.category_id in category_ids]
+            anns = anns if len(area_range) == 0 else [ann for ann in anns if area_range[0] < ann.area < area_range[1]]
+        ids = [ann.id for ann in anns]
+        return ids
+
+    def get_image_ids(self, image_ids: ListInt = None, category_ids: ListInt = None) -> List[int]:
+        """
+        Get img ids that satisfy given filter conditions.
+        :param image_ids: get imgs for given ids
+        :param category_ids: get imgs with all given cats
+        :return: ids: integer array of img ids
+        """
+        image_ids = _default_argument(image_ids)
+        category_ids = _default_argument(category_ids)
+
+        if len(image_ids) == len(category_ids) == 0:
+            ids = [img.id for img in self.images]
+        else:
+            ids = set(image_ids)
+            for i, catId in enumerate(category_ids):
+                if i == 0 and len(ids) == 0:
+                    ids = set(ann.image_id for ann in self.annotations if ann.category_id == catId)
+                else:
+                    ids &= set(ann.image_id for ann in self.annotations if ann.category_id == catId)
+        return list(ids)
+
+    def load_annotations(self, ids: ListInt = None) -> List[PCOCOAnnotation]:
+        """
+        Load anns with the specified ids.
+        :param ids: integer ids specifying anns
+        :return: anns: loaded ann objects
+        """
+        ids = _default_argument(ids)
+        return [ann for ann in self.annotations if ann.id in ids]
+
+    def load_categories(self, ids: ListInt = None) -> List[PCOCOCategory]:
+        """
+        Load cats with the specified ids.
+        :param ids: integer ids specifying cats
+        :return: cats: loaded cat objects
+        """
+        ids = _default_argument(ids)
+        return [cat for cat in self.categories if cat.id in ids]
 
     # def bboxes(self, use_name: bool = True) -> List[box.Box]:
     #     if use_name:
