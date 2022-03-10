@@ -1,61 +1,34 @@
-import json
-import tempfile
-from pathlib import Path
-
-import numpy as np
+import math
 from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
 
-if __name__ == '__main__':
-    dir = Path(r'ImageCLEF2016\total')
-    annFile = dir / 'instances_default.json'
-    coco = COCO(annFile)
 
-    # display COCO categories and supercategories
+def test_pycocotools(sample_dir):
+    coco = COCO(str(sample_dir / 'groundtruths_coco.json'))
     cats = coco.loadCats(coco.getCatIds())
-    nms = [cat['name'] for cat in cats]
-    print('COCO categories: \n{}\n'.format(' '.join(nms)))
-
-    nms = set([cat['supercategory'] for cat in cats])
-    print('COCO supercategories: \n{}'.format(' '.join(nms)))
+    assert len(cats) == 38
 
     # get all images containing given categories, select one at random
-    catIds = coco.getCatIds(catNms=['cxr'])
+    catIds = coco.getCatIds(catNms=['person'])
+    assert catIds[0] == 26
+
+    annIds = coco.getAnnIds(catIds=catIds)
+    assert len(annIds) == 7
+
     imgIds = coco.getImgIds(catIds=catIds)
-    img = coco.loadImgs(imgIds[np.random.randint(0, len(imgIds))])[0]
-    print(img)
+    assert len(imgIds) == 6
 
-    # I = io.imread(img['coco_url'])
-    # plt.axis('off')
-    # plt.imshow(I)
-    # plt.show()
+    annIds = coco.getAnnIds(imgIds=imgIds[1], catIds=catIds, iscrowd=None)
+    assert len(annIds) == 1
 
-    # load and display instance annotations
-    # plt.imshow(I)
-    # plt.axis('off')
-    annIds = coco.getAnnIds(imgIds=img['id'], catIds=catIds, iscrowd=None)
-    anns = coco.loadAnns(annIds)
-    print(anns)
-    # coco.showAnns(anns)
 
-    res = []
-    print(coco.getCatIds(catNms='cxr'))
-    annIds = coco.getAnnIds()
-    for ann in coco.loadAnns(annIds):
-        ann['score'] = np.random.uniform(.5, 1)
-        res.append(ann)
+def test_cocoeval(sample_dir):
+    coco_gld = COCO(str(sample_dir / 'groundtruths_coco.json'))
+    coco_rst = coco_gld.loadRes(str(sample_dir / 'detections_coco.json'))
 
-    rstFile = tempfile.mktemp()
-    with open(rstFile, 'w') as fp:
-        json.dump(res, fp, indent=2)
-
-    cocoDt = coco.loadRes(rstFile)
-    cocoEval = COCOeval(coco, cocoDt, iouType='bbox')
-
-    cocoEval.params.imgIds = imgIds
+    cocoEval = COCOeval(coco_gld, coco_rst, iouType='bbox')
     cocoEval.evaluate()
     cocoEval.accumulate()
     cocoEval.summarize()
-    print(cocoEval.stats[1])
-    # print(cocoEval.eval)
-    # print(cocoEval.ious)
+    assert math.isclose(cocoEval.stats[1], 0.31195, rel_tol=1e-2)
+    assert math.isclose(cocoEval.stats[-1], 0.307, rel_tol=1e-2)
