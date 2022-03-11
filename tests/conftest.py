@@ -11,4 +11,3 @@ def sample_dir():
 @pytest.fixture(scope="module")
 def tests_dir():
     return Path(__file__).parent
-

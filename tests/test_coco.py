@@ -1,6 +1,6 @@
 import pytest
 
-from podm import coco
+from podm import coco, coco_decoder
 
 
 def test_cat():
@@ -36,3 +36,23 @@ def test_image():
         img = coco.PCOCOImage()
         img.id = 0
         dataset.add_image(img)
+
+
+def test_gets(sample_dir):
+    with open(sample_dir / 'groundtruths_coco.json') as fp:
+        gold_dataset = coco_decoder.load_true_bounding_box_dataset(fp)
+
+    # get all images containing given categories, select one at random
+    cat_ids = gold_dataset.get_category_ids(category_names=['person'])
+    assert 26 in cat_ids
+
+    ann_ids = gold_dataset.get_annotation_ids(category_ids=cat_ids)
+    assert len(ann_ids) == 7
+
+    img_ids = gold_dataset.get_image_ids(category_ids=cat_ids)
+    assert len(img_ids) == 6
+
+    print(img_ids[1])
+
+    ann_ids = gold_dataset.get_annotation_ids(image_ids=[img_ids[1]], category_ids=cat_ids)
+    assert len(ann_ids) == 1
