@@ -88,9 +88,9 @@ class PascalVoc2COCO:
                 box.xbr += box.xtl
                 box.ybr += box.ytl
             ann = PCOCOBoundingBox()
-            ann.image_id = dataset.get_image_name(row['name']).id
+            ann.image_id = dataset.get_image(file_name=row['name']).id
             ann.id = i
-            ann.category_id = dataset.get_category_name(row['label']).id
+            ann.category_id = dataset.get_category(name=row['label']).id
             ann.set_box(box)
             dataset.add_annotation(ann)
         return dataset
@@ -107,10 +107,10 @@ class PascalVoc2COCO:
         # check cat
         subrows = []
         for i, row in tqdm.tqdm(df.iterrows(), total=len(df)):
-            if gold_dataset.get_category_name(row['label']) is None:
+            if gold_dataset.get_category(name=row['label']) is None:
                 warnings.warn('%s: Category does not exist' % row['label'])
                 continue
-            if gold_dataset.get_image_name(row['name']) is None:
+            if gold_dataset.get_image(file_name=row['name']) is None:
                 warnings.warn('%s: Image does not exist' % row['name'])
                 continue
             subrows.append(row)
@@ -124,9 +124,9 @@ class PascalVoc2COCO:
                 box.xbr += box.xtl
                 box.ybr += box.ytl
             ann = PCOCOBoundingBox()
-            ann.image_id = gold_dataset.get_image_name(row['name']).id
+            ann.image_id = gold_dataset.get_image(file_name=row['name']).id
             ann.id = i
-            ann.category_id = gold_dataset.get_category_name(row['label']).id
+            ann.category_id = gold_dataset.get_category(name=row['label']).id
             ann.score = row['score']
             ann.set_box(box)
             annotations.append(ann)

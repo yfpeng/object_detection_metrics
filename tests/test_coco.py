@@ -1,9 +1,11 @@
 import pytest
 
 from podm import coco, coco_decoder
+from podm.box import Box
 
 
-def test_cat():
+@pytest.fixture
+def dataset():
     dataset = coco.PCOCOBoundingBoxDataset()
 
     for i in range(0, 10):
@@ -11,9 +13,38 @@ def test_cat():
         cat.id = i
         cat.name = str(i)
         dataset.add_category(cat)
-        assert dataset.get_category_id(cat.id).name == cat.name
-        assert dataset.get_category_name(cat.name).name == cat.name
+
+    for i in range(0, 10):
+        img = coco.PCOCOImage()
+        img.id = i
+        img.file_name = str(i)
+        dataset.add_image(img)
+
+    for i in range(0, 10):
+        ann = coco.PCOCOBoundingBox()
+        ann.id = i
+        ann.image_id = i
+        ann.category_id = i
+        ann.set_box(Box.of_box(0, 0, 10, 10))
+        dataset.add_annotation(ann)
+
+    return dataset
+
+
+def test_cat(dataset):
+    for i in range(0, 10):
+        assert dataset.get_category(id=i).name == str(i)
+        assert dataset.get_category(name=str(i)).id == i
+
+    assert dataset.get_category(id=-1) is None
+    assert dataset.get_category(name="-1") is None
+
     assert dataset.get_max_category_id() == 9
+
+    cat_ids = dataset.get_category_ids(category_names=['1', '2', '-1'])
+    assert 1 in cat_ids
+    assert 2 in cat_ids
+    assert 3 not in cat_ids
 
     with pytest.raises(KeyError):
         cat = coco.PCOCOCategory()
@@ -21,16 +52,53 @@ def test_cat():
         dataset.add_category(cat)
 
 
-def test_image():
-    dataset = coco.PCOCOBoundingBoxDataset()
-
+def test_ann(dataset):
     for i in range(0, 10):
-        img = coco.PCOCOImage()
-        img.id = i
-        img.file_name = str(i)
-        dataset.add_image(img)
-        assert dataset.get_image_id(img.id).file_name == img.file_name
-        assert dataset.get_image_name(img.file_name).file_name == img.file_name
+        assert dataset.get_annotation(id=i).id == i
+
+    assert dataset.get_annotation(id=-1) is None
+
+    ann_ids = dataset.get_annotation_ids(image_ids=[1, -1])
+    assert 1 in ann_ids
+    assert 2 not in ann_ids
+    assert -1 not in ann_ids
+
+    ann_ids = dataset.get_annotation_ids(area_range=(100, 100))
+    assert len(ann_ids) == 10
+
+    ann_ids = dataset.get_annotation_ids(area_range=(99, 99))
+    assert len(ann_ids) == 0
+
+    ann_ids = dataset.get_annotation_ids(area_range=(0, 110))
+    assert len(ann_ids) == 10
+
+    ann_ids = dataset.get_annotation_ids(category_ids=[1, 2, -1])
+    assert 1 in ann_ids
+    assert 2 in ann_ids
+    assert -1 not in ann_ids
+
+    ann_ids = dataset.get_annotation_ids(image_ids=[1], category_ids=[1, 2])
+    assert 1 in ann_ids
+    assert 2 not in ann_ids
+
+    with pytest.raises(KeyError):
+        ann = coco.PCOCOBoundingBox()
+        ann.id = 0
+        dataset.add_annotation(ann)
+
+
+def test_image(dataset):
+    for i in range(0, 10):
+        assert dataset.get_image(id=i).file_name == str(i)
+        assert dataset.get_image(file_name=str(i)).id == i
+
+    assert dataset.get_image(id=-1) is None
+    assert dataset.get_image(file_name='-1') is None
+
+    img_ids = {img.id for img in dataset.get_images([0, 1, -2])}
+    assert 0 in img_ids
+    assert 1 in img_ids
+    assert -2 not in img_ids
 
     with pytest.raises(KeyError):
         img = coco.PCOCOImage()
@@ -38,21 +106,24 @@ def test_image():
         dataset.add_image(img)
 
 
-def test_gets(sample_dir):
-    with open(sample_dir / 'groundtruths_coco.json') as fp:
-        gold_dataset = coco_decoder.load_true_bounding_box_dataset(fp)
-
+def test_gets(dataset):
     # get all images containing given categories, select one at random
-    cat_ids = gold_dataset.get_category_ids(category_names=['person'])
-    assert 26 in cat_ids
+    cat_ids = dataset.get_category_ids(category_names=['1', '2'])
+    assert len(cat_ids) == 2
+    assert 1 in cat_ids
+    assert 2 in cat_ids
 
-    ann_ids = gold_dataset.get_annotation_ids(category_ids=cat_ids)
-    assert len(ann_ids) == 7
+    ann_ids = dataset.get_annotation_ids(category_ids=cat_ids)
+    assert len(ann_ids) == 2
+    assert 1 in ann_ids
+    assert 2 in ann_ids
 
-    img_ids = gold_dataset.get_image_ids(category_ids=cat_ids)
-    assert len(img_ids) == 6
 
-    print(img_ids[1])
+def test_segments():
+    segments = coco.PCOCOSegments()
+    segments.add_box(Box.of_box(0, 0, 10, 10))
+    segments.add_box(Box.of_box(1, 1, 11, 11))
+    assert segments.bbox == Box.of_box(0, 0, 11, 11)
 
-    ann_ids = gold_dataset.get_annotation_ids(image_ids=[img_ids[1]], category_ids=cat_ids)
-    assert len(ann_ids) == 1
+    segments.add_segmentation(Box.of_box(2, 2, 12, 12).segment)
+    assert segments.bbox == Box.of_box(0, 0, 12, 12)

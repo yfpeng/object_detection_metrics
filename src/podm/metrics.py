@@ -45,8 +45,8 @@ def get_bounding_boxes(dataset: PCOCOBoundingBoxDataset, use_name: bool = True) 
     for ann in dataset.annotations:
         bb = BoundingBox.of_bbox(ann.image_id, ann.category_id, ann.xtl, ann.ytl, ann.xbr, ann.ybr, ann.score)
         if use_name:
-            bb.image = dataset.get_image_id(ann.image_id).file_name
-            bb.category = dataset.get_category_id(ann.category_id).name
+            bb.image = dataset.get_image(id=ann.image_id).file_name
+            bb.category = dataset.get_category(id=ann.category_id).name
         bboxes.append(bb)
     return bboxes
 

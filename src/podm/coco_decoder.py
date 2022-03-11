@@ -115,9 +115,9 @@ def load_pred_bounding_box_dataset(fp, dataset: PCOCOBoundingBoxDataset, **kwarg
     annotations = []
     for obj in coco_obj:
         ann = parse_bounding_box(obj)
-        if new_dataset.get_image_id(ann.image_id) is None:
+        if new_dataset.get_image(id=ann.image_id) is None:
             print('%s: Cannot find image' % ann.image_id)
-        if new_dataset.get_category_id(ann.category_id) is None:
+        if new_dataset.get_category(id=ann.category_id) is None:
             print('%s: Cannot find category' % ann.category_id)
         annotations.append(ann)
     new_dataset.annotations = annotations

@@ -17,17 +17,27 @@ def test_iou():
     # no overlap
     box1 = Box.of_box(0., 0., 10., 10.)
     box2 = Box.of_box(12., 12., 22., 22.)
-    assert math.isclose(box.intersection_over_union(box1, box2), 0, rel_tol=1e-6)
+    assert box.intersection_over_union(box1, box2) == 0
 
     box1 = Box.of_box(0., 0., 2., 2.)
     box2 = Box.of_box(1., 1., 3., 3.)
     assert math.isclose(box.intersection_over_union(box1, box2), 0.142857142857, rel_tol=1e-6)
 
 
+def test_union():
+    box1 = Box.of_box(0., 0., 10., 10.)
+    box2 = Box.of_box(1., 1., 11., 11.)
+    box3 = box.union(box1, box2)
+    assert box3 == Box.of_box(0, 0, 11, 11)
+
+
 def test_box():
     box = Box.of_box(0., 0., 10., 10.)
     assert box.width == 10
     assert box.height == 10
+    assert box.area == 100
+    assert box == Box.of_box(0, 0, 10, 10)
+    assert box != Box.of_box(0, 0, 11, 11)
 
     with pytest.raises(AssertionError):
         Box.of_box(0., 0., -1, 10.)

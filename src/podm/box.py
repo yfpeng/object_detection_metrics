@@ -51,6 +51,10 @@ class Box:
         assert self.ytl <= self.ybr, f'ytl < ybr: ytl:{self.ytl}, xbr:{self.ybr}'
 
     @property
+    def segment(self):
+        return [self.xtl, self.ytl, self.xtl, self.ybr, self.xbr, self.ybr, self.xbr, self.ytl]
+
+    @property
     def width(self) -> float:
         return self.xbr - self.xtl
 
@@ -64,6 +68,11 @@ class Box:
 
     def __str__(self):
         return 'Box[xtl={},ytl={},xbr={},ybr={}]'.format(self.xtl, self.ytl, self.xbr, self.ybr)
+
+    def __eq__(self, other):
+        if not isinstance(other, Box):
+            return False
+        return self.xtl == other.xtl and self.ytl == other.ytl and self.xbr == other.xbr and self.ybr == other.ybr
 
 
 def intersection_over_union(box1: 'Box', box2: 'Box') -> float:
