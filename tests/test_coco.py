@@ -12,6 +12,7 @@ def dataset():
         cat = coco.PCOCOCategory()
         cat.id = i
         cat.name = str(i)
+        cat.supercategory = 's%d' % i
         dataset.add_category(cat)
 
     for i in range(0, 10):
@@ -46,10 +47,24 @@ def test_cat(dataset):
     assert 2 in cat_ids
     assert 3 not in cat_ids
 
+    cat_ids = dataset.get_category_ids(supercategory_names=['s1', 's2', '3'])
+    assert 1 in cat_ids
+    assert 2 in cat_ids
+    assert 3 not in cat_ids
+
+    cats = dataset.get_categories([1, 2])
+    assert sorted(list(cat.id for cat in cats)) == [1, 2]
+
     with pytest.raises(KeyError):
         cat = coco.PCOCOCategory()
         cat.id = 0
         dataset.add_category(cat)
+
+    with pytest.raises(KeyError):
+        dataset.get_category()
+
+    with pytest.raises(KeyError):
+        dataset.get_category(id=0, name='0')
 
 
 def test_ann(dataset):
@@ -81,6 +96,9 @@ def test_ann(dataset):
     assert 1 in ann_ids
     assert 2 not in ann_ids
 
+    anns = dataset.get_annotations([1, 2])
+    assert sorted(list(ann.id for ann in anns)) == [1, 2]
+
     with pytest.raises(KeyError):
         ann = coco.PCOCOBoundingBox()
         ann.id = 0
@@ -100,10 +118,22 @@ def test_image(dataset):
     assert 1 in img_ids
     assert -2 not in img_ids
 
+    img_ids = dataset.get_image_ids(category_ids=[1])
+    assert 1 in img_ids
+
+    img_ids = dataset.get_image_ids(category_ids=[1, 2])
+    assert len(img_ids) == 0
+
     with pytest.raises(KeyError):
         img = coco.PCOCOImage()
         img.id = 0
         dataset.add_image(img)
+
+    with pytest.raises(KeyError):
+        dataset.get_image()
+
+    with pytest.raises(KeyError):
+        dataset.get_image(id=0, file_name='0')
 
 
 def test_gets(dataset):
@@ -127,3 +157,6 @@ def test_segments():
 
     segments.add_segmentation(Box.of_box(2, 2, 12, 12).segment)
     assert segments.bbox == Box.of_box(0, 0, 12, 12)
+
+    segments = coco.PCOCOSegments()
+    assert segments.bbox is None

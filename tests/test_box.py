@@ -27,8 +27,8 @@ def test_iou():
 def test_union():
     box1 = Box.of_box(0., 0., 10., 10.)
     box2 = Box.of_box(1., 1., 11., 11.)
-    box3 = box.union(box1, box2)
-    assert box3 == Box.of_box(0, 0, 11, 11)
+    assert box.union(box1, box2) == Box.of_box(0, 0, 11, 11)
+    assert box.union_areas(box1, box2) == 119
 
 
 def test_box():
@@ -38,6 +38,7 @@ def test_box():
     assert box.area == 100
     assert box == Box.of_box(0, 0, 10, 10)
     assert box != Box.of_box(0, 0, 11, 11)
+    assert box != 1
 
     with pytest.raises(AssertionError):
         Box.of_box(0., 0., -1, 10.)

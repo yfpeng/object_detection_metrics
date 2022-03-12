@@ -56,6 +56,12 @@ class PCOCODataset(ABC):
         self.images = []  # type: List[PCOCOImage]
         self.licenses = []  # type: List[PCOCOLicense]
 
+    def add_license(self, license: PCOCOLicense):
+        for lic in self.licenses:
+            if lic.id == license.id or lic.name == license.name:
+                raise KeyError('%s: License exists' % lic.id)
+        self.licenses.append(license)
+
     def add_image(self, image: PCOCOImage):
         for img in self.images:
             if img.id == image.id or img.file_name == image.file_name:
