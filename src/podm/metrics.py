@@ -1,7 +1,7 @@
 import sys
 from collections import Counter, defaultdict
 from enum import Enum
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Tuple
 
 import numpy as np
 
@@ -196,14 +196,18 @@ def calculate_all_points_average_precision(recall, precision):
     return ap, mpre[0:len(mpre) - 1], mrec[0:len(mpre) - 1], ii
 
 
-def calculate_11_points_average_precision(recall, precision):
+def calculate_11_points_average_precision(recall: List[float], precision: List[float]) -> Tuple[float, List[float], List[float]]:
     """
-    11-point interpolated average precision
+    11-point interpolated average precision. This is done by segmenting the recalls evenly into 11 parts:
+        {0,0.1,0.2,...,0.9,1}.
+
+    Args:
+        recall: recall list
+        precision: precision list
 
     Returns:
-        average precision
-        interpolated precision
-        interpolated recall
+        average precision, interpolated recall, interpolated precision
+
     """
     mrec = [e for e in recall]
     mpre = [e for e in precision]
@@ -235,6 +239,6 @@ def calculate_11_points_average_precision(recall, precision):
         p = (rvals[i], pvals[i])
         if p not in cc:
             cc.append(p)
-    recall_values = [i[0] for i in cc]
-    rho_interp = [i[1] for i in cc]
-    return ap, rho_interp, recall_values
+    recall_values = [i[0] for i in reversed(cc)]
+    precision_values = [i[1] for i in reversed(cc)]
+    return ap, recall_values, precision_values
