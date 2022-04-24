@@ -172,18 +172,19 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
     return ret
 
 
-def calculate_all_points_average_precision(recall, precision):
+def calculate_all_points_average_precision(recall: List[float], precision: List[float]) \
+        -> Tuple[float, List[float], List[float], List[int]]:
     """
     All-point interpolated average precision
 
     Returns:
         average precision
-        interpolated precision
         interpolated recall
+        interpolated precision
         interpolated points
     """
-    mrec = [0] + [e for e in recall] + [1]
-    mpre = [0] + [e for e in precision] + [0]
+    mrec = [0.0] + [e for e in recall] + [1.0]
+    mpre = [0.0] + [e for e in precision] + [0]
     for i in range(len(mpre) - 1, 0, -1):
         mpre[i - 1] = max(mpre[i - 1], mpre[i])
     ii = []
@@ -193,7 +194,7 @@ def calculate_all_points_average_precision(recall, precision):
     ap = 0
     for i in ii:
         ap = ap + np.sum((mrec[i] - mrec[i - 1]) * mpre[i])
-    return ap, mpre[0:len(mpre) - 1], mrec[0:len(mpre) - 1], ii
+    return ap, mrec[0:len(mpre) - 1], mpre[0:len(mpre) - 1], ii
 
 
 def calculate_11_points_average_precision(recall: List[float], precision: List[float]) -> Tuple[float, List[float], List[float]]:
