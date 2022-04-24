@@ -9,6 +9,8 @@
 
 This project was forked from [rafaelpadilla/Object-Detection-Metrics](https://github.com/rafaelpadilla/Object-Detection-Metrics).
 
+Development of `object_detection_metrics` happens on GitHub: https://github.com/yfpeng/object_detection_metrics
+
 ## Getting started
 
 Installing `object_detection_metrics`
