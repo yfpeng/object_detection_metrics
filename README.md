@@ -11,6 +11,8 @@ This project was forked from [rafaelpadilla/Object-Detection-Metrics](https://gi
 
 Development of `object_detection_metrics` happens on GitHub: https://github.com/yfpeng/object_detection_metrics
 
+The latest `object_detection_metrics releases` are available over [pypi](https://pypi.org/project/object-detection-metrics/).
+
 ## Getting started
 
 Installing `object_detection_metrics`
