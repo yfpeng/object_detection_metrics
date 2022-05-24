@@ -21,7 +21,7 @@ import tqdm
 import pandas as pd
 from podm import coco_encoder
 from podm.box import BBFormat, Box
-from podm.coco import PCOCOBoundingBoxDataset, PCOCOImage, PCOCOCategory, PCOCOBoundingBox
+from podm.coco import PCOCOObjectDetectionDataset, PCOCOImage, PCOCOCategory, PCOCOBoundingBox
 
 
 def convert_pascal_to_df(src):
@@ -65,10 +65,10 @@ class PascalVoc2COCO:
     def __init__(self, format: BBFormat = BBFormat.X1Y1X2Y2):
         self.format = format
 
-    def convert_gold(self, src) -> PCOCOBoundingBoxDataset:
+    def convert_gold(self, src) -> PCOCOObjectDetectionDataset:
         df = convert_pascal_to_df(src)
 
-        dataset = PCOCOBoundingBoxDataset()
+        dataset = PCOCOObjectDetectionDataset()
         # add image
         for i, name in enumerate(df['name'].unique()):
             img = PCOCOImage()

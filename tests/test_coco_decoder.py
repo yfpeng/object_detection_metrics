@@ -3,7 +3,7 @@ from podm import coco_decoder
 
 def test_load_true(sample_dir):
     with open(sample_dir / 'groundtruths_coco.json') as fp:
-        dataset = coco_decoder.load_true_bounding_box_dataset(fp)
+        dataset = coco_decoder.load_true_object_detection_dataset(fp)
 
     assert len(dataset.images) == 85
     assert len(dataset.categories) == 38
@@ -12,9 +12,9 @@ def test_load_true(sample_dir):
 
 def test_load_pred(sample_dir):
     with open(sample_dir / 'groundtruths_coco.json') as fp:
-        gold_dataset = coco_decoder.load_true_bounding_box_dataset(fp)
+        gold_dataset = coco_decoder.load_true_object_detection_dataset(fp)
     with open(sample_dir / 'detections_coco.json') as fp:
-        pred_dataset = coco_decoder.load_pred_bounding_box_dataset(fp, gold_dataset)
+        pred_dataset = coco_decoder.load_pred_object_detection_dataset(fp, gold_dataset)
 
     assert len(gold_dataset.images) == 85
     assert len(gold_dataset.categories) == 38

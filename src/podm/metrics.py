@@ -6,7 +6,7 @@ from typing import List, Dict, Any, Tuple
 import numpy as np
 
 from podm import box
-from podm.coco import PCOCOBoundingBoxDataset
+from podm.coco import PCOCOObjectDetectionDataset, PCOCOBoundingBox, PCOCOSegments
 
 
 class BoundingBox(box.Box):
@@ -40,10 +40,16 @@ class BoundingBox(box.Box):
         return bbox
 
 
-def get_bounding_boxes(dataset: PCOCOBoundingBoxDataset, use_name: bool = True) -> List[BoundingBox]:
+def get_bounding_boxes(dataset: PCOCOObjectDetectionDataset, use_name: bool = True) -> List[BoundingBox]:
     bboxes = []
     for ann in dataset.annotations:
-        bb = BoundingBox.of_bbox(ann.image_id, ann.category_id, ann.xtl, ann.ytl, ann.xbr, ann.ybr, ann.score)
+        if isinstance(ann, PCOCOBoundingBox):
+            bb = BoundingBox.of_bbox(ann.image_id, ann.category_id, ann.xtl, ann.ytl, ann.xbr, ann.ybr, ann.score)
+        elif isinstance(ann, PCOCOSegments):
+            bb = BoundingBox.of_bbox(ann.image_id, ann.category_id,
+                                     ann.bbox.xtl, ann.bbox.ytl, ann.bbox.xbr, ann.bbox.ybr, ann.score)
+        else:
+            raise TypeError
         if use_name:
             bb.image = dataset.get_image(id=ann.image_id).file_name
             bb.category = dataset.get_category(id=ann.category_id).name

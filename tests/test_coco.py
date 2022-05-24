@@ -6,7 +6,7 @@ from podm.box import Box
 
 @pytest.fixture
 def dataset():
-    dataset = coco.PCOCOBoundingBoxDataset()
+    dataset = coco.PCOCOObjectDetectionDataset()
 
     for i in range(0, 10):
         cat = coco.PCOCOCategory()

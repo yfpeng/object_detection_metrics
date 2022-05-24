@@ -2,7 +2,7 @@ import copy
 from abc import ABC
 from typing import List, Tuple, Set, Collection
 from datetime import date, datetime
-
+from shapely.geometry import Polygon, Point
 from podm import box
 
 
@@ -22,6 +22,7 @@ class PCOCOAnnotation(ABC):
         self.image_id = None  # type:int or None
         self.score = None  # type:float or None
         self.contributor = ''  # type: str
+        self.attributes = {}  # type: dict
 
 
 class PCOCOImage:
@@ -128,6 +129,22 @@ class PCOCOSegments(PCOCOAnnotation):
     def add_segmentation(self, segmentation: List[float]):
         self.segmentation.append(segmentation)
 
+    def __contains__(self, item):
+        if not type(item) == list and not type(item) == tuple:
+            raise TypeError('Has to be a list or a tuple: %s' % type(item))
+        if len(item) == 2:
+            point = Point(item[0], item[1])
+            for p in self.polygons:
+                if p.contains(point):
+                    return True
+            return False
+        else:
+            raise ValueError('Only support a point')
+
+    @property
+    def polygons(self) -> List[Polygon]:
+        return [Polygon([(seg[i], seg[i+1]) for i in range(0, len(seg), 2)]) for seg in self.segmentation]
+
     @property
     def bbox(self) -> 'box.Box' or None:
         if len(self.segmentation) == 0:
@@ -153,13 +170,13 @@ class PCOCOImageCaptioning(PCOCOAnnotation):
         self.caption = None  # type:str or None
 
 
-class PCOCOBoundingBoxDataset(PCOCODataset):
+class PCOCOObjectDetectionDataset(PCOCODataset):
     def __init__(self):
-        super(PCOCOBoundingBoxDataset, self).__init__()
-        self.annotations = []  # type: List[PCOCOBoundingBox]
+        super(PCOCOObjectDetectionDataset, self).__init__()
+        self.annotations = []  # type: List[PCOCOBoundingBox or PCOCOSegments]
         self.categories = []  # type: List[PCOCOCategory]
 
-    def add_annotation(self, annotation: 'PCOCOBoundingBox'):
+    def add_annotation(self, annotation: 'PCOCOBoundingBox' or 'PCOCOSegments'):
         for ann in self.annotations:
             if ann.id == annotation.id:
                 raise KeyError('%s: Annotation exists' % ann.id)
@@ -210,8 +227,8 @@ class PCOCOBoundingBoxDataset(PCOCODataset):
         else:
             raise KeyError('%s: more than one annotation' % id)
 
-    def get_new_dataset(self, annotations: Collection[PCOCOBoundingBox]):
-        new_dataset = PCOCOBoundingBoxDataset()
+    def get_new_dataset(self, annotations: Collection[PCOCOBoundingBox or PCOCOSegments]):
+        new_dataset = PCOCOObjectDetectionDataset()
         new_dataset.info = copy.deepcopy(self.info)
         new_dataset.licenses = copy.deepcopy(self.licenses)
         new_dataset.images = copy.deepcopy(self.images)

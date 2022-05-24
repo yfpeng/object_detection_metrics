@@ -3,12 +3,12 @@ from typing import Union, TextIO, Dict, List
 
 from podm.coco import PCOCOImage, PCOCOLicense, PCOCOInfo, \
     PCOCOCategory, PCOCOBoundingBox, \
-    PCOCOSegments, PCOCOBoundingBoxDataset
+    PCOCOSegments, PCOCOObjectDetectionDataset
 
 PCOCO_OBJ = Union[
     PCOCOImage, PCOCOLicense, PCOCOInfo,
     PCOCOCategory,
-    PCOCOBoundingBoxDataset,
+    PCOCOObjectDetectionDataset,
     List[PCOCOBoundingBox],
 ]
 
@@ -63,6 +63,7 @@ class PCOCOJSONEncoder(json.JSONEncoder):
                 "bbox": [o.xtl, o.ytl, o.width, o.height],
                 "score": o.score,
                 "contributor": o.contributor,
+                "attributes": json.dumps(o.attributes)
             }
         if isinstance(o, PCOCOSegments):
             bb = o.bbox
@@ -76,8 +77,9 @@ class PCOCOJSONEncoder(json.JSONEncoder):
                 "iscrowd": o.iscrowd,
                 "score": o.score,
                 "contributor": o.contributor,
+                "attributes": json.dumps(o.attributes)
             }
-        if isinstance(o, PCOCOBoundingBoxDataset):
+        if isinstance(o, PCOCOObjectDetectionDataset):
             return {
                 "info": self.default(o.info),
                 'images': [self.default(img) for img in o.images],

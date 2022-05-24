@@ -6,3 +6,4 @@ tqdm
 Pillow
 pandas
 docopt
+shapely

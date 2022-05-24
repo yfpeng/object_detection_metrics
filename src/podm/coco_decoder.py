@@ -2,8 +2,8 @@ import copy
 import json
 from typing import Dict
 
-from podm.coco import PCOCOLicense, PCOCOInfo, PCOCOImage, \
-    PCOCOCategory, PCOCOBoundingBox, PCOCOSegments, PCOCOBoundingBoxDataset
+from podm.coco import PCOCOLicense, PCOCOInfo, PCOCOImage, PCOCOCategory, PCOCOBoundingBox, PCOCOSegments, \
+    PCOCOObjectDetectionDataset
 
 
 def parse_infon(obj: Dict) -> PCOCOInfo:
@@ -51,6 +51,8 @@ def parse_bounding_box(obj: Dict) -> PCOCOBoundingBox:
         ann.contributor = obj['contributor']
     if 'score' in obj:
         ann.score = obj['score']
+    if 'attributes' in obj:
+        ann.attributes = obj['attributes']
     return ann
 
 
@@ -65,6 +67,8 @@ def parse_segments(obj: Dict) -> PCOCOSegments:
         ann.score = obj['score']
     if 'contributor' in obj:
         ann.contributor = obj['contributor']
+    if 'attributes' in obj:
+        ann.attributes = obj['attributes']
     return ann
 
 
@@ -76,8 +80,8 @@ def parse_category(obj: Dict) -> PCOCOCategory:
     return cat
 
 
-def parse_bounding_box_dataset(coco_obj: Dict) -> PCOCOBoundingBoxDataset:
-    dataset = PCOCOBoundingBoxDataset()
+def parse_object_detection_dataset(coco_obj: Dict) -> PCOCOObjectDetectionDataset:
+    dataset = PCOCOObjectDetectionDataset()
     dataset.info = parse_infon(coco_obj['info'])
 
     for lic_obj in coco_obj['licenses']:
@@ -89,7 +93,10 @@ def parse_bounding_box_dataset(coco_obj: Dict) -> PCOCOBoundingBoxDataset:
         dataset.images.append(img)
 
     for ann_obj in coco_obj['annotations']:
-        ann = parse_bounding_box(ann_obj)
+        if 'segmentation' in ann_obj and len(ann_obj['segmentation']) > 0:
+            ann = parse_segments(ann_obj)
+        else:
+            ann = parse_bounding_box(ann_obj)
         dataset.add_annotation(ann)
 
     for cat_obj in coco_obj['categories']:
@@ -99,13 +106,14 @@ def parse_bounding_box_dataset(coco_obj: Dict) -> PCOCOBoundingBoxDataset:
     return dataset
 
 
-def load_true_bounding_box_dataset(fp, **kwargs) -> PCOCOBoundingBoxDataset:
+def load_true_object_detection_dataset(fp, **kwargs) -> PCOCOObjectDetectionDataset:
     coco_obj = json.load(fp, **kwargs)
-    return parse_bounding_box_dataset(coco_obj)
+    return parse_object_detection_dataset(coco_obj)
 
 
-def load_pred_bounding_box_dataset(fp, dataset: PCOCOBoundingBoxDataset, **kwargs) -> PCOCOBoundingBoxDataset:
-    new_dataset = PCOCOBoundingBoxDataset()
+def load_pred_object_detection_dataset(fp, dataset: PCOCOObjectDetectionDataset, **kwargs) \
+        -> PCOCOObjectDetectionDataset:
+    new_dataset = PCOCOObjectDetectionDataset()
     new_dataset.info = copy.deepcopy(dataset.info)
     new_dataset.licenses = copy.deepcopy(dataset.licenses)
     new_dataset.images = copy.deepcopy(dataset.images)

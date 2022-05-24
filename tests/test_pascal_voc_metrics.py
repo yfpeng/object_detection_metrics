@@ -9,9 +9,9 @@ from podm.metrics import get_pascal_voc_metrics, MetricPerClass, get_bounding_bo
 
 def _get_dataset_helper(sample_dir):
     with open(sample_dir / 'groundtruths_coco.json') as fp:
-        gold_dataset = coco_decoder.load_true_bounding_box_dataset(fp)
+        gold_dataset = coco_decoder.load_true_object_detection_dataset(fp)
     with open(sample_dir / 'detections_coco.json') as fp:
-        pred_dataset = coco_decoder.load_pred_bounding_box_dataset(fp, gold_dataset)
+        pred_dataset = coco_decoder.load_pred_object_detection_dataset(fp, gold_dataset)
     RESULT0_5 = json.load(open(sample_dir / 'expected0_5.json'))
     return get_bounding_boxes(gold_dataset), get_bounding_boxes(pred_dataset), RESULT0_5
 

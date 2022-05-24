@@ -8,7 +8,7 @@ from podm.box import Box
 
 @pytest.fixture
 def dataset():
-    dataset = coco.PCOCOBoundingBoxDataset()
+    dataset = coco.PCOCOObjectDetectionDataset()
     for i in range(0, 2):
         lic = coco.PCOCOLicense()
         lic.id = i
@@ -44,7 +44,7 @@ def test_load(dataset, tmp_path):
     with open(tmp_file, 'w') as fp:
         coco_encoder.dump(dataset, fp)
     with open(tmp_file) as fp:
-        dataset = coco_decoder.load_true_bounding_box_dataset(fp)
+        dataset = coco_decoder.load_true_object_detection_dataset(fp)
 
     assert len(dataset.images) == 10
     assert len(dataset.categories) == 10
@@ -54,7 +54,7 @@ def test_load(dataset, tmp_path):
 
 def test_loads(dataset):
     s = coco_encoder.dumps(dataset)
-    dataset = coco_decoder.load_true_bounding_box_dataset(io.StringIO(s))
+    dataset = coco_decoder.load_true_object_detection_dataset(io.StringIO(s))
 
     assert len(dataset.images) == 10
     assert len(dataset.categories) == 10

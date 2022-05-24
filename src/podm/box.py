@@ -1,4 +1,5 @@
 from enum import Enum
+from typing import Tuple
 
 
 class Box:
@@ -65,6 +66,18 @@ class Box:
     @property
     def area(self) -> float:
         return (self.xbr - self.xtl) * (self.ybr - self.ytl)
+
+    @property
+    def center(self) -> Tuple[float, float]:
+        return (self.xbr + self.xtl) / 2, (self.ybr + self.ytl) / 2
+
+    def __contains__(self, item):
+        if not type(item) == list and not type(item) == tuple:
+            raise TypeError('Has to be a list or a tuple: %s' % type(item))
+        if len(item) == 2:
+            return self.xtl <= item[0] < self.xbr and self.ytl <= item[1] < self.ybr
+        else:
+            raise ValueError('Only support a point')
 
     def __str__(self):
         return 'Box[xtl={},ytl={},xbr={},ybr={}]'.format(self.xtl, self.ytl, self.xbr, self.ybr)
