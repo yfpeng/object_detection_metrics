@@ -26,7 +26,7 @@ Reading COCO file
 ```python
 from podm import coco_decoder
 with open('tests/sample/groundtruths_coco.json') as fp:
-    gold_dataset = coco_decoder.load_true_bounding_box_dataset(fp)
+    gold_dataset = coco_decoder.load_true_object_detection_dataset(fp)
 ```
 
 PASCAL VOC Metrics
@@ -36,9 +36,9 @@ from podm import coco_decoder
 from podm.metrics import get_pascal_voc_metrics, MetricPerClass, get_bounding_boxes
 
 with open('tests/sample/groundtruths_coco.json') as fp:
-    gold_dataset = coco_decoder.load_true_bounding_box_dataset(fp)
+    gold_dataset = coco_decoder.load_true_object_detection_dataset(fp)
 with open('tests/sample/detections_coco.json') as fp:
-    pred_dataset = coco_decoder.load_pred_bounding_box_dataset(fp, gold_dataset)
+    pred_dataset = coco_decoder.load_pred_object_detection_dataset(fp, gold_dataset)
 
 gt_BoundingBoxes = get_bounding_boxes(gold_dataset)
 pd_BoundingBoxes = get_bounding_boxes(pred_dataset)
