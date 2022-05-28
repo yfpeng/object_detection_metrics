@@ -10,17 +10,16 @@ from podm.coco import PCOCOObjectDetectionDataset, PCOCOBoundingBox, PCOCOSegmen
 
 
 class BoundingBox(box.Box):
+    """
+    image: image.
+    category: category.
+    xtl: the X top-left coordinate of the bounding box.
+    ytl: the Y top-left coordinate of the bounding box.
+    xbr: the X bottom-right coordinate of the bounding box.
+    ybr: the Y bottom-right coordinate of the bounding box.
+    score: (optional) the confidence of the detected class.
+    """
     def __init__(self):
-        """Constructor.
-        Args:
-            image: image.
-            category: category.
-            xtl: the X top-left coordinate of the bounding box.
-            ytl: the Y top-left coordinate of the bounding box.
-            xbr: the X bottom-right coordinate of the bounding box.
-            ybr: the Y bottom-right coordinate of the bounding box.
-            score: (optional) the confidence of the detected class.
-        """
         super(BoundingBox, self).__init__()
         self.image = None
         self.category = None
