@@ -1,4 +1,4 @@
-from podm.coco import PCOCOObjectDetectionDataset, PCOCOBoundingBox, PCOCOSegments
+from podm.coco import PCOCOObjectDetectionDataset, PCOCOObjectDetection
 
 
 def coco2labelme(cocodataset: PCOCOObjectDetectionDataset):
@@ -15,21 +15,19 @@ def coco2labelme(cocodataset: PCOCOObjectDetectionDataset):
         }
         for annid in cocodataset.get_annotation_ids(image_ids=[img.id]):
             ann = cocodataset.get_annotation(annid)
-            if isinstance(ann, PCOCOBoundingBox):
+            if isinstance(ann, PCOCOObjectDetection):
+                if ann.is_rectangle:
+                    bbox = ann.bbox
+                    points = [[bbox.xtl, bbox.ytl], [bbox.xbr, bbox.ybr]]
+                    shape_type = "rectangle"
+                else:
+                    points = ann.segmentation[0].exterior.coords
+                    shape_type = "polygon"
                 shape = {
                     "label": ann.attributes['ID'],
-                    "points": [[ann.xtl, ann.ytl], [ann.xbr, ann.ybr]],
+                    "points": points,
                     "group_id": None,
-                    "shape_type": "rectangle",
-                    "flags": {}
-                }
-            elif isinstance(ann, PCOCOSegments):
-                shape = {
-                    "label": ann.attributes['ID'],
-                    "points": [[ann.segmentation[0][i], ann.segmentation[0][i+1]]
-                               for i in range(0, len(ann.segmentation[0]), 2)],
-                    "group_id": None,
-                    "shape_type": "polygon",
+                    "shape_type": shape_type,
                     "flags": {}
                 }
             else:

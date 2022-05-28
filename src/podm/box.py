@@ -1,5 +1,4 @@
 from enum import Enum
-from typing import Tuple
 
 
 class Box:
@@ -52,10 +51,6 @@ class Box:
         assert self.ytl <= self.ybr, f'ytl < ybr: ytl:{self.ytl}, xbr:{self.ybr}'
 
     @property
-    def segment(self):
-        return [self.xtl, self.ytl, self.xtl, self.ybr, self.xbr, self.ybr, self.xbr, self.ytl]
-
-    @property
     def width(self) -> float:
         return self.xbr - self.xtl
 
@@ -66,10 +61,6 @@ class Box:
     @property
     def area(self) -> float:
         return (self.xbr - self.xtl) * (self.ybr - self.ytl)
-
-    @property
-    def center(self) -> Tuple[float, float]:
-        return (self.xbr + self.xtl) / 2, (self.ybr + self.ytl) / 2
 
     def __contains__(self, item):
         if not type(item) == list and not type(item) == tuple:
@@ -122,14 +113,6 @@ def union_areas(box1: 'Box', box2: 'Box', intersection_area: float = None) -> fl
     return box1.area + box2.area - intersection_area
 
 
-def union(box1: 'Box', box2: 'Box'):
-    xtl = min(box1.xtl, box2.xtl)
-    ytl = min(box1.ytl, box2.ytl)
-    xbr = max(box1.xbr, box2.xbr)
-    ybr = max(box1.ybr, box2.ybr)
-    return Box.of_box(xtl, ytl, xbr, ybr)
-
-
 def intersection(box1: 'Box', box2: 'Box'):
     xtl = max(box1.xtl, box2.xtl)
     ytl = max(box1.ytl, box2.ytl)
@@ -149,34 +132,3 @@ class BBFormat(Enum):
     """
     XYWH = 1
     X1Y1X2Y2 = 2
-
-
-# class BoundingBox(Box):
-#     def __init__(self):
-#         """Constructor.
-#         Args:
-#             image: image.
-#             category: category.
-#             xtl: the X top-left coordinate of the bounding box.
-#             ytl: the Y top-left coordinate of the bounding box.
-#             xbr: the X bottom-right coordinate of the bounding box.
-#             ybr: the Y bottom-right coordinate of the bounding box.
-#             score: (optional) the confidence of the detected class.
-#         """
-#         super(BoundingBox, self).__init__()
-#         self.image = None
-#         self.category = None
-#         self.score = None  # type: float or None
-#
-#     @classmethod
-#     def of_bbox(cls, image, category, xtl: float, ytl: float, xbr: float, ybr: float, score: float = None) \
-#             -> 'BoundingBox':
-#         bbox = BoundingBox()
-#         bbox.xtl = xtl
-#         bbox.ytl = ytl
-#         bbox.xbr = xbr
-#         bbox.ybr = ybr
-#         bbox.image = image
-#         bbox.score = score
-#         bbox.category = category
-#         return bbox
