@@ -74,8 +74,8 @@ class MetricPerClass:
         self.precision = None
         self.recall = None
         self.ap = None
-        self.interpolated_precision = None
-        self.interpolated_recall = None
+        self.interpolated_precision = None  # type: None or np.ndarray
+        self.interpolated_recall = None  # type: None or np.ndarray
         self.num_groundtruth = None
         self.num_detection = None
         self.tp = None
@@ -158,9 +158,9 @@ def get_pascal_voc_metrics(gold_standard: List[BoundingBox],
         precisions = np.divide(cumulative_tps, (cumulative_fps + cumulative_tps))
         # Depending on the method, call the right implementation
         if method == MethodAveragePrecision.AllPointsInterpolation:
-            ap, mpre, mrec, _ = calculate_all_points_average_precision(recalls, precisions)
+            ap, mrec, mpre, _ = calculate_all_points_average_precision(recalls, precisions)
         else:
-            ap, mpre, mrec = calculate_11_points_average_precision(recalls, precisions)
+            ap, mrec, mpre = calculate_11_points_average_precision(recalls, precisions)
         # add class result in the dictionary to be returned
         r = MetricPerClass()
         r.label = category

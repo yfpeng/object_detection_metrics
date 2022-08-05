@@ -45,8 +45,8 @@ def plot_precision_recall_curve(result: MetricPerClass,
     plt.plot(result.recall, result.precision, '-o')
     # add a new penultimate point to the list (mrec[-2], 0.0)
     # since the last line segment (and respective area) do not affect the AP value
-    area_under_curve_x = mrec[:-1] + [mrec[-2]] + [mrec[-1]]
-    area_under_curve_y = mpre[:-1] + [0.0] + [mpre[-1]]
+    area_under_curve_x = mrec[:-1].tolist() + [mrec[-2]] + [mrec[-1]]
+    area_under_curve_y = mpre[:-1].tolist() + [0.0] + [mpre[-1]]
     plt.fill_between(area_under_curve_x, 0, area_under_curve_y, alpha=0.2, edgecolor='r')
 
     plt.xlabel('Recall')
