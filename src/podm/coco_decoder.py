@@ -121,7 +121,7 @@ def load_pred_object_detection_dataset(fp, dataset: PCOCOObjectDetectionDataset,
     # check annotation
     coco_obj = json.load(fp, **kwargs)
     annotations = []
-    for obj in coco_obj:
+    for obj in coco_obj["annotations"]:
         ann = parse_bounding_box(obj)
         if new_dataset.get_image(id=ann.image_id) is None:
             print('%s: Cannot find image' % ann.image_id)
